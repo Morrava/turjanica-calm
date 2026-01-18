@@ -5,6 +5,7 @@ const languages: { code: Language; flag: string; label: string }[] = [
   { code: 'nl', flag: '🇳🇱', label: 'NL' },
   { code: 'en', flag: '🇬🇧', label: 'EN' },
   { code: 'de', flag: '🇩🇪', label: 'DE' },
+  { code: 'bs', flag: '🇧🇦', label: 'BHS' },
 ];
 
 export const LanguageSwitcher = () => {

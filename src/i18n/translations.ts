@@ -1,4 +1,4 @@
-export type Language = 'nl' | 'en' | 'de';
+export type Language = 'nl' | 'en' | 'de' | 'bs';
 
 export const translations = {
   nl: {
@@ -233,6 +233,81 @@ export const translations = {
       tagline: 'Für Camper gemacht, nicht für Touristen',
       address: 'Turjanica, Bosnien & Herzegowina',
       rights: 'Alle Rechte vorbehalten',
+    },
+  },
+  bs: {
+    nav: {
+      accommodations: 'Smještaj',
+      facilities: 'Sadržaji',
+      location: 'Lokacija',
+      contact: 'Kontakt',
+    },
+    hero: {
+      headline: 'Mir, prostor i priroda u srcu Bosne',
+      subheadline: 'Mali, miran kamp u blizini Banja Luke',
+      cta: 'Provjeri dostupnost',
+      ctaSecondary: 'Piši nam na WhatsApp',
+      trust1: 'Prostrana mjesta za kampere',
+      trust2: 'Tišina i priroda',
+      trust3: 'Popularno među Nizozemcima',
+    },
+    why: {
+      title: 'Zašto Kamp Turjanica?',
+      subtitle: 'Otkrijte šta nas čini posebnim',
+      reason1Title: 'Mali i Lični',
+      reason1Desc: 'Samo 15 mjesta znači mir, prostor i lična pažnja za svakog gosta.',
+      reason2Title: 'Priroda i Tišina',
+      reason2Desc: 'Daleko od masovnog turizma, usred netaknute bosanske prirode.',
+      reason3Title: 'Sigurno i Gostoljubivo',
+      reason3Desc: 'Zapadnoevropski gosti se ovdje odmah osjećaju kao kod kuće.',
+      reason4Title: 'Autentično Gostoprimstvo',
+      reason4Desc: 'Doživite toplinu pravog balkanskog gostoprimstva bez pretvaranja.',
+    },
+    accommodations: {
+      title: 'Smještaj',
+      subtitle: 'Izaberite ono što vam odgovara',
+      camperTitle: 'Mjesta za Kampere',
+      camperFeatures: ['15 prostranih mjesta', 'Struja dostupna', 'Travnata podloga', 'Kamperi i prikolice dobrodošli'],
+      bungalowTitle: 'Bungalov',
+      bungalowFeatures: ['Do 6 osoba', 'Idealno za porodice', 'Privatno i udobno', 'Okruženo prirodom'],
+      cta: 'Pitaj za dostupnost',
+    },
+    facilities: {
+      title: 'Sadržaji i Udobnost',
+      subtitle: 'Sve što vam treba',
+      toilets: 'Toaleti i tuševi',
+      water: 'Pitka voda',
+      electricity: 'Struja',
+      firepit: 'Ložište i roštilj',
+      kids: 'Za djecu',
+      pets: 'Ljubimci dobrodošli',
+      bar: 'Večernje druženje',
+      wifi: 'WiFi dostupan',
+    },
+    location: {
+      title: 'Lokacija i Okolina',
+      subtitle: 'U zelenom srcu Bosne',
+      description: 'Kamp Turjanica se nalazi u mirnom, ruralnom području u blizini Banja Luke. Okolina nudi prekrasnu prirodu, rijeke, te mogućnosti za planinarenje i biciklizam. Sigurna i mirna destinacija za avanturističke putnike.',
+      distance: '30 minuta od Banja Luke',
+      nature: 'Planinarenje, biciklizam, plivanje',
+      safe: 'Mirno i sigurno selo',
+    },
+    reviews: {
+      title: 'Šta gosti kažu',
+      subtitle: 'Omiljeno među nizozemskim i njemačkim kamperima',
+      source: 'preko',
+    },
+    cta: {
+      title: 'Spremni za mir i prirodu?',
+      subtitle: 'Kontaktirajte nas i rezervišite svoje mjesto',
+      whatsapp: 'WhatsApp',
+      email: 'Email',
+      form: 'Kontakt forma',
+    },
+    footer: {
+      tagline: 'Napravljeno za kampere, ne za turiste',
+      address: 'Turjanica, Bosna i Hercegovina',
+      rights: 'Sva prava zadržana',
     },
   },
 };
