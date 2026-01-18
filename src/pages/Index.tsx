@@ -1,13 +1,33 @@
-// Update this page (the content is just a fallback if you fail to update the page)
+import { LanguageProvider } from '@/i18n/LanguageContext';
+import { Header } from '@/components/camping/Header';
+import { Hero } from '@/components/camping/Hero';
+import { WhySection } from '@/components/camping/WhySection';
+import { Accommodations } from '@/components/camping/Accommodations';
+import { Facilities } from '@/components/camping/Facilities';
+import { Location } from '@/components/camping/Location';
+import { Reviews } from '@/components/camping/Reviews';
+import { ContactCTA } from '@/components/camping/ContactCTA';
+import { Footer } from '@/components/camping/Footer';
+import { MobileContactButton } from '@/components/camping/MobileContactButton';
 
 const Index = () => {
   return (
-    <div className="flex min-h-screen items-center justify-center bg-background">
-      <div className="text-center">
-        <h1 className="mb-4 text-4xl font-bold">Welcome to Your Blank App</h1>
-        <p className="text-xl text-muted-foreground">Start building your amazing project here!</p>
+    <LanguageProvider>
+      <div className="min-h-screen bg-background">
+        <Header />
+        <main>
+          <Hero />
+          <WhySection />
+          <Accommodations />
+          <Facilities />
+          <Location />
+          <Reviews />
+          <ContactCTA />
+        </main>
+        <Footer />
+        <MobileContactButton />
       </div>
-    </div>
+    </LanguageProvider>
   );
 };
 
