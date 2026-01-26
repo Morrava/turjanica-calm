@@ -1,4 +1,4 @@
-import React, { createContext, useContext, useState, ReactNode } from 'react';
+import React, { createContext, useContext, useState, useEffect, ReactNode } from 'react';
 import { translations, Language, Translations } from './translations';
 
 interface LanguageContextType {
@@ -7,10 +7,32 @@ interface LanguageContextType {
   t: Translations;
 }
 
+const STORAGE_KEY = 'camping-turjanica-language';
+
+const getInitialLanguage = (): Language => {
+  if (typeof window !== 'undefined') {
+    const stored = localStorage.getItem(STORAGE_KEY);
+    if (stored && stored in translations) {
+      return stored as Language;
+    }
+  }
+  return 'nl';
+};
+
 const LanguageContext = createContext<LanguageContextType | undefined>(undefined);
 
 export const LanguageProvider = ({ children }: { children: ReactNode }) => {
-  const [language, setLanguage] = useState<Language>('nl');
+  const [language, setLanguageState] = useState<Language>(getInitialLanguage);
+
+  const setLanguage = (lang: Language) => {
+    setLanguageState(lang);
+    localStorage.setItem(STORAGE_KEY, lang);
+  };
+
+  useEffect(() => {
+    // Persist initial language
+    localStorage.setItem(STORAGE_KEY, language);
+  }, []);
 
   const value = {
     language,

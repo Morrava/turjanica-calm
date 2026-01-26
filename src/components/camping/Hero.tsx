@@ -1,7 +1,11 @@
-import { Check, MessageCircle } from 'lucide-react';
+import { MapPin, Navigation } from 'lucide-react';
 import { useLanguage } from '@/i18n/LanguageContext';
 import { Button } from '@/components/ui/button';
 import heroImage from '@/assets/hero-camping.jpg';
+
+const GPS_LAT = 44.77506126380439;
+const GPS_LNG = 17.512651922089002;
+const GOOGLE_MAPS_URL = `https://www.google.com/maps?q=${GPS_LAT},${GPS_LNG}`;
 
 export const Hero = () => {
   const { t } = useLanguage();
@@ -27,24 +31,29 @@ export const Hero = () => {
       {/* Content */}
       <div className="relative z-10 section-container w-full">
         <div className="max-w-2xl">
+          {/* Camp name badge */}
+          <div className="inline-flex items-center gap-2 bg-primary/90 backdrop-blur-sm rounded-full px-4 py-2 mb-6 animate-slide-up">
+            <MapPin className="w-4 h-4 text-primary-foreground" />
+            <span className="text-sm font-medium text-primary-foreground">{t.camp.name}</span>
+          </div>
+
           {/* Headline */}
-          <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-card leading-tight mb-6 animate-slide-up">
+          <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-card leading-tight mb-6 animate-slide-up" style={{ animationDelay: '0.05s' }}>
             {t.hero.headline}
           </h1>
 
-          {/* Subheadline */}
-          <p className="text-lg sm:text-xl text-card/90 mb-8 animate-slide-up" style={{ animationDelay: '0.1s' }}>
-            {t.hero.subheadline}
+          {/* Tagline */}
+          <p className="text-lg sm:text-xl text-card/90 mb-8 animate-slide-up italic" style={{ animationDelay: '0.1s' }}>
+            "{t.hero.tagline}"
           </p>
 
           {/* Trust points */}
-          <div className="flex flex-wrap gap-4 mb-10 animate-slide-up" style={{ animationDelay: '0.2s' }}>
+          <div className="flex flex-wrap gap-3 mb-10 animate-slide-up" style={{ animationDelay: '0.2s' }}>
             {trustPoints.map((point, index) => (
               <div
                 key={index}
                 className="flex items-center gap-2 bg-card/10 backdrop-blur-sm rounded-full px-4 py-2 border border-card/20"
               >
-                <Check className="w-4 h-4 text-primary-foreground" />
                 <span className="text-sm font-medium text-card">{point}</span>
               </div>
             ))}
@@ -56,9 +65,9 @@ export const Hero = () => {
               <a href="#contact">{t.hero.cta}</a>
             </Button>
             <Button variant="heroSecondary" size="xl" asChild>
-              <a href="https://wa.me/387xxxxxxxxx" target="_blank" rel="noopener noreferrer">
-                <MessageCircle className="w-5 h-5" />
-                {t.hero.ctaSecondary}
+              <a href={GOOGLE_MAPS_URL} target="_blank" rel="noopener noreferrer">
+                <Navigation className="w-5 h-5" />
+                {t.hero.ctaMap}
               </a>
             </Button>
           </div>

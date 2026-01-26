@@ -2,53 +2,59 @@ import { useState } from 'react';
 import { Menu, X } from 'lucide-react';
 import { useLanguage } from '@/i18n/LanguageContext';
 import { LanguageSwitcher } from './LanguageSwitcher';
+import { Button } from '@/components/ui/button';
 
 export const Header = () => {
-  const { t } = useLanguage();
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const { t } = useLanguage();
 
-  const navLinks = [
-    { href: '#accommodations', label: t.nav.accommodations },
-    { href: '#facilities', label: t.nav.facilities },
-    { href: '#location', label: t.nav.location },
-    { href: '#contact', label: t.nav.contact },
+  const navItems = [
+    { label: t.nav.about, href: '#about' },
+    { label: t.nav.offers, href: '#offers' },
+    { label: t.nav.accommodations, href: '#accommodations' },
+    { label: t.nav.facilities, href: '#facilities' },
+    { label: t.nav.location, href: '#location' },
+    { label: t.nav.trips, href: '#trips' },
   ];
 
   return (
-    <header className="fixed top-0 left-0 right-0 z-50 bg-card/95 backdrop-blur-md border-b border-border shadow-soft">
+    <header className="fixed top-0 left-0 right-0 z-50 bg-background/95 backdrop-blur-sm border-b border-border">
       <div className="section-container">
-        <div className="flex items-center justify-between h-16 sm:h-20">
+        <div className="flex items-center justify-between h-16">
           {/* Logo */}
           <a href="#" className="flex items-center gap-2">
             <div className="w-10 h-10 rounded-full bg-primary flex items-center justify-center">
               <span className="text-primary-foreground text-lg font-bold">T</span>
             </div>
-            <span className="font-semibold text-lg text-foreground hidden sm:block">
-              Camping Turjanica
-            </span>
+            <span className="font-semibold text-lg hidden sm:block">Turjanica</span>
           </a>
 
-          {/* Desktop Nav */}
-          <nav className="hidden md:flex items-center gap-8">
-            {navLinks.map((link) => (
+          {/* Desktop Navigation */}
+          <nav className="hidden lg:flex items-center gap-6">
+            {navItems.map((item) => (
               <a
-                key={link.href}
-                href={link.href}
-                className="text-sm font-medium text-muted-foreground hover:text-primary transition-colors duration-200"
+                key={item.href}
+                href={item.href}
+                className="text-sm font-medium text-muted-foreground hover:text-foreground transition-colors"
               >
-                {link.label}
+                {item.label}
               </a>
             ))}
           </nav>
 
           {/* Right side */}
           <div className="flex items-center gap-4">
-            <LanguageSwitcher />
-            
+            <div className="hidden md:block">
+              <LanguageSwitcher />
+            </div>
+            <Button variant="cta" size="sm" asChild className="hidden sm:flex">
+              <a href="#contact">{t.nav.contact}</a>
+            </Button>
+
             {/* Mobile menu button */}
             <button
               onClick={() => setIsMenuOpen(!isMenuOpen)}
-              className="md:hidden p-2 text-muted-foreground hover:text-foreground transition-colors"
+              className="lg:hidden p-2 text-foreground"
               aria-label="Toggle menu"
             >
               {isMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
@@ -56,20 +62,32 @@ export const Header = () => {
           </div>
         </div>
 
-        {/* Mobile Nav */}
+        {/* Mobile Navigation */}
         {isMenuOpen && (
-          <nav className="md:hidden py-4 border-t border-border">
-            {navLinks.map((link) => (
+          <div className="lg:hidden py-4 border-t border-border">
+            <nav className="flex flex-col gap-2">
+              {navItems.map((item) => (
+                <a
+                  key={item.href}
+                  href={item.href}
+                  onClick={() => setIsMenuOpen(false)}
+                  className="px-4 py-3 text-sm font-medium text-muted-foreground hover:text-foreground hover:bg-secondary rounded-lg transition-colors"
+                >
+                  {item.label}
+                </a>
+              ))}
               <a
-                key={link.href}
-                href={link.href}
+                href="#contact"
                 onClick={() => setIsMenuOpen(false)}
-                className="block py-3 text-base font-medium text-muted-foreground hover:text-primary transition-colors"
+                className="px-4 py-3 text-sm font-medium text-primary hover:bg-secondary rounded-lg transition-colors"
               >
-                {link.label}
+                {t.nav.contact}
               </a>
-            ))}
-          </nav>
+            </nav>
+            <div className="mt-4 px-4">
+              <LanguageSwitcher />
+            </div>
+          </div>
         )}
       </div>
     </header>

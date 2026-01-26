@@ -1,5 +1,6 @@
 import { Star } from 'lucide-react';
 import { useLanguage } from '@/i18n/LanguageContext';
+import { Language } from '@/i18n/translations';
 
 const reviews = [
   {
@@ -10,7 +11,9 @@ const reviews = [
       nl: 'Prachtige rustige camping! De kinderen vonden het geweldig en de eigenaren zijn super vriendelijk.',
       en: 'Beautiful peaceful campsite! The kids loved it and the owners are super friendly.',
       de: 'Wunderschöner ruhiger Campingplatz! Die Kinder waren begeistert und die Besitzer sind super freundlich.',
-    },
+      bs: 'Prekrasan miran kamp! Djeci se svidjelo, a vlasnici su super prijateljski.',
+      'sr-Latn': 'Prekrasan miran kamp! Deci se svidelo, a vlasnici su super prijateljski.',
+    } as Record<Language, string>,
     source: 'Park4Night',
   },
   {
@@ -21,7 +24,9 @@ const reviews = [
       nl: 'Een verborgen juweeltje in Bosnië. Schone faciliteiten, prachtige natuur rondom.',
       en: 'A hidden gem in Bosnia. Clean facilities, beautiful nature all around.',
       de: 'Ein verstecktes Juwel in Bosnien. Saubere Einrichtungen, wunderschöne Natur rundherum.',
-    },
+      bs: 'Skriveni dragulj u Bosni. Čisti sadržaji, prekrasna priroda svuda okolo.',
+      'sr-Latn': 'Skriveni dragulj u Bosni. Čisti sadržaji, prelepa priroda svuda okolo.',
+    } as Record<Language, string>,
     source: 'Camping.info',
   },
   {
@@ -32,7 +37,9 @@ const reviews = [
       nl: 'Na 3 weken Balkan was dit de beste camping. Authentiek, gastvrij en rustig. Zeker terug!',
       en: 'After 3 weeks in the Balkans, this was the best campsite. Authentic, welcoming and peaceful. Definitely coming back!',
       de: 'Nach 3 Wochen Balkan war dies der beste Campingplatz. Authentisch, gastfreundlich und ruhig. Kommen bestimmt wieder!',
-    },
+      bs: 'Nakon 3 sedmice na Balkanu, ovo je bio najbolji kamp. Autentičan, gostoljubiv i miran. Definitivno se vraćamo!',
+      'sr-Latn': 'Nakon 3 nedelje na Balkanu, ovo je bio najbolji kamp. Autentičan, gostoljubiv i miran. Definitivno se vraćamo!',
+    } as Record<Language, string>,
     source: 'Park4Night',
   },
 ];

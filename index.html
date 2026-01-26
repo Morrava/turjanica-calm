@@ -1,23 +1,76 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="nl">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Camping Turjanica | Rust, Ruimte & Natuur in Bosnië</title>
-    <meta name="description" content="Kleinschalige camping nabij Banja Luka, Bosnië. 15 ruime camperplaatsen en een gezellige bungalow. Populair bij Nederlandse en Duitse kampeerders. Rust, natuur en authentieke gastvrijheid." />
-    <meta name="author" content="Camping Turjanica" />
-    <link rel="icon" type="image/x-icon" href="/favicon.ico" />
-
-    <meta property="og:title" content="Camping Turjanica | Rust, Ruimte & Natuur in Bosnië" />
-    <meta property="og:description" content="Kleinschalige camping nabij Banja Luka. 15 ruime camperplaatsen en bungalow. Geliefd bij Nederlandse en Duitse kampeerders." />
+    <title>Izletište Camp Turjanica | Branešci, Čelinac | Camping nabij Banja Luka</title>
+    <meta name="description" content="Camp Turjanica - 10 hectare natuur in Branešci, Čelinac. Rustige camping met rivieren, wandelpaden, lokaal eten en authentieke Balkan gastvrijheid. 38km van Banja Luka." />
+    <meta name="keywords" content="camping Bosnia, camp Turjanica, Banja Luka camping, Čelinac, Branešci, nature camping, camper spots, Balkan camping" />
+    <meta name="author" content="Camp Turjanica" />
+    <meta name="geo.position" content="44.77506;17.51265" />
+    <meta name="geo.placename" content="Branešci, Čelinac, Bosnia and Herzegovina" />
+    <meta name="geo.region" content="BA" />
+    <link rel="canonical" href="https://campturjanica.com" />
+    
+    <!-- Open Graph -->
+    <meta property="og:title" content="Izletište Camp Turjanica | Peaceful Nature Camping" />
+    <meta property="og:description" content="10 hectares of nature surrounded by 2 rivers. Authentic Balkan hospitality near Banja Luka. Camper spots, bungalow, trails, local food & distillery." />
     <meta property="og:type" content="website" />
-    <meta property="og:image" content="https://lovable.dev/opengraph-image-p98pqg.png" />
-
-    <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:site" content="@CampingTurjanica" />
-    <meta name="twitter:image" content="https://lovable.dev/opengraph-image-p98pqg.png" />
+    <meta property="og:locale" content="nl_NL" />
+    <meta property="og:locale:alternate" content="en_US" />
+    <meta property="og:locale:alternate" content="de_DE" />
+    <meta property="og:locale:alternate" content="bs_BA" />
+    <meta property="og:locale:alternate" content="sr_RS" />
+    
+    <!-- Structured Data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Campground",
+      "name": "Izletište Camp Turjanica",
+      "description": "Peaceful nature camping with 10 hectares surrounded by two rivers. Camper spots, bungalow, trails, local food and authentic Balkan hospitality.",
+      "url": "https://campturjanica.com",
+      "telephone": "+387-XX-XXX-XXX",
+      "email": "info@campturjanica.com",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Branešci",
+        "addressLocality": "Čelinac",
+        "addressCountry": "BA"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": 44.77506126380439,
+        "longitude": 17.512651922089002
+      },
+      "amenityFeature": [
+        {"@type": "LocationFeatureSpecification", "name": "Toilets with hot water"},
+        {"@type": "LocationFeatureSpecification", "name": "Showers"},
+        {"@type": "LocationFeatureSpecification", "name": "Electricity hookups"},
+        {"@type": "LocationFeatureSpecification", "name": "Drinking water"},
+        {"@type": "LocationFeatureSpecification", "name": "Natural spring"},
+        {"@type": "LocationFeatureSpecification", "name": "Fire pits"},
+        {"@type": "LocationFeatureSpecification", "name": "Walking trails"},
+        {"@type": "LocationFeatureSpecification", "name": "Sports facilities"},
+        {"@type": "LocationFeatureSpecification", "name": "Pet friendly"}
+      ],
+      "containsPlace": [
+        {
+          "@type": "Accommodation",
+          "name": "Camper Spots",
+          "description": "Spacious grass pitches with electricity for campers, caravans and tents"
+        },
+        {
+          "@type": "Accommodation",
+          "name": "Bungalow",
+          "description": "Comfortable bungalow for up to 6 people, surrounded by nature"
+        }
+      ]
+    }
+    </script>
+    
+    <link rel="icon" type="image/x-icon" href="/favicon.ico" />
   </head>
-
   <body>
     <div id="root"></div>
     <script type="module" src="/src/main.tsx"></script>
