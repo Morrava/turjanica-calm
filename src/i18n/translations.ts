@@ -188,7 +188,7 @@ export const translations = {
     cta: {
       title: 'Klaar voor rust en natuur?',
       subtitle: 'Neem contact op en boek uw plek',
-      whatsapp: 'WhatsApp',
+      call: 'Bellen',
       email: 'Email',
       form: 'Contactformulier',
     },
@@ -374,7 +374,7 @@ export const translations = {
     cta: {
       title: 'Ready for peace and nature?',
       subtitle: 'Get in touch and book your spot',
-      whatsapp: 'WhatsApp',
+      call: 'Call us',
       email: 'Email',
       form: 'Contact form',
     },
@@ -559,7 +559,7 @@ export const translations = {
     cta: {
       title: 'Bereit für Ruhe und Natur?',
       subtitle: 'Kontaktieren Sie uns und buchen Sie Ihren Platz',
-      whatsapp: 'WhatsApp',
+      call: 'Anrufen',
       email: 'E-Mail',
       form: 'Kontaktformular',
     },
@@ -744,7 +744,7 @@ export const translations = {
     cta: {
       title: 'Spremni za mir i prirodu?',
       subtitle: 'Kontaktirajte nas i rezervišite svoje mjesto',
-      whatsapp: 'WhatsApp',
+      call: 'Pozovite nas',
       email: 'Email',
       form: 'Kontakt forma',
     },
@@ -929,7 +929,7 @@ export const translations = {
     cta: {
       title: 'Spremni za mir i prirodu?',
       subtitle: 'Kontaktirajte nas i rezervišite svoje mesto',
-      whatsapp: 'WhatsApp',
+      call: 'Pozovite nas',
       email: 'Email',
       form: 'Kontakt forma',
     },

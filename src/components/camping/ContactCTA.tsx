@@ -1,6 +1,9 @@
-import { MessageCircle, Mail, Send } from 'lucide-react';
+import { Phone, Mail } from 'lucide-react';
 import { useLanguage } from '@/i18n/LanguageContext';
 import { Button } from '@/components/ui/button';
+
+const PHONE_NUMBER = '+387 66 912 449';
+const EMAIL = 'camp.turjanica@gmail.com';
 
 export const ContactCTA = () => {
   const { t } = useLanguage();
@@ -18,10 +21,10 @@ export const ContactCTA = () => {
 
           {/* Contact Buttons */}
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Button variant="whatsapp" size="xl" asChild>
-              <a href="https://wa.me/387xxxxxxxxx" target="_blank" rel="noopener noreferrer">
-                <MessageCircle className="w-5 h-5" />
-                {t.cta.whatsapp}
+            <Button variant="heroSecondary" size="xl" asChild>
+              <a href={`tel:${PHONE_NUMBER.replace(/\s/g, '')}`}>
+                <Phone className="w-5 h-5" />
+                {t.cta.call}
               </a>
             </Button>
             
@@ -30,7 +33,7 @@ export const ContactCTA = () => {
               size="xl" 
               asChild
             >
-              <a href="mailto:info@campingturjanica.com">
+              <a href={`mailto:${EMAIL}`}>
                 <Mail className="w-5 h-5" />
                 {t.cta.email}
               </a>
