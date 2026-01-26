@@ -6,6 +6,7 @@ import { AboutSection } from '@/components/camping/AboutSection';
 import { OffersSection } from '@/components/camping/OffersSection';
 import { Accommodations } from '@/components/camping/Accommodations';
 import { Facilities } from '@/components/camping/Facilities';
+import { PhotoGallery } from '@/components/camping/PhotoGallery';
 import { NearbySection } from '@/components/camping/NearbySection';
 import { TripsSection } from '@/components/camping/TripsSection';
 import { DirectionsSection } from '@/components/camping/DirectionsSection';
@@ -27,6 +28,7 @@ const Index = () => {
           <OffersSection />
           <Accommodations />
           <Facilities />
+          <PhotoGallery />
           <NearbySection />
           <TripsSection />
           <DirectionsSection />
