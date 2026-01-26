@@ -8,12 +8,18 @@ import {
   Wheat,
   Apple,
   Wine,
-  Users
+  Users,
+  ChevronLeft,
+  ChevronRight
 } from 'lucide-react';
 import { useLanguage } from '@/i18n/LanguageContext';
+import { useRef, useState, useEffect } from 'react';
 
 export const OffersSection = () => {
   const { t } = useLanguage();
+  const scrollRef = useRef<HTMLDivElement>(null);
+  const [canScrollLeft, setCanScrollLeft] = useState(false);
+  const [canScrollRight, setCanScrollRight] = useState(true);
 
   const offers = [
     { icon: Tent, title: t.offers.activeStay.title, desc: t.offers.activeStay.desc },
@@ -28,11 +34,33 @@ export const OffersSection = () => {
     { icon: Users, title: t.offers.experience.title, desc: t.offers.experience.desc },
   ];
 
+  const checkScrollability = () => {
+    if (scrollRef.current) {
+      const { scrollLeft, scrollWidth, clientWidth } = scrollRef.current;
+      setCanScrollLeft(scrollLeft > 0);
+      setCanScrollRight(scrollLeft < scrollWidth - clientWidth - 10);
+    }
+  };
+
+  useEffect(() => {
+    checkScrollability();
+    window.addEventListener('resize', checkScrollability);
+    return () => window.removeEventListener('resize', checkScrollability);
+  }, []);
+
+  const scrollByCard = (direction: 'left' | 'right') => {
+    if (scrollRef.current) {
+      const cardWidth = 320 + 24; // card width + gap
+      const scrollAmount = direction === 'left' ? -cardWidth : cardWidth;
+      scrollRef.current.scrollBy({ left: scrollAmount, behavior: 'smooth' });
+    }
+  };
+
   return (
     <section id="offers" className="section-padding bg-background">
       <div className="section-container">
         {/* Header */}
-        <div className="text-center mb-16">
+        <div className="text-center mb-12">
           <h2 className="text-3xl sm:text-4xl font-bold mb-4">
             {t.offers.title}
           </h2>
@@ -41,19 +69,59 @@ export const OffersSection = () => {
           </p>
         </div>
 
-        {/* Offers Grid */}
-        <div className="grid sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-6">
-          {offers.map((offer, index) => (
+        {/* Carousel Container */}
+        <div className="relative">
+          {/* Left Arrow */}
+          {canScrollLeft && (
+            <button
+              onClick={() => scrollByCard('left')}
+              className="absolute left-0 top-1/2 -translate-y-1/2 z-10 w-12 h-12 rounded-full bg-background/90 border border-border shadow-card flex items-center justify-center hover:bg-secondary transition-colors -ml-4 lg:-ml-6"
+              aria-label="Scroll left"
+            >
+              <ChevronLeft className="w-6 h-6 text-foreground" />
+            </button>
+          )}
+
+          {/* Scrollable Container */}
+          <div
+            ref={scrollRef}
+            onScroll={checkScrollability}
+            className="flex gap-6 overflow-x-auto scrollbar-hide pb-4 snap-x snap-mandatory"
+            style={{ scrollbarWidth: 'none', msOverflowStyle: 'none' }}
+          >
+            {offers.map((offer, index) => (
+              <div
+                key={index}
+                className="flex-shrink-0 w-[280px] sm:w-[320px] snap-start group p-6 sm:p-8 rounded-2xl bg-card border border-border hover:shadow-card hover:border-primary/20 transition-all duration-300"
+              >
+                <div className="w-14 h-14 sm:w-16 sm:h-16 rounded-xl bg-secondary flex items-center justify-center text-primary mb-5 group-hover:bg-primary group-hover:text-primary-foreground transition-colors duration-300">
+                  <offer.icon className="w-7 h-7 sm:w-8 sm:h-8" />
+                </div>
+                <h3 className="font-semibold text-lg sm:text-xl mb-3 text-foreground">{offer.title}</h3>
+                <p className="text-sm sm:text-base text-muted-foreground leading-relaxed">{offer.desc}</p>
+              </div>
+            ))}
+          </div>
+
+          {/* Right Arrow */}
+          {canScrollRight && (
+            <button
+              onClick={() => scrollByCard('right')}
+              className="absolute right-0 top-1/2 -translate-y-1/2 z-10 w-12 h-12 rounded-full bg-background/90 border border-border shadow-card flex items-center justify-center hover:bg-secondary transition-colors -mr-4 lg:-mr-6"
+              aria-label="Scroll right"
+            >
+              <ChevronRight className="w-6 h-6 text-foreground" />
+            </button>
+          )}
+        </div>
+
+        {/* Scroll Indicator */}
+        <div className="flex justify-center mt-6 gap-1">
+          {offers.map((_, index) => (
             <div
               key={index}
-              className="group p-5 rounded-xl bg-card border border-border hover:shadow-card hover:border-primary/20 transition-all duration-300"
-            >
-              <div className="w-12 h-12 rounded-lg bg-secondary flex items-center justify-center text-primary mb-4 group-hover:bg-primary group-hover:text-primary-foreground transition-colors duration-300">
-                <offer.icon className="w-6 h-6" />
-              </div>
-              <h3 className="font-semibold mb-2 text-foreground">{offer.title}</h3>
-              <p className="text-sm text-muted-foreground leading-relaxed">{offer.desc}</p>
-            </div>
+              className="w-2 h-2 rounded-full bg-border"
+            />
           ))}
         </div>
       </div>

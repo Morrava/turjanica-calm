@@ -1,7 +1,6 @@
-import { useState } from 'react';
+import { useState, useRef, useEffect } from 'react';
 import { useLanguage } from '@/i18n/LanguageContext';
 import { X, ChevronLeft, ChevronRight, Images } from 'lucide-react';
-import { cn } from '@/lib/utils';
 
 // Import all gallery images
 import pavilionImg from '@/assets/gallery/pavilion.jpg';
@@ -15,33 +14,47 @@ import heartViewImg from '@/assets/gallery/heart-view.jpg';
 import treehouseCellarImg from '@/assets/gallery/treehouse-cellar.jpg';
 import heartDecorationImg from '@/assets/gallery/heart-decoration.jpg';
 
-interface GalleryImage {
-  src: string;
-  category: 'facilities' | 'nature' | 'accommodations';
-}
-
-const galleryImages: GalleryImage[] = [
-  { src: treehouseImg, category: 'accommodations' },
-  { src: treehouseCellarImg, category: 'accommodations' },
-  { src: campGroundsImg, category: 'nature' },
-  { src: pavilionImg, category: 'facilities' },
-  { src: eveningAtmosphereImg, category: 'facilities' },
-  { src: heartDecorationImg, category: 'nature' },
-  { src: sportsFieldImg, category: 'facilities' },
-  { src: heartViewImg, category: 'nature' },
-  { src: entranceWinterImg, category: 'nature' },
-  { src: roadSignImg, category: 'facilities' },
+const galleryImages = [
+  treehouseImg,
+  treehouseCellarImg,
+  campGroundsImg,
+  pavilionImg,
+  eveningAtmosphereImg,
+  heartDecorationImg,
+  sportsFieldImg,
+  heartViewImg,
+  entranceWinterImg,
+  roadSignImg,
 ];
 
 export const PhotoGallery = () => {
   const { t } = useLanguage();
   const [lightboxOpen, setLightboxOpen] = useState(false);
   const [currentIndex, setCurrentIndex] = useState(0);
-  const [filter, setFilter] = useState<'all' | 'facilities' | 'nature' | 'accommodations'>('all');
+  const scrollRef = useRef<HTMLDivElement>(null);
+  const [canScrollLeft, setCanScrollLeft] = useState(false);
+  const [canScrollRight, setCanScrollRight] = useState(true);
 
-  const filteredImages = filter === 'all' 
-    ? galleryImages 
-    : galleryImages.filter(img => img.category === filter);
+  const checkScrollability = () => {
+    if (scrollRef.current) {
+      const { scrollLeft, scrollWidth, clientWidth } = scrollRef.current;
+      setCanScrollLeft(scrollLeft > 0);
+      setCanScrollRight(scrollLeft < scrollWidth - clientWidth - 10);
+    }
+  };
+
+  useEffect(() => {
+    checkScrollability();
+    window.addEventListener('resize', checkScrollability);
+    return () => window.removeEventListener('resize', checkScrollability);
+  }, []);
+
+  const scrollByAmount = (direction: 'left' | 'right') => {
+    if (scrollRef.current) {
+      const scrollAmount = direction === 'left' ? -400 : 400;
+      scrollRef.current.scrollBy({ left: scrollAmount, behavior: 'smooth' });
+    }
+  };
 
   const openLightbox = (index: number) => {
     setCurrentIndex(index);
@@ -55,11 +68,11 @@ export const PhotoGallery = () => {
   };
 
   const goToPrevious = () => {
-    setCurrentIndex((prev) => (prev === 0 ? filteredImages.length - 1 : prev - 1));
+    setCurrentIndex((prev) => (prev === 0 ? galleryImages.length - 1 : prev - 1));
   };
 
   const goToNext = () => {
-    setCurrentIndex((prev) => (prev === filteredImages.length - 1 ? 0 : prev + 1));
+    setCurrentIndex((prev) => (prev === galleryImages.length - 1 ? 0 : prev + 1));
   };
 
   const handleKeyDown = (e: React.KeyboardEvent) => {
@@ -67,13 +80,6 @@ export const PhotoGallery = () => {
     if (e.key === 'ArrowLeft') goToPrevious();
     if (e.key === 'ArrowRight') goToNext();
   };
-
-  const categories = [
-    { key: 'all', label: t.gallery.all },
-    { key: 'facilities', label: t.gallery.facilities },
-    { key: 'nature', label: t.gallery.nature },
-    { key: 'accommodations', label: t.gallery.accommodations },
-  ] as const;
 
   return (
     <section id="gallery" className="py-16 md:py-24 bg-muted/30">
@@ -91,46 +97,53 @@ export const PhotoGallery = () => {
           </p>
         </div>
 
-        {/* Filter buttons */}
-        <div className="flex flex-wrap justify-center gap-2 mb-8">
-          {categories.map((cat) => (
+        {/* Gallery Carousel */}
+        <div className="relative">
+          {/* Left Arrow */}
+          {canScrollLeft && (
             <button
-              key={cat.key}
-              onClick={() => setFilter(cat.key)}
-              className={cn(
-                "px-4 py-2 rounded-full text-sm font-medium transition-all duration-200",
-                filter === cat.key
-                  ? "bg-primary text-primary-foreground shadow-md"
-                  : "bg-background text-muted-foreground hover:bg-primary/10 hover:text-primary border border-border"
-              )}
+              onClick={() => scrollByAmount('left')}
+              className="absolute left-0 top-1/2 -translate-y-1/2 z-10 w-12 h-12 rounded-full bg-background/90 border border-border shadow-card flex items-center justify-center hover:bg-secondary transition-colors -ml-4 lg:-ml-6"
+              aria-label="Scroll left"
             >
-              {cat.label}
+              <ChevronLeft className="w-6 h-6 text-foreground" />
             </button>
-          ))}
-        </div>
+          )}
 
-        {/* Gallery grid */}
-        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-3 md:gap-4">
-          {filteredImages.map((image, index) => (
+          {/* Scrollable Container */}
+          <div
+            ref={scrollRef}
+            onScroll={checkScrollability}
+            className="flex gap-4 overflow-x-auto scrollbar-hide pb-4"
+            style={{ scrollbarWidth: 'none', msOverflowStyle: 'none' }}
+          >
+            {galleryImages.map((image, index) => (
+              <button
+                key={index}
+                onClick={() => openLightbox(index)}
+                className="flex-shrink-0 group relative w-[280px] sm:w-[320px] md:w-[360px] aspect-[4/3] overflow-hidden rounded-xl bg-muted cursor-pointer focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2"
+              >
+                <img
+                  src={image}
+                  alt={`Camp Turjanica - Photo ${index + 1}`}
+                  className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                  loading="lazy"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+              </button>
+            ))}
+          </div>
+
+          {/* Right Arrow */}
+          {canScrollRight && (
             <button
-              key={index}
-              onClick={() => openLightbox(index)}
-              className="group relative aspect-square overflow-hidden rounded-xl bg-muted cursor-pointer focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2"
+              onClick={() => scrollByAmount('right')}
+              className="absolute right-0 top-1/2 -translate-y-1/2 z-10 w-12 h-12 rounded-full bg-background/90 border border-border shadow-card flex items-center justify-center hover:bg-secondary transition-colors -mr-4 lg:-mr-6"
+              aria-label="Scroll right"
             >
-              <img
-                src={image.src}
-                alt={`Camp Turjanica - ${image.category}`}
-                className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
-                loading="lazy"
-              />
-              <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
-              <div className="absolute bottom-3 left-3 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                <span className="text-xs text-white/90 bg-black/30 px-2 py-1 rounded-full backdrop-blur-sm">
-                  {t.gallery[image.category]}
-                </span>
-              </div>
+              <ChevronRight className="w-6 h-6 text-foreground" />
             </button>
-          ))}
+          )}
         </div>
 
         {/* Lightbox */}
@@ -167,13 +180,13 @@ export const PhotoGallery = () => {
               onClick={(e) => e.stopPropagation()}
             >
               <img
-                src={filteredImages[currentIndex].src}
-                alt={`Camp Turjanica - ${filteredImages[currentIndex].category}`}
+                src={galleryImages[currentIndex]}
+                alt={`Camp Turjanica - Photo ${currentIndex + 1}`}
                 className="max-w-full max-h-[85vh] object-contain rounded-lg"
               />
               {/* Image counter */}
               <div className="absolute bottom-4 left-1/2 -translate-x-1/2 text-white/80 text-sm bg-black/40 px-4 py-2 rounded-full backdrop-blur-sm">
-                {currentIndex + 1} / {filteredImages.length}
+                {currentIndex + 1} / {galleryImages.length}
               </div>
             </div>
 
