@@ -2,9 +2,7 @@ import { MapPin, Phone, Mail, Navigation } from 'lucide-react';
 import { useLanguage } from '@/i18n/LanguageContext';
 import { LanguageSwitcher } from './LanguageSwitcher';
 
-const GPS_LAT = 44.77506126380439;
-const GPS_LNG = 17.512651922089002;
-const GOOGLE_MAPS_URL = `https://www.google.com/maps/search/?api=1&query=${GPS_LAT},${GPS_LNG}`;
+const GOOGLE_MAPS_URL = "https://www.google.com/maps/place/44%C2%B046'30.2%22N+17%C2%B030'45.5%22E/@44.7750638,17.5100751,17z/data=!3m1!4b1!4m4!3m3!8m2!3d44.77506!4d17.51265?entry=ttu&g_ep=EgoyMDI2MDEyMS4wIKXMDSoKLDEwMDc5MjA2OUgBUAM%3D";
 
 export const Footer = () => {
   const { t } = useLanguage();
