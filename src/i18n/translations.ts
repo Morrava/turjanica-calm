@@ -200,6 +200,14 @@ export const translations = {
       language: 'Taal',
       rights: 'Alle rechten voorbehouden',
     },
+    gallery: {
+      title: 'Fotogalerij',
+      subtitle: 'Ontdek de schoonheid van Camp Turjanica',
+      all: 'Alles',
+      facilities: 'Voorzieningen',
+      nature: 'Natuur',
+      accommodations: 'Verblijven',
+    },
   },
   en: {
     camp: {
@@ -376,6 +384,14 @@ export const translations = {
       links: 'Links',
       language: 'Language',
       rights: 'All rights reserved',
+    },
+    gallery: {
+      title: 'Photo Gallery',
+      subtitle: 'Discover the beauty of Camp Turjanica',
+      all: 'All',
+      facilities: 'Facilities',
+      nature: 'Nature',
+      accommodations: 'Accommodations',
     },
   },
   de: {
@@ -554,6 +570,14 @@ export const translations = {
       language: 'Sprache',
       rights: 'Alle Rechte vorbehalten',
     },
+    gallery: {
+      title: 'Fotogalerie',
+      subtitle: 'Entdecken Sie die Schönheit von Camp Turjanica',
+      all: 'Alle',
+      facilities: 'Einrichtungen',
+      nature: 'Natur',
+      accommodations: 'Unterkünfte',
+    },
   },
   bs: {
     camp: {
@@ -731,6 +755,14 @@ export const translations = {
       language: 'Jezik',
       rights: 'Sva prava zadržana',
     },
+    gallery: {
+      title: 'Foto galerija',
+      subtitle: 'Otkrijte ljepotu kampa Turjanica',
+      all: 'Sve',
+      facilities: 'Sadržaji',
+      nature: 'Priroda',
+      accommodations: 'Smještaj',
+    },
   },
   'sr-Latn': {
     camp: {
@@ -907,6 +939,14 @@ export const translations = {
       links: 'Linkovi',
       language: 'Jezik',
       rights: 'Sva prava zadržana',
+    },
+    gallery: {
+      title: 'Foto galerija',
+      subtitle: 'Otkrijte lepotu kampa Turjanica',
+      all: 'Sve',
+      facilities: 'Sadržaji',
+      nature: 'Priroda',
+      accommodations: 'Smeštaj',
     },
   },
 };
