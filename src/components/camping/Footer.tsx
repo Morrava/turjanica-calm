@@ -1,6 +1,7 @@
 import { MapPin, Phone, Mail, Navigation } from 'lucide-react';
 import { useLanguage } from '@/i18n/LanguageContext';
 import { LanguageSwitcher } from './LanguageSwitcher';
+import icon from '@/assets/icon.png';
 
 const GOOGLE_MAPS_URL = "https://www.google.com/maps/place/Izleti%C5%A1te+Camp+Turjanica/@44.7748936,17.5077542,17z/data=!3m1!4b1!4m6!3m5!1s0x475e0bd99cadffeb:0x229eb213d65e0676!8m2!3d44.7748899!4d17.5126251!16s%2Fg%2F11sv_lsqmk?entry=ttu&g_ep=EgoyMDI2MDEyMS4wIKXMDSoKLDEwMDc5MjA2OUgBUAM%3D";
 
@@ -14,9 +15,7 @@ export const Footer = () => {
           {/* Brand */}
           <div>
             <div className="flex items-center gap-2 mb-4">
-              <div className="w-10 h-10 rounded-full bg-primary flex items-center justify-center">
-                <span className="text-primary-foreground text-lg font-bold">T</span>
-              </div>
+              <img src={icon} alt="Turjanica" className="w-10 h-10 invert" />
               <span className="font-semibold text-lg">{t.camp.name}</span>
             </div>
             <p className="text-background/70 text-sm italic mb-4">
