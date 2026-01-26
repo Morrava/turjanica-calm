@@ -37,12 +37,15 @@ export const LanguageSwitcher = () => {
         />
       </button>
 
+      {/* Invisible bridge to prevent gap */}
+      <div className="absolute top-full right-0 left-0 h-2" />
+
       {/* Dropdown Menu */}
       <div
-        className={`absolute top-full right-0 mt-1 z-50 bg-background border border-border rounded-lg shadow-lg overflow-hidden transition-all duration-200 origin-top ${
+        className={`absolute top-[calc(100%+0.25rem)] right-0 z-50 bg-background border border-border rounded-lg shadow-lg overflow-hidden transition-all duration-200 origin-top ${
           isOpen 
-            ? 'opacity-100 scale-100 translate-y-0' 
-            : 'opacity-0 scale-95 -translate-y-2 pointer-events-none'
+            ? 'opacity-100 scale-100 visible' 
+            : 'opacity-0 scale-95 invisible'
         }`}
       >
         <div className="py-1 min-w-[140px]">
