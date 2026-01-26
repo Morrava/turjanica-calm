@@ -3,6 +3,7 @@ import { Menu, X } from 'lucide-react';
 import { useLanguage } from '@/i18n/LanguageContext';
 import { LanguageSwitcher } from './LanguageSwitcher';
 import { Button } from '@/components/ui/button';
+import logo from '@/assets/logo.png';
 
 export const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -22,11 +23,12 @@ export const Header = () => {
       <div className="section-container">
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
-          <a href="#" className="flex items-center gap-2">
-            <div className="w-10 h-10 rounded-full bg-primary flex items-center justify-center">
-              <span className="text-primary-foreground text-lg font-bold">T</span>
-            </div>
-            <span className="font-semibold text-lg hidden sm:block">Turjanica</span>
+          <a href="#" className="flex items-center">
+            <img 
+              src={logo} 
+              alt="Camping Turjanica" 
+              className="h-10 w-auto"
+            />
           </a>
 
           {/* Desktop Navigation */}
