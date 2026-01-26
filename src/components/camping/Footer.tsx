@@ -1,6 +1,10 @@
-import { MapPin, Phone, Mail } from 'lucide-react';
+import { MapPin, Phone, Mail, Navigation } from 'lucide-react';
 import { useLanguage } from '@/i18n/LanguageContext';
 import { LanguageSwitcher } from './LanguageSwitcher';
+
+const GPS_LAT = 44.77506126380439;
+const GPS_LNG = 17.512651922089002;
+const GOOGLE_MAPS_URL = `https://www.google.com/maps?q=${GPS_LAT},${GPS_LNG}`;
 
 export const Footer = () => {
   const { t } = useLanguage();
@@ -15,20 +19,34 @@ export const Footer = () => {
               <div className="w-10 h-10 rounded-full bg-primary flex items-center justify-center">
                 <span className="text-primary-foreground text-lg font-bold">T</span>
               </div>
-              <span className="font-semibold text-lg">Camping Turjanica</span>
+              <span className="font-semibold text-lg">{t.camp.name}</span>
             </div>
-            <p className="text-background/70 text-sm italic">
+            <p className="text-background/70 text-sm italic mb-4">
               {t.footer.tagline}
             </p>
+            <a 
+              href={GOOGLE_MAPS_URL}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-2 text-sm text-primary hover:text-primary/80 transition-colors"
+            >
+              <Navigation className="w-4 h-4" />
+              {t.directions.openMaps}
+            </a>
           </div>
 
           {/* Contact */}
           <div>
             <h4 className="font-semibold mb-4">{t.nav.contact}</h4>
             <div className="space-y-3 text-sm text-background/70">
-              <div className="flex items-center gap-2">
-                <MapPin className="w-4 h-4" />
-                <span>{t.footer.address}</span>
+              <div className="flex items-start gap-2">
+                <MapPin className="w-4 h-4 mt-0.5 flex-shrink-0" />
+                <div>
+                  <span className="block">{t.footer.address}</span>
+                  <span className="block text-xs font-mono mt-1">
+                    GPS: {t.camp.gps}
+                  </span>
+                </div>
               </div>
               <div className="flex items-center gap-2">
                 <Phone className="w-4 h-4" />
@@ -36,15 +54,21 @@ export const Footer = () => {
               </div>
               <div className="flex items-center gap-2">
                 <Mail className="w-4 h-4" />
-                <span>info@campingturjanica.com</span>
+                <span>info@campturjanica.com</span>
               </div>
             </div>
           </div>
 
           {/* Quick Links */}
           <div>
-            <h4 className="font-semibold mb-4">Links</h4>
+            <h4 className="font-semibold mb-4">{t.footer.links}</h4>
             <div className="space-y-2 text-sm text-background/70">
+              <a href="#about" className="block hover:text-background transition-colors">
+                {t.nav.about}
+              </a>
+              <a href="#offers" className="block hover:text-background transition-colors">
+                {t.nav.offers}
+              </a>
               <a href="#accommodations" className="block hover:text-background transition-colors">
                 {t.nav.accommodations}
               </a>
@@ -54,19 +78,22 @@ export const Footer = () => {
               <a href="#location" className="block hover:text-background transition-colors">
                 {t.nav.location}
               </a>
+              <a href="#trips" className="block hover:text-background transition-colors">
+                {t.nav.trips}
+              </a>
             </div>
           </div>
 
           {/* Language */}
           <div>
-            <h4 className="font-semibold mb-4">Language</h4>
+            <h4 className="font-semibold mb-4">{t.footer.language}</h4>
             <LanguageSwitcher />
           </div>
         </div>
 
         {/* Bottom bar */}
         <div className="pt-8 border-t border-background/10 text-center text-sm text-background/50">
-          <p>© {new Date().getFullYear()} Camping Turjanica. {t.footer.rights}</p>
+          <p>© {new Date().getFullYear()} {t.camp.name}. {t.footer.rights}</p>
         </div>
       </div>
     </footer>

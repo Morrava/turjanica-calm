@@ -1,9 +1,14 @@
 import { LanguageProvider } from '@/i18n/LanguageContext';
 import { Header } from '@/components/camping/Header';
 import { Hero } from '@/components/camping/Hero';
-import { WhySection } from '@/components/camping/WhySection';
+import { QuickFacts } from '@/components/camping/QuickFacts';
+import { AboutSection } from '@/components/camping/AboutSection';
+import { OffersSection } from '@/components/camping/OffersSection';
 import { Accommodations } from '@/components/camping/Accommodations';
 import { Facilities } from '@/components/camping/Facilities';
+import { NearbySection } from '@/components/camping/NearbySection';
+import { TripsSection } from '@/components/camping/TripsSection';
+import { DirectionsSection } from '@/components/camping/DirectionsSection';
 import { Location } from '@/components/camping/Location';
 import { Reviews } from '@/components/camping/Reviews';
 import { ContactCTA } from '@/components/camping/ContactCTA';
@@ -17,9 +22,14 @@ const Index = () => {
         <Header />
         <main>
           <Hero />
-          <WhySection />
+          <QuickFacts />
+          <AboutSection />
+          <OffersSection />
           <Accommodations />
           <Facilities />
+          <NearbySection />
+          <TripsSection />
+          <DirectionsSection />
           <Location />
           <Reviews />
           <ContactCTA />

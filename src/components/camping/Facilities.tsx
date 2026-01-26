@@ -1,4 +1,4 @@
-import { Bath, Droplets, Zap, Flame, Baby, Dog, Wine, Wifi } from 'lucide-react';
+import { Bath, Zap, Droplets, Flame, UtensilsCrossed, Sparkles } from 'lucide-react';
 import { useLanguage } from '@/i18n/LanguageContext';
 
 export const Facilities = () => {
@@ -6,13 +6,11 @@ export const Facilities = () => {
 
   const facilities = [
     { icon: Bath, label: t.facilities.toilets },
-    { icon: Droplets, label: t.facilities.water },
     { icon: Zap, label: t.facilities.electricity },
+    { icon: Droplets, label: t.facilities.water },
     { icon: Flame, label: t.facilities.firepit },
-    { icon: Baby, label: t.facilities.kids },
-    { icon: Dog, label: t.facilities.pets },
-    { icon: Wine, label: t.facilities.bar },
-    { icon: Wifi, label: t.facilities.wifi },
+    { icon: UtensilsCrossed, label: t.facilities.equipment },
+    { icon: Sparkles, label: t.facilities.spring },
   ];
 
   return (
@@ -29,7 +27,7 @@ export const Facilities = () => {
         </div>
 
         {/* Facilities Grid */}
-        <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 sm:gap-6 max-w-4xl mx-auto">
+        <div className="grid grid-cols-2 sm:grid-cols-3 gap-4 sm:gap-6 max-w-4xl mx-auto">
           {facilities.map((facility, index) => (
             <div
               key={index}
@@ -38,7 +36,7 @@ export const Facilities = () => {
               <div className="w-12 h-12 rounded-full bg-secondary flex items-center justify-center text-primary">
                 <facility.icon className="w-6 h-6" />
               </div>
-              <span className="text-sm font-medium text-center text-foreground">
+              <span className="text-sm font-medium text-center text-foreground leading-snug">
                 {facility.label}
               </span>
             </div>

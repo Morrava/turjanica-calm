@@ -1,6 +1,11 @@
-import { MapPin, Mountain, Shield } from 'lucide-react';
+import { MapPin, Mountain, Shield, Navigation } from 'lucide-react';
 import { useLanguage } from '@/i18n/LanguageContext';
-import natureImage from '@/assets/nature-surroundings.jpg';
+import { Button } from '@/components/ui/button';
+
+const GPS_LAT = 44.77506126380439;
+const GPS_LNG = 17.512651922089002;
+const GOOGLE_MAPS_URL = `https://www.google.com/maps?q=${GPS_LAT},${GPS_LNG}`;
+const EMBED_URL = `https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2856.123456789!2d${GPS_LNG}!3d${GPS_LAT}!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNDTCsDQ2JzMwLjIiTiAxN8KwMzAnNDUuNSJF!5e0!3m2!1sen!2sus!4v1705600000000!5m2!1sen!2sus`;
 
 export const Location = () => {
   const { t } = useLanguage();
@@ -24,23 +29,15 @@ export const Location = () => {
           </p>
         </div>
 
-        <div className="grid lg:grid-cols-2 gap-12 items-center">
-          {/* Image & Description */}
+        <div className="grid lg:grid-cols-2 gap-12 items-start">
+          {/* Description */}
           <div>
-            <div className="rounded-2xl overflow-hidden shadow-card mb-8">
-              <img
-                src={natureImage}
-                alt="Bosnian nature surroundings"
-                className="w-full aspect-video object-cover"
-              />
-            </div>
-
             <p className="text-muted-foreground leading-relaxed mb-8">
               {t.location.description}
             </p>
 
             {/* Highlights */}
-            <div className="flex flex-wrap gap-4">
+            <div className="flex flex-wrap gap-4 mb-8">
               {highlights.map((item, index) => (
                 <div
                   key={index}
@@ -51,12 +48,29 @@ export const Location = () => {
                 </div>
               ))}
             </div>
+
+            {/* GPS + CTA */}
+            <div className="bg-secondary rounded-xl p-5">
+              <div className="flex items-center gap-2 mb-3">
+                <MapPin className="w-5 h-5 text-primary" />
+                <span className="font-semibold">{t.camp.location}</span>
+              </div>
+              <p className="text-sm font-mono text-muted-foreground mb-4">
+                GPS: {GPS_LAT}, {GPS_LNG}
+              </p>
+              <Button variant="cta" size="default" asChild className="w-full sm:w-auto">
+                <a href={GOOGLE_MAPS_URL} target="_blank" rel="noopener noreferrer">
+                  <Navigation className="w-4 h-4" />
+                  {t.directions.openMaps}
+                </a>
+              </Button>
+            </div>
           </div>
 
           {/* Map */}
           <div className="rounded-2xl overflow-hidden shadow-card border border-border h-[400px] lg:h-[500px]">
             <iframe
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d90856.21542978654!2d17.1066559!3d44.7725581!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x475e03678881f8b5%3A0x2c9ec9ef50c1a12a!2sBanja%20Luka%2C%20Bosnia%20and%20Herzegovina!5e0!3m2!1sen!2sus!4v1705600000000!5m2!1sen!2sus"
+              src={EMBED_URL}
               width="100%"
               height="100%"
               style={{ border: 0 }}
