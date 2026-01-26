@@ -2,7 +2,7 @@ import { MapPin, Phone, Mail, Navigation } from 'lucide-react';
 import { useLanguage } from '@/i18n/LanguageContext';
 import { LanguageSwitcher } from './LanguageSwitcher';
 
-const GOOGLE_MAPS_URL = "https://www.google.com/maps/place/44%C2%B046'30.2%22N+17%C2%B030'45.5%22E/@44.7750638,17.5100751,17z/data=!3m1!4b1!4m4!3m3!8m2!3d44.77506!4d17.51265?entry=ttu&g_ep=EgoyMDI2MDEyMS4wIKXMDSoKLDEwMDc5MjA2OUgBUAM%3D";
+const GOOGLE_MAPS_URL = "https://www.google.com/maps/place/Izleti%C5%A1te+Camp+Turjanica/@44.7748936,17.5077542,17z/data=!3m1!4b1!4m6!3m5!1s0x475e0bd99cadffeb:0x229eb213d65e0676!8m2!3d44.7748899!4d17.5126251!16s%2Fg%2F11sv_lsqmk?entry=ttu&g_ep=EgoyMDI2MDEyMS4wIKXMDSoKLDEwMDc5MjA2OUgBUAM%3D";
 
 export const Footer = () => {
   const { t } = useLanguage();
