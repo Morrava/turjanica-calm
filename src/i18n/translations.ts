@@ -47,7 +47,7 @@ export const translations = {
     // About
     about: {
       title: 'Over de camping',
-      text1: 'Camp Turjanica ligt op slechts 2 km van de hoofdweg R-476 (Banja Luka–Doboj–Sarajevo), bereikbaar via een geasfalteerde weg. Google Maps navigatie leidt u precies naar de camping.',
+      text1: 'Camp Turjanica ligt op slechts 2 km van de hoofdweg R-476 (Banja Luka–Doboj–Sarajevo). De camping is gemakkelijk bereikbaar via een volledig geasfalteerde toegangsweg. Gebruik Google Maps om direct naar ons toe te navigeren.',
       text2: 'Op 38 km van Banja Luka vindt u 10 hectare prachtige natuur, omringd door twee kleine rivieren. De rijke planten- en dierenwereld zorgt voor een zeer aangenaam verblijf.',
     },
     // What we offer
@@ -242,7 +242,7 @@ export const translations = {
     },
     about: {
       title: 'About the camp',
-      text1: 'Camp Turjanica is located just 2 km from the main road R-476 (Banja Luka–Doboj–Sarajevo), accessible via an asphalt road. Google Maps navigation leads you precisely to the camp.',
+      text1: 'Camp Turjanica is located just 2 km from the main road R-476 (Banja Luka–Doboj–Sarajevo). The camp is easily accessible via a fully paved access road. Use Google Maps to navigate directly to us.',
       text2: 'At 38 km from Banja Luka, you will find 10 hectares of beautiful nature, surrounded by two small rivers. The rich plant and animal life ensures a very pleasant stay.',
     },
     offers: {
@@ -427,7 +427,7 @@ export const translations = {
     },
     about: {
       title: 'Über den Campingplatz',
-      text1: 'Camp Turjanica liegt nur 2 km von der Hauptstraße R-476 (Banja Luka–Doboj–Sarajevo) entfernt, erreichbar über eine asphaltierte Straße. Google Maps Navigation führt Sie präzise zum Camp.',
+      text1: 'Camp Turjanica liegt nur 2 km von der Hauptstraße R-476 (Banja Luka–Doboj–Sarajevo) entfernt. Der Campingplatz ist über eine vollständig asphaltierte Zufahrtsstraße leicht erreichbar. Nutzen Sie Google Maps, um direkt zu uns zu navigieren.',
       text2: '38 km von Banja Luka entfernt finden Sie 10 Hektar wunderschöne Natur, umgeben von zwei kleinen Flüssen. Die reiche Pflanzen- und Tierwelt sorgt für einen sehr angenehmen Aufenthalt.',
     },
     offers: {
@@ -612,7 +612,7 @@ export const translations = {
     },
     about: {
       title: 'O kampu',
-      text1: 'Kamp Turjanica se nalazi na samo 2 km od glavnog puta R-476 (Banja Luka–Doboj–Sarajevo), povezan asfaltnim putem. Google Maps navigacija vas vodi precizno do kampa.',
+      text1: 'Kamp Turjanica se nalazi na samo 2 km od glavnog puta R-476 (Banja Luka–Doboj–Sarajevo). Kamp je lako dostupan putem potpuno asfaltiranog pristupnog puta. Koristite Google Maps za navigaciju direktno do nas.',
       text2: 'Na 38 km od Banja Luke pronaći ćete 10 hektara prelijepe prirode, okružene sa dvije male rijeke. Bogat biljni i životinjski svijet osigurava vrlo ugodan boravak.',
     },
     offers: {
@@ -797,7 +797,7 @@ export const translations = {
     },
     about: {
       title: 'O kampu',
-      text1: 'Kamp Turjanica se nalazi na samo 2 km od glavnog puta R-476 (Banja Luka–Doboj–Sarajevo), povezan asfaltnim putem. Google Maps navigacija vas vodi precizno do kampa.',
+      text1: 'Kamp Turjanica se nalazi na samo 2 km od glavnog puta R-476 (Banja Luka–Doboj–Sarajevo). Kamp je lako dostupan putem potpuno asfaltiranog pristupnog puta. Koristite Google Maps za navigaciju direktno do nas.',
       text2: 'Na 38 km od Banja Luke pronaći ćete 10 hektara prelepe prirode, okružene sa dve male reke. Bogat biljni i životinjski svet osigurava veoma ugodan boravak.',
     },
     offers: {
