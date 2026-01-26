@@ -27,7 +27,7 @@ export const Header = () => {
             <img 
               src={logo} 
               alt="Camping Turjanica" 
-              className="h-16 sm:h-20 w-auto"
+              className="h-9 sm:h-10 w-auto"
             />
           </a>
 
