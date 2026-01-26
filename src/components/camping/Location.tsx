@@ -4,8 +4,8 @@ import { Button } from '@/components/ui/button';
 
 const GPS_LAT = 44.77506126380439;
 const GPS_LNG = 17.512651922089002;
-const GOOGLE_MAPS_URL = `https://www.google.com/maps?q=${GPS_LAT},${GPS_LNG}`;
-const EMBED_URL = `https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2856.123456789!2d${GPS_LNG}!3d${GPS_LAT}!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNDTCsDQ2JzMwLjIiTiAxN8KwMzAnNDUuNSJF!5e0!3m2!1sen!2sus!4v1705600000000!5m2!1sen!2sus`;
+const GOOGLE_MAPS_URL = `https://www.google.com/maps/search/?api=1&query=${GPS_LAT},${GPS_LNG}`;
+const EMBED_URL = `https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2856.5!2d${GPS_LNG}!3d${GPS_LAT}!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNDTCsDQ2JzMwLjIiTiAxN8KwMzAnNDUuNSJF!5e0!3m2!1sen!2sba!4v1706000000000!5m2!1sen!2sba`;
 
 export const Location = () => {
   const { t } = useLanguage();

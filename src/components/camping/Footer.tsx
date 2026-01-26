@@ -4,7 +4,7 @@ import { LanguageSwitcher } from './LanguageSwitcher';
 
 const GPS_LAT = 44.77506126380439;
 const GPS_LNG = 17.512651922089002;
-const GOOGLE_MAPS_URL = `https://www.google.com/maps?q=${GPS_LAT},${GPS_LNG}`;
+const GOOGLE_MAPS_URL = `https://www.google.com/maps/search/?api=1&query=${GPS_LAT},${GPS_LNG}`;
 
 export const Footer = () => {
   const { t } = useLanguage();
@@ -50,11 +50,11 @@ export const Footer = () => {
               </div>
               <div className="flex items-center gap-2">
                 <Phone className="w-4 h-4" />
-                <span>+387 XX XXX XXX</span>
+                <a href="tel:+38766912449" className="hover:text-background transition-colors">+387 66 912 449</a>
               </div>
               <div className="flex items-center gap-2">
                 <Mail className="w-4 h-4" />
-                <span>info@campturjanica.com</span>
+                <a href="mailto:camp.turjanica@gmail.com" className="hover:text-background transition-colors">camp.turjanica@gmail.com</a>
               </div>
             </div>
           </div>

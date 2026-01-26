@@ -4,7 +4,7 @@ import { Button } from '@/components/ui/button';
 
 const GPS_LAT = 44.77506126380439;
 const GPS_LNG = 17.512651922089002;
-const GOOGLE_MAPS_URL = `https://www.google.com/maps?q=${GPS_LAT},${GPS_LNG}`;
+const GOOGLE_MAPS_URL = `https://www.google.com/maps/search/?api=1&query=${GPS_LAT},${GPS_LNG}`;
 
 export const DirectionsSection = () => {
   const { t } = useLanguage();
