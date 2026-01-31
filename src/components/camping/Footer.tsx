@@ -1,4 +1,4 @@
-import { MapPin, Phone, Mail, Navigation } from 'lucide-react';
+import { MapPin, Phone, Mail, Navigation, Instagram, Facebook } from 'lucide-react';
 import { useLanguage } from '@/i18n/LanguageContext';
 import { LanguageSwitcher } from './LanguageSwitcher';
 import icon from '@/assets/icon.png';
@@ -21,6 +21,26 @@ export const Footer = () => {
             <p className="text-background/70 text-sm italic mb-4">
               {t.footer.tagline}
             </p>
+            <div className="flex items-center gap-4 mb-4">
+              <a 
+                href="https://www.instagram.com/izletiste_camp_turjanica/?hl=en"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-background/70 hover:text-primary transition-colors"
+                aria-label="Instagram"
+              >
+                <Instagram className="w-5 h-5" />
+              </a>
+              <a 
+                href="https://www.facebook.com/p/Izleti%C5%A1te-i-kamp-Turjanica-Picnic-and-Camping-Turjanica-100094247625434/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-background/70 hover:text-primary transition-colors"
+                aria-label="Facebook"
+              >
+                <Facebook className="w-5 h-5" />
+              </a>
+            </div>
             <a 
               href={GOOGLE_MAPS_URL}
               target="_blank"
