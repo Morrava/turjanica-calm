@@ -102,9 +102,9 @@ export const Footer = () => {
           </div>
 
           {/* Language */}
-          <div>
+          <div className="sm:col-span-2 lg:col-span-1">
             <h4 className="font-semibold mb-4">{t.footer.language}</h4>
-            <LanguageSwitcher />
+            <LanguageSwitcher variant="footer" />
           </div>
         </div>
 
