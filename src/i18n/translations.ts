@@ -187,7 +187,7 @@ export const translations = {
     // CTA
     cta: {
       title: 'Klaar voor rust en natuur?',
-      subtitle: 'Chat met ons via onze socials',
+      subtitle: 'Neem contact met ons op via onze socials',
       whatsapp: 'WhatsApp',
       messenger: 'Messenger',
       instagram: 'Instagram DM',
@@ -374,7 +374,7 @@ export const translations = {
     },
     cta: {
       title: 'Ready for peace and nature?',
-      subtitle: 'Chat with us through our socials',
+      subtitle: 'Contact us through our socials',
       whatsapp: 'WhatsApp',
       messenger: 'Messenger',
       instagram: 'Instagram DM',
@@ -560,7 +560,7 @@ export const translations = {
     },
     cta: {
       title: 'Bereit für Ruhe und Natur?',
-      subtitle: 'Chatten Sie mit uns über unsere Socials',
+      subtitle: 'Kontaktieren Sie uns über unsere Socials',
       whatsapp: 'WhatsApp',
       messenger: 'Messenger',
       instagram: 'Instagram DM',
@@ -746,7 +746,7 @@ export const translations = {
     },
     cta: {
       title: 'Spremni za mir i prirodu?',
-      subtitle: 'Pišite nam preko naših društvenih mreža',
+      subtitle: 'Kontaktirajte nas preko naših društvenih mreža',
       whatsapp: 'WhatsApp',
       messenger: 'Messenger',
       instagram: 'Instagram DM',
@@ -932,7 +932,7 @@ export const translations = {
     },
     cta: {
       title: 'Prêt pour la paix et la nature ?',
-      subtitle: 'Discutez avec nous via nos réseaux sociaux',
+      subtitle: 'Contactez-nous via nos réseaux sociaux',
       whatsapp: 'WhatsApp',
       messenger: 'Messenger',
       instagram: 'Instagram DM',
