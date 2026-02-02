@@ -64,9 +64,10 @@ export const PhotoGallery = () => {
     return () => window.removeEventListener('resize', checkScrollability);
   }, []);
 
-  const scrollByAmount = (direction: 'left' | 'right') => {
+  const scrollByCard = (direction: 'left' | 'right') => {
     if (scrollRef.current) {
-      const scrollAmount = direction === 'left' ? -400 : 400;
+      const cardWidth = 360 + 16; // card width + gap (md:w-[360px] + gap-4)
+      const scrollAmount = direction === 'left' ? -cardWidth : cardWidth;
       scrollRef.current.scrollBy({ left: scrollAmount, behavior: 'smooth' });
     }
   };
@@ -117,7 +118,7 @@ export const PhotoGallery = () => {
           {/* Left Arrow */}
           {canScrollLeft && (
             <button
-              onClick={() => scrollByAmount('left')}
+              onClick={() => scrollByCard('left')}
               className="absolute left-0 top-1/2 -translate-y-1/2 z-10 w-12 h-12 rounded-full bg-background/90 border border-border shadow-card flex items-center justify-center hover:bg-secondary transition-colors -ml-4 lg:-ml-6"
               aria-label="Scroll left"
             >
@@ -129,14 +130,14 @@ export const PhotoGallery = () => {
           <div
             ref={scrollRef}
             onScroll={checkScrollability}
-            className="flex gap-4 overflow-x-auto scrollbar-hide pb-4"
+            className="flex gap-4 overflow-x-auto scrollbar-hide pb-4 snap-x snap-mandatory"
             style={{ scrollbarWidth: 'none', msOverflowStyle: 'none' }}
           >
             {galleryImages.map((image, index) => (
               <button
                 key={index}
                 onClick={() => openLightbox(index)}
-                className="flex-shrink-0 group relative w-[280px] sm:w-[320px] md:w-[360px] aspect-[4/3] overflow-hidden rounded-xl bg-muted cursor-pointer focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2"
+                className="flex-shrink-0 snap-start group relative w-[280px] sm:w-[320px] md:w-[360px] aspect-[4/3] overflow-hidden rounded-xl bg-muted cursor-pointer focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2"
               >
                 <img
                   src={image}
@@ -152,7 +153,7 @@ export const PhotoGallery = () => {
           {/* Right Arrow */}
           {canScrollRight && (
             <button
-              onClick={() => scrollByAmount('right')}
+              onClick={() => scrollByCard('right')}
               className="absolute right-0 top-1/2 -translate-y-1/2 z-10 w-12 h-12 rounded-full bg-background/90 border border-border shadow-card flex items-center justify-center hover:bg-secondary transition-colors -mr-4 lg:-mr-6"
               aria-label="Scroll right"
             >
