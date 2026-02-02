@@ -66,7 +66,7 @@ export const PhotoGallery = () => {
 
   const scrollByCard = (direction: 'left' | 'right') => {
     if (scrollRef.current) {
-      const cardWidth = 360 + 16; // card width + gap (md:w-[360px] + gap-4)
+      const cardWidth = 432 + 16; // card width + gap (md:w-[432px] + gap-4)
       const scrollAmount = direction === 'left' ? -cardWidth : cardWidth;
       scrollRef.current.scrollBy({ left: scrollAmount, behavior: 'smooth' });
     }
@@ -137,7 +137,7 @@ export const PhotoGallery = () => {
               <button
                 key={index}
                 onClick={() => openLightbox(index)}
-                className="flex-shrink-0 snap-start group relative w-[280px] sm:w-[320px] md:w-[360px] aspect-[4/3] overflow-hidden rounded-xl bg-muted cursor-pointer focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2"
+                className="flex-shrink-0 snap-start group relative w-[336px] sm:w-[384px] md:w-[432px] aspect-[4/3] overflow-hidden rounded-xl bg-muted cursor-pointer focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2"
               >
                 <img
                   src={image}
