@@ -1,9 +1,8 @@
 import { useState } from 'react';
-import { Menu, X } from 'lucide-react';
+import { Menu, X, Tent } from 'lucide-react';
 import { useLanguage } from '@/i18n/LanguageContext';
 import { LanguageSwitcher } from './LanguageSwitcher';
 import { Button } from '@/components/ui/button';
-import icon from '@/assets/icon.png';
 
 export const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -34,7 +33,9 @@ export const Header = () => {
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
           <a href="#" className="flex items-center gap-2">
-            <img src={icon} alt="Turjanica" className="h-8 sm:h-9 w-auto" />
+            <div className="w-8 h-8 sm:w-9 sm:h-9 rounded-lg bg-primary flex items-center justify-center">
+              <Tent className="w-5 h-5 sm:w-6 sm:h-6 text-primary-foreground" />
+            </div>
             <span className="font-semibold text-foreground text-sm sm:text-base">Camping Turjanica</span>
           </a>
 
