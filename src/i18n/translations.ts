@@ -187,10 +187,11 @@ export const translations = {
     // CTA
     cta: {
       title: 'Klaar voor rust en natuur?',
-      subtitle: 'Neem contact op en boek uw plek',
-      call: 'Bellen',
+      subtitle: 'Chat met ons via onze socials',
+      whatsapp: 'WhatsApp',
+      messenger: 'Messenger',
+      instagram: 'Instagram DM',
       email: 'Email',
-      form: 'Contactformulier',
     },
     // Footer
     footer: {
@@ -373,10 +374,11 @@ export const translations = {
     },
     cta: {
       title: 'Ready for peace and nature?',
-      subtitle: 'Get in touch and book your spot',
-      call: 'Call us',
+      subtitle: 'Chat with us through our socials',
+      whatsapp: 'WhatsApp',
+      messenger: 'Messenger',
+      instagram: 'Instagram DM',
       email: 'Email',
-      form: 'Contact form',
     },
     footer: {
       tagline: 'Made for campers, not tourists',
@@ -558,10 +560,11 @@ export const translations = {
     },
     cta: {
       title: 'Bereit für Ruhe und Natur?',
-      subtitle: 'Kontaktieren Sie uns und buchen Sie Ihren Platz',
-      call: 'Anrufen',
+      subtitle: 'Chatten Sie mit uns über unsere Socials',
+      whatsapp: 'WhatsApp',
+      messenger: 'Messenger',
+      instagram: 'Instagram DM',
       email: 'E-Mail',
-      form: 'Kontaktformular',
     },
     footer: {
       tagline: 'Für Camper gemacht, nicht für Touristen',
@@ -743,10 +746,11 @@ export const translations = {
     },
     cta: {
       title: 'Spremni za mir i prirodu?',
-      subtitle: 'Kontaktirajte nas i rezervišite svoje mjesto',
-      call: 'Pozovite nas',
+      subtitle: 'Pišite nam preko naših društvenih mreža',
+      whatsapp: 'WhatsApp',
+      messenger: 'Messenger',
+      instagram: 'Instagram DM',
       email: 'Email',
-      form: 'Kontakt forma',
     },
     footer: {
       tagline: 'Napravljeno za kampere, ne za turiste',
@@ -928,10 +932,11 @@ export const translations = {
     },
     cta: {
       title: 'Prêt pour la paix et la nature ?',
-      subtitle: 'Contactez-nous et réservez votre place',
-      call: 'Appeler',
+      subtitle: 'Discutez avec nous via nos réseaux sociaux',
+      whatsapp: 'WhatsApp',
+      messenger: 'Messenger',
+      instagram: 'Instagram DM',
       email: 'Email',
-      form: 'Formulaire de contact',
     },
     footer: {
       tagline: 'Fait pour les campeurs, pas les touristes',
