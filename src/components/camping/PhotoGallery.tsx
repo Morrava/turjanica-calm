@@ -13,8 +13,23 @@ import campGroundsImg from '@/assets/gallery/camp-grounds.jpg';
 import heartViewImg from '@/assets/gallery/heart-view.jpg';
 import treehouseCellarImg from '@/assets/gallery/treehouse-cellar.jpg';
 import heartDecorationImg from '@/assets/gallery/heart-decoration.jpg';
+// New gallery images
+import barTreehouseImg from '@/assets/gallery/bar-treehouse.jpg';
+import outdoorBarImg from '@/assets/gallery/outdoor-bar.jpg';
+import diningHallImg from '@/assets/gallery/dining-hall.jpg';
+import cabinsImg from '@/assets/gallery/cabins.jpg';
+import pondPavilionImg from '@/assets/gallery/pond-pavilion.jpg';
+import riverWaterfallImg from '@/assets/gallery/river-waterfall.jpg';
+import coveredTerraceImg from '@/assets/gallery/covered-terrace.jpg';
 
 const galleryImages = [
+  barTreehouseImg,
+  pondPavilionImg,
+  riverWaterfallImg,
+  coveredTerraceImg,
+  diningHallImg,
+  outdoorBarImg,
+  cabinsImg,
   treehouseImg,
   treehouseCellarImg,
   campGroundsImg,
