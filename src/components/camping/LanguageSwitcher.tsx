@@ -50,7 +50,7 @@ export const LanguageSwitcher = ({ variant = 'navbar' }: LanguageSwitcherProps) 
         aria-expanded={isOpen}
       >
         <Globe className={`w-4 h-4 ${isFooter ? 'text-background/70' : 'text-muted-foreground'}`} />
-        <span className="text-base">{currentLang.flag}</span>
+        <span className="text-base sm:hidden">{currentLang.flag}</span>
         <span className={`font-medium text-sm ${isFooter ? 'text-background' : 'text-foreground'}`}>
           {currentLang.fullLabel}
         </span>
@@ -88,7 +88,7 @@ export const LanguageSwitcher = ({ variant = 'navbar' }: LanguageSwitcherProps) 
                       : 'hover:bg-secondary text-foreground'
                 }`}
               >
-                <span className="text-lg">{lang.flag}</span>
+                <span className="text-lg sm:hidden">{lang.flag}</span>
                 <span className="font-medium text-sm flex-1">{lang.fullLabel}</span>
                 {language === lang.code && (
                   <Check className="w-4 h-4 text-primary" />
