@@ -1,10 +1,10 @@
-export type Language = 'nl' | 'en' | 'de' | 'bs' | 'fr';
+export type Language = 'nl' | 'en' | 'de' | 'sr' | 'fr';
 
 export const languageFallbacks: Record<Language, Language | null> = {
   'nl': 'en',
   'en': null,
   'de': 'en',
-  'bs': 'en',
+  'sr': 'en',
   'fr': 'en',
 };
 
@@ -582,7 +582,7 @@ export const translations = {
       accommodations: 'Unterkünfte',
     },
   },
-  bs: {
+  sr: {
     camp: {
       name: 'Izletište camp Turjanica',
       location: 'Branešci, Čelinac',

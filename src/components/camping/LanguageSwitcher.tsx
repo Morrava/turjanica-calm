@@ -8,7 +8,7 @@ const languages: { code: Language; flag: string; label: string; fullLabel: strin
   { code: 'en', flag: '🇬🇧', label: 'EN', fullLabel: 'English' },
   { code: 'de', flag: '🇩🇪', label: 'DE', fullLabel: 'Deutsch' },
   { code: 'fr', flag: '🇫🇷', label: 'FR', fullLabel: 'Français' },
-  { code: 'bs', flag: '🇧🇦', label: 'BS', fullLabel: 'Bosanski' },
+  { code: 'sr', flag: '🇷🇸', label: 'SR', fullLabel: 'Srpski' },
 ];
 
 interface LanguageSwitcherProps {
