@@ -5,7 +5,7 @@ import { useLanguage } from '@/i18n/LanguageContext';
 import banjaLukaImg from '@/assets/trips/banja-luka.jpg';
 import celinacImg from '@/assets/trips/celinac.jpg';
 import brvnaraImg from '@/assets/trips/brvnara.png';
-import pizzeriaImg from '@/assets/trips/pizzeria.jpg';
+import pizzeriaImg from '@/assets/trips/pizzeria.png';
 import lipljeImg from '@/assets/trips/liplje.jpg';
 import stupljeImg from '@/assets/trips/stuplje.jpg';
 
