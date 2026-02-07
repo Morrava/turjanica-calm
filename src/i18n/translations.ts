@@ -28,8 +28,8 @@ export const translations = {
     },
     // Hero
     hero: {
-      headline: 'Rust, ruimte en natuur in het hart van Bosnië',
-      tagline: 'Als u wilt genieten van de natuur omringd door rust en stilte, dan bent u op de juiste plek.',
+      headline: 'Izletište & Kamp Turjanica',
+      tagline: 'Natuur. Rust. Avontuur.',
       cta: 'Contact opnemen',
       ctaMap: 'Open in Google Maps',
       trust1: '10 hectare natuur',
@@ -226,8 +226,8 @@ export const translations = {
       contact: 'Contact',
     },
     hero: {
-      headline: 'Peace, space and nature in the heart of Bosnia',
-      tagline: 'If you want to enjoy nature surrounded by peace and quiet, then you are in the right place.',
+      headline: 'Izletište & Camp Turjanica',
+      tagline: 'Nature. Peace. Adventure.',
       cta: 'Get in touch',
       ctaMap: 'Open in Google Maps',
       trust1: '10 hectares of nature',
@@ -412,8 +412,8 @@ export const translations = {
       contact: 'Kontakt',
     },
     hero: {
-      headline: 'Ruhe, Raum und Natur im Herzen Bosniens',
-      tagline: 'Wenn Sie die Natur umgeben von Ruhe und Stille genießen möchten, dann sind Sie hier richtig.',
+      headline: 'Izletište & Camp Turjanica',
+      tagline: 'Natur. Ruhe. Abenteuer.',
       cta: 'Kontakt aufnehmen',
       ctaMap: 'In Google Maps öffnen',
       trust1: '10 Hektar Natur',
@@ -598,8 +598,8 @@ export const translations = {
       contact: 'Kontakt',
     },
     hero: {
-      headline: 'Mir, prostor i priroda u srcu Bosne',
-      tagline: 'Ako želite da uživate u prirodi okruženoj sa mirom i tišinom onda ste na pravom mjestu.',
+      headline: 'Izletište & Kamp Turjanica',
+      tagline: 'Priroda. Mir. Avantura.',
       cta: 'Kontaktirajte nas',
       ctaMap: 'Otvori u Google Maps',
       trust1: '10 hektara prirode',
@@ -784,8 +784,8 @@ export const translations = {
       contact: 'Contact',
     },
     hero: {
-      headline: 'Paix, espace et nature au cœur de la Bosnie',
-      tagline: 'Si vous souhaitez profiter de la nature entourée de paix et de tranquillité, vous êtes au bon endroit.',
+      headline: 'Izletište & Camp Turjanica',
+      tagline: 'Nature. Paix. Aventure.',
       cta: 'Nous contacter',
       ctaMap: 'Ouvrir dans Google Maps',
       trust1: '10 hectares de nature',
