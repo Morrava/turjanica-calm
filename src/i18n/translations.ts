@@ -1114,7 +1114,7 @@ export const translations = {
     },
     reviews: {
       title: 'Šta gosti kažu',
-      subtitle: 'Omiljeno među nizozemskim i njemačkim kamperima',
+      subtitle: 'Omiljeno među holandskim i njemačkim kamperima',
       source: 'preko',
     },
     cta: {
