@@ -42,7 +42,7 @@ export const Hero = () => {
 
           {/* Tagline */}
           <p className="text-lg sm:text-xl text-card/90 mb-8 animate-slide-up italic" style={{ animationDelay: '0.1s' }}>
-            "{t.hero.tagline}"
+            {t.hero.tagline}
           </p>
 
           {/* Trust points */}
