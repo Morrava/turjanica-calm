@@ -6,7 +6,7 @@ import banjaLukaImg from '@/assets/trips/banja-luka.jpg';
 import celinacImg from '@/assets/trips/celinac.jpg';
 import brvnaraImg from '@/assets/trips/brvnara.png';
 import pizzeriaImg from '@/assets/trips/pizzeria.png';
-import lipljeImg from '@/assets/trips/liplje.jpg';
+import lipljeImg from '@/assets/trips/liplje.png';
 import stupljeImg from '@/assets/trips/stuplje.jpg';
 
 export const TripsSection = () => {
