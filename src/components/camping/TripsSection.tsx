@@ -22,7 +22,7 @@ export const TripsSection = () => {
   ];
 
   return (
-    <section id="trips" className="section-padding bg-background">
+    <section id="trips" className="section-padding bg-card">
       <div className="section-container">
         {/* Header */}
         <div className="text-center mb-16">
