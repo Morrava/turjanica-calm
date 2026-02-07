@@ -13,20 +13,20 @@ export const Header = () => {
     label: t.nav.about,
     href: '#about'
   }, {
-    label: t.nav.offers,
-    href: '#offers'
-  }, {
     label: t.nav.accommodations,
     href: '#accommodations'
   }, {
-    label: t.nav.facilities,
-    href: '#facilities'
+    label: t.nav.offers,
+    href: '#offers'
   }, {
-    label: t.nav.location,
-    href: '#location'
+    label: t.nav.gallery,
+    href: '#gallery'
   }, {
     label: t.nav.trips,
     href: '#trips'
+  }, {
+    label: t.nav.location,
+    href: '#location'
   }];
   return <header className="fixed top-0 left-0 right-0 z-50 bg-background/95 backdrop-blur-sm border-b border-border">
       <div className="section-container">

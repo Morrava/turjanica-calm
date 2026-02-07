@@ -48,7 +48,7 @@ export const Reviews = () => {
   const { t, language } = useLanguage();
 
   return (
-    <section className="section-padding bg-background">
+    <section className="section-padding bg-card">
       <div className="section-container">
         {/* Header */}
         <div className="text-center mb-16">

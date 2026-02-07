@@ -17,7 +17,7 @@ export const Location = () => {
   ];
 
   return (
-    <section id="location" className="section-padding bg-card">
+    <section id="location" className="section-padding bg-background">
       <div className="section-container">
         {/* Header */}
         <div className="text-center mb-16">

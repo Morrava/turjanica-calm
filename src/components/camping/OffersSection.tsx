@@ -229,7 +229,7 @@ export const OffersSection = () => {
   };
 
   return (
-    <section id="offers" className="py-16 md:py-24 bg-background">
+    <section id="offers" className="py-16 md:py-24 bg-card">
       <div className="container mx-auto px-4">
         {/* Header */}
         <div className="text-center mb-10 md:mb-14">

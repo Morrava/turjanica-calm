@@ -98,7 +98,7 @@ export const PhotoGallery = () => {
   };
 
   return (
-    <section id="gallery" className="py-16 md:py-24 bg-muted/30">
+    <section id="gallery" className="py-16 md:py-24 bg-background">
       <div className="container mx-auto px-4">
         {/* Header */}
         <div className="text-center mb-10">
