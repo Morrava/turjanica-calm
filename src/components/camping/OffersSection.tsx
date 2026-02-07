@@ -291,21 +291,6 @@ export const OffersSection = () => {
                 ))}
               </div>
             </div>
-
-            {/* Highlight chips */}
-            <div className="flex flex-wrap gap-2 mt-4">
-              {highlightChips.map((chip, idx) => (
-                <span
-                  key={idx}
-                  className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-secondary text-secondary-foreground text-sm font-medium"
-                >
-                  {idx === 0 && <Mountain className="w-4 h-4 text-primary" />}
-                  {idx === 1 && <Droplets className="w-4 h-4 text-primary" />}
-                  {idx === 2 && <MapPin className="w-4 h-4 text-primary" />}
-                  {chip}
-                </span>
-              ))}
-            </div>
           </div>
 
           {/* Right: Tabs + Cards */}
@@ -397,35 +382,6 @@ export const OffersSection = () => {
           </div>
         </div>
 
-        {/* CTA Bar */}
-        <div className="flex flex-col sm:flex-row items-center justify-center gap-3 pt-6 border-t border-border">
-          <Button 
-            size="lg" 
-            className="w-full sm:w-auto"
-            onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })}
-          >
-            <Calendar className="w-4 h-4 mr-2" />
-            {t.offersNew?.cta?.availability || t.accommodations.cta}
-          </Button>
-          <Button 
-            variant="outline" 
-            size="lg" 
-            className="w-full sm:w-auto"
-            onClick={() => window.open('https://wa.me/38765123456', '_blank')}
-          >
-            <MessageCircle className="w-4 h-4 mr-2" />
-            {t.offersNew?.cta?.whatsapp || 'WhatsApp'}
-          </Button>
-          <Button 
-            variant="ghost" 
-            size="lg" 
-            className="w-full sm:w-auto"
-            onClick={() => document.getElementById('location')?.scrollIntoView({ behavior: 'smooth' })}
-          >
-            <MapPin className="w-4 h-4 mr-2" />
-            {t.offersNew?.cta?.location || t.nav.location}
-          </Button>
-        </div>
       </div>
     </section>
   );
