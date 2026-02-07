@@ -50,7 +50,7 @@ export const Hero = () => {
             {trustPoints.map((point, index) => (
               <div
                 key={index}
-                className="flex items-center gap-2 bg-card/10 backdrop-blur-sm rounded-full px-4 py-2 border border-card/20"
+                className="flex items-center gap-2 bg-card/10 backdrop-blur-md rounded-full px-4 py-2 border border-card/20"
               >
                 <span className="text-sm font-medium text-card">{point}</span>
               </div>
