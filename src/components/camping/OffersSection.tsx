@@ -309,7 +309,7 @@ export const OffersSection = () => {
           </div>
 
           {/* Right: Tabs + Cards */}
-          <div>
+          <div className="flex flex-col justify-center">
             {/* Tabs - Horizontal scroll on mobile */}
             <div 
               ref={tabsRef}
