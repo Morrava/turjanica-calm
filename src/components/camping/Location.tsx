@@ -5,7 +5,7 @@ import { Button } from '@/components/ui/button';
 const GPS_LAT = 44.77506126380439;
 const GPS_LNG = 17.512651922089002;
 const GOOGLE_MAPS_URL = "https://www.google.com/maps/place/Izleti%C5%A1te+Camp+Turjanica/@44.7748936,17.5077542,17z/data=!3m1!4b1!4m6!3m5!1s0x475e0bd99cadffeb:0x229eb213d65e0676!8m2!3d44.7748899!4d17.5126251!16s%2Fg%2F11sv_lsqmk?entry=ttu&g_ep=EgoyMDI2MDEyMS4wIKXMDSoKLDEwMDc5MjA2OUgBUAM%3D";
-const EMBED_URL = `https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2856.5!2d${GPS_LNG}!3d${GPS_LAT}!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNDTCsDQ2JzMwLjIiTiAxN8KwMzAnNDUuNSJF!5e0!3m2!1sen!2sba!4v1706000000000!5m2!1sen!2sba`;
+const EMBED_URL = `https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2856.5!2d${GPS_LNG}!3d${GPS_LAT}!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNDTCsDQ2JzMwLjIiTiAxN8KwMzAnNDUuNSJF!5e1!3m2!1sen!2sba!4v1706000000000!5m2!1sen!2sba`;
 
 export const Location = () => {
   const { t } = useLanguage();
