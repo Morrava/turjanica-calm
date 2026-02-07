@@ -7,7 +7,7 @@ import celinacImg from '@/assets/trips/celinac.jpg';
 import brvnaraImg from '@/assets/trips/brvnara.png';
 import pizzeriaImg from '@/assets/trips/pizzeria.png';
 import lipljeImg from '@/assets/trips/liplje.png';
-import stupljeImg from '@/assets/trips/stuplje.jpg';
+import stupljeImg from '@/assets/trips/stuplje.png';
 
 export const TripsSection = () => {
   const { t } = useLanguage();
