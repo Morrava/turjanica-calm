@@ -358,22 +358,9 @@ export const OffersSection = () => {
                         <Icon className="w-5 h-5" />
                       </div>
                       <div className="flex-1 min-w-0">
-                        <div className="flex items-center gap-2 mb-1">
-                          <h3 className="font-semibold text-foreground text-sm leading-tight truncate">
-                            {getTitle(amenity.titleKey)}
-                          </h3>
-                          <span className={cn(
-                            "flex-shrink-0 text-[10px] font-medium px-1.5 py-0.5 rounded-full uppercase tracking-wide",
-                            amenity.badge === 'included' 
-                              ? "bg-primary/10 text-primary" 
-                              : "bg-muted text-muted-foreground"
-                          )}>
-                            {amenity.badge === 'included' 
-                              ? (t.offersNew?.badges?.included || 'Included')
-                              : (t.offersNew?.badges?.request || 'On request')
-                            }
-                          </span>
-                        </div>
+                        <h3 className="font-semibold text-foreground text-sm leading-tight truncate mb-1">
+                          {getTitle(amenity.titleKey)}
+                        </h3>
                         <p className="text-xs text-muted-foreground leading-relaxed line-clamp-2">
                           {getBenefit(amenity.titleKey)}
                         </p>
