@@ -195,7 +195,7 @@ export const translations = {
     },
     // Footer
     footer: {
-      tagline: 'Ontkoppel om weer te verbinden',
+      tagline: 'Natuur. Rust. Avontuur.',
       address: 'Branešci, Čelinac, Bosnië & Herzegovina',
       links: 'Links',
       language: 'Taal',
@@ -381,7 +381,7 @@ export const translations = {
       email: 'Email',
     },
     footer: {
-      tagline: 'Disconnect to reconnect',
+      tagline: 'Nature. Peace. Adventure.',
       address: 'Branešci, Čelinac, Bosnia & Herzegovina',
       links: 'Links',
       language: 'Language',
@@ -567,7 +567,7 @@ export const translations = {
       email: 'E-Mail',
     },
     footer: {
-      tagline: 'Abschalten, um aufzutanken',
+      tagline: 'Natur. Ruhe. Abenteuer.',
       address: 'Branešci, Čelinac, Bosnien & Herzegowina',
       links: 'Links',
       language: 'Sprache',
@@ -753,7 +753,7 @@ export const translations = {
       email: 'Email',
     },
     footer: {
-      tagline: 'Isključi se da bi se ponovo povezao',
+      tagline: 'Priroda. Mir. Avantura.',
       address: 'Branešci, Čelinac, Bosna i Hercegovina',
       links: 'Linkovi',
       language: 'Jezik',
@@ -939,7 +939,7 @@ export const translations = {
       email: 'Email',
     },
     footer: {
-      tagline: 'Déconnectez-vous pour vous reconnecter',
+      tagline: 'Nature. Paix. Aventure.',
       address: 'Branešci, Čelinac, Bosnie-Herzégovine',
       links: 'Liens',
       language: 'Langue',
