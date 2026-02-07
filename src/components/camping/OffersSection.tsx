@@ -17,124 +17,426 @@ import {
   UtensilsCrossed,
   Sparkles,
   ChevronLeft,
-  ChevronRight
+  ChevronRight,
+  ChevronDown,
+  MapPin,
+  MessageCircle,
+  Calendar,
+  LucideIcon,
+  Utensils,
+  Leaf,
+  Shield,
+  Wifi,
+  Car,
+  Mountain,
+  Heart
 } from 'lucide-react';
 import { useLanguage } from '@/i18n/LanguageContext';
+import { Button } from '@/components/ui/button';
+import { cn } from '@/lib/utils';
+
+// Import gallery images for carousel
+import campGrounds from '@/assets/gallery/camp-grounds.jpg';
+import riverWaterfall from '@/assets/gallery/river-waterfall.jpg';
+import pondPavilion from '@/assets/gallery/pond-pavilion.jpg';
+import entranceWinter from '@/assets/gallery/entrance-winter.jpg';
+
+type TabCategory = 'comfort' | 'fire' | 'family' | 'extras';
+
+interface AmenityItem {
+  icon: LucideIcon;
+  titleKey: string;
+  benefitKey: string;
+  badge: 'included' | 'request';
+  details: string[];
+}
+
+const amenitiesByCategory: Record<TabCategory, AmenityItem[]> = {
+  comfort: [
+    { 
+      icon: Bath, 
+      titleKey: 'toilets', 
+      benefitKey: 'toiletsBenefit',
+      badge: 'included',
+      details: ['detailHotWater', 'detailClean', 'detailAccessible']
+    },
+    { 
+      icon: Zap, 
+      titleKey: 'electricity', 
+      benefitKey: 'electricityBenefit',
+      badge: 'included',
+      details: ['detailHookups', 'detailReliable', 'detailConvenient']
+    },
+    { 
+      icon: Droplets, 
+      titleKey: 'water', 
+      benefitKey: 'waterBenefit',
+      badge: 'included',
+      details: ['detailDrinkable', 'detailSpring', 'detailFresh']
+    },
+    { 
+      icon: Sparkles, 
+      titleKey: 'spring', 
+      benefitKey: 'springBenefit',
+      badge: 'included',
+      details: ['detailNatural', 'detailPure', 'detailRefreshing']
+    },
+  ],
+  fire: [
+    { 
+      icon: Flame, 
+      titleKey: 'firepit', 
+      benefitKey: 'firepitBenefit',
+      badge: 'included',
+      details: ['detailEachSpot', 'detailEvening', 'detailSafe']
+    },
+    { 
+      icon: UtensilsCrossed, 
+      titleKey: 'equipment', 
+      benefitKey: 'equipmentBenefit',
+      badge: 'included',
+      details: ['detailGrills', 'detailSac', 'detailFridge']
+    },
+    { 
+      icon: Apple, 
+      titleKey: 'localFood', 
+      benefitKey: 'localFoodBenefit',
+      badge: 'request',
+      details: ['detailEggs', 'detailCheese', 'detailHoney']
+    },
+    { 
+      icon: Wine, 
+      titleKey: 'distillery', 
+      benefitKey: 'distilleryBenefit',
+      badge: 'request',
+      details: ['detailRakija', 'detailTasting', 'detailBuy']
+    },
+  ],
+  family: [
+    { 
+      icon: Baby, 
+      titleKey: 'kids', 
+      benefitKey: 'kidsBenefit',
+      badge: 'included',
+      details: ['detailSwings', 'detailSandbox', 'detailPlayground']
+    },
+    { 
+      icon: Dog, 
+      titleKey: 'pets', 
+      benefitKey: 'petsBenefit',
+      badge: 'included',
+      details: ['detailPetArea', 'detailPetFriendly', 'detailPetSafe']
+    },
+    { 
+      icon: Trophy, 
+      titleKey: 'sports', 
+      benefitKey: 'sportsBenefit',
+      badge: 'included',
+      details: ['detailFootball', 'detailVolleyball', 'detailTableTennis']
+    },
+    { 
+      icon: Shield, 
+      titleKey: 'safety', 
+      benefitKey: 'safetyBenefit',
+      badge: 'included',
+      details: ['detailQuiet', 'detailSecure', 'detailFamily']
+    },
+  ],
+  extras: [
+    { 
+      icon: TreePine, 
+      titleKey: 'trails', 
+      benefitKey: 'trailsBenefit',
+      badge: 'included',
+      details: ['detailShortTrail', 'detailLongTrail', 'detailForest']
+    },
+    { 
+      icon: Ship, 
+      titleKey: 'river', 
+      benefitKey: 'riverBenefit',
+      badge: 'request',
+      details: ['detailBoat', 'detailFourPeople', 'detailWaterLevel']
+    },
+    { 
+      icon: Wheat, 
+      titleKey: 'watermill', 
+      benefitKey: 'watermillBenefit',
+      badge: 'request',
+      details: ['detailMill', 'detailFlour', 'detailTradition']
+    },
+    { 
+      icon: Users, 
+      titleKey: 'experience', 
+      benefitKey: 'experienceBenefit',
+      badge: 'request',
+      details: ['detailHarvest', 'detailParticipate', 'detailLearn']
+    },
+  ],
+};
+
+const carouselImages = [
+  campGrounds,
+  riverWaterfall,
+  pondPavilion,
+  entranceWinter,
+];
 
 export const OffersSection = () => {
   const { t } = useLanguage();
-  const scrollRef = useRef<HTMLDivElement>(null);
-  const [canScrollLeft, setCanScrollLeft] = useState(false);
-  const [canScrollRight, setCanScrollRight] = useState(true);
+  const [activeTab, setActiveTab] = useState<TabCategory>('comfort');
+  const [expandedCard, setExpandedCard] = useState<string | null>(null);
+  const [currentImage, setCurrentImage] = useState(0);
+  const tabsRef = useRef<HTMLDivElement>(null);
 
-  const offers = [
-    // Activities & experiences
-    { icon: Tent, title: t.offers.activeStay.title, desc: t.offers.activeStay.desc },
-    { icon: TreePine, title: t.offers.trails.title, desc: t.offers.trails.desc },
-    { icon: Trophy, title: t.offers.sports.title, desc: t.offers.sports.desc },
-    { icon: Baby, title: t.offers.kids.title, desc: t.offers.kids.desc },
-    { icon: Dog, title: t.offers.pets.title, desc: t.offers.pets.desc },
-    { icon: Ship, title: t.offers.river.title, desc: t.offers.river.desc },
-    { icon: Wheat, title: t.offers.watermill.title, desc: t.offers.watermill.desc },
-    { icon: Apple, title: t.offers.localFood.title, desc: t.offers.localFood.desc },
-    { icon: Wine, title: t.offers.distillery.title, desc: t.offers.distillery.desc },
-    { icon: Users, title: t.offers.experience.title, desc: t.offers.experience.desc },
-    // Facilities
-    { icon: Bath, title: t.facilities.toilets, desc: null },
-    { icon: Zap, title: t.facilities.electricity, desc: null },
-    { icon: Droplets, title: t.facilities.water, desc: null },
-    { icon: Flame, title: t.facilities.firepit, desc: null },
-    { icon: UtensilsCrossed, title: t.facilities.equipment, desc: null },
-    { icon: Sparkles, title: t.facilities.spring, desc: null },
+  const tabs: { key: TabCategory; label: string }[] = [
+    { key: 'comfort', label: t.offersNew?.tabs?.comfort || 'Comfort' },
+    { key: 'fire', label: t.offersNew?.tabs?.fire || 'Fire & Food' },
+    { key: 'family', label: t.offersNew?.tabs?.family || 'Family & Rules' },
+    { key: 'extras', label: t.offersNew?.tabs?.extras || 'Extras' },
   ];
 
-  const checkScrollability = () => {
-    if (scrollRef.current) {
-      const { scrollLeft, scrollWidth, clientWidth } = scrollRef.current;
-      setCanScrollLeft(scrollLeft > 0);
-      setCanScrollRight(scrollLeft < scrollWidth - clientWidth - 10);
-    }
-  };
+  const highlightChips = [
+    t.offersNew?.chips?.hectares || '10 hectares',
+    t.offersNew?.chips?.rivers || '2 rivers',
+    t.offersNew?.chips?.nearCity || 'Near Banja Luka',
+  ];
 
+  // Auto-advance carousel
   useEffect(() => {
-    checkScrollability();
-    window.addEventListener('resize', checkScrollability);
-    return () => window.removeEventListener('resize', checkScrollability);
+    const interval = setInterval(() => {
+      setCurrentImage((prev) => (prev + 1) % carouselImages.length);
+    }, 5000);
+    return () => clearInterval(interval);
   }, []);
 
-  const scrollByCard = (direction: 'left' | 'right') => {
-    if (scrollRef.current) {
-      const cardWidth = 240 + 16; // card width + gap (w-[240px] + gap-4)
-      const scrollAmount = direction === 'left' ? -cardWidth : cardWidth;
-      scrollRef.current.scrollBy({ left: scrollAmount, behavior: 'smooth' });
-    }
+  const nextImage = () => setCurrentImage((prev) => (prev + 1) % carouselImages.length);
+  const prevImage = () => setCurrentImage((prev) => (prev - 1 + carouselImages.length) % carouselImages.length);
+
+  const getTitle = (key: string) => {
+    return t.offersNew?.amenities?.[key]?.title || t.facilities?.[key] || key;
+  };
+
+  const getBenefit = (key: string) => {
+    return t.offersNew?.amenities?.[key]?.benefit || '';
+  };
+
+  const getDetail = (key: string) => {
+    return t.offersNew?.details?.[key] || key;
+  };
+
+  const toggleCard = (key: string) => {
+    setExpandedCard(expandedCard === key ? null : key);
   };
 
   return (
     <section id="offers" className="py-16 md:py-24 bg-background">
       <div className="container mx-auto px-4">
         {/* Header */}
-        <div className="text-center mb-10">
+        <div className="text-center mb-10 md:mb-14">
           <h2 className="text-3xl md:text-4xl font-display font-semibold text-foreground mb-4">
-            {t.offers.title}
+            {t.offersNew?.title || t.offers.title}
           </h2>
           <p className="text-muted-foreground max-w-2xl mx-auto">
-            {t.offers.subtitle}
+            {t.offersNew?.subtitle || t.offers.subtitle}
           </p>
         </div>
 
-        {/* Horizontal Scroll Carousel */}
-        <div className="relative">
-          {/* Left Arrow */}
-          {canScrollLeft && (
-            <button
-              onClick={() => scrollByCard('left')}
-              className="absolute left-0 top-1/2 -translate-y-1/2 z-10 w-10 h-10 rounded-full bg-background/90 border border-border shadow-card flex items-center justify-center hover:bg-secondary transition-colors -ml-3 lg:-ml-5"
-              aria-label="Scroll left"
-            >
-              <ChevronLeft className="w-5 h-5 text-foreground" />
-            </button>
-          )}
-
-          {/* Scrollable Container */}
-          <div
-            ref={scrollRef}
-            onScroll={checkScrollability}
-            className="flex gap-4 overflow-x-auto scrollbar-hide pb-4 snap-x snap-mandatory"
-            style={{ scrollbarWidth: 'none', msOverflowStyle: 'none' }}
-          >
-            {offers.map((offer, index) => (
-              <div
-                key={index}
-                className={`flex-shrink-0 snap-start group p-4 rounded-xl bg-card border border-border hover:shadow-card hover:border-primary/20 transition-all duration-300 ${
-                  offer.desc ? 'w-[220px] sm:w-[260px]' : 'w-[160px] sm:w-[180px]'
-                }`}
+        {/* Main 2-column layout */}
+        <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 mb-12">
+          {/* Left: Image Carousel with Chips */}
+          <div className="relative">
+            <div className="relative aspect-[4/3] rounded-2xl overflow-hidden bg-muted">
+              {carouselImages.map((img, idx) => (
+                <img
+                  key={idx}
+                  src={img}
+                  alt={`Camp Turjanica ${idx + 1}`}
+                  className={cn(
+                    "absolute inset-0 w-full h-full object-cover transition-opacity duration-700",
+                    idx === currentImage ? "opacity-100" : "opacity-0"
+                  )}
+                />
+              ))}
+              
+              {/* Navigation arrows */}
+              <button
+                onClick={prevImage}
+                className="absolute left-3 top-1/2 -translate-y-1/2 w-10 h-10 rounded-full bg-background/80 backdrop-blur-sm border border-border shadow-sm flex items-center justify-center hover:bg-background transition-colors"
+                aria-label="Previous image"
               >
-                <div className="w-10 h-10 rounded-lg bg-secondary flex items-center justify-center text-primary mb-3 group-hover:bg-primary group-hover:text-primary-foreground transition-colors duration-300">
-                  <offer.icon className="w-5 h-5" />
-                </div>
-                <h3 className="font-semibold text-sm text-foreground leading-snug">
-                  {offer.title}
-                </h3>
-                {offer.desc && (
-                  <p className="text-xs text-muted-foreground mt-2 leading-relaxed line-clamp-3">
-                    {offer.desc}
-                  </p>
-                )}
+                <ChevronLeft className="w-5 h-5 text-foreground" />
+              </button>
+              <button
+                onClick={nextImage}
+                className="absolute right-3 top-1/2 -translate-y-1/2 w-10 h-10 rounded-full bg-background/80 backdrop-blur-sm border border-border shadow-sm flex items-center justify-center hover:bg-background transition-colors"
+                aria-label="Next image"
+              >
+                <ChevronRight className="w-5 h-5 text-foreground" />
+              </button>
+
+              {/* Dots indicator */}
+              <div className="absolute bottom-4 left-1/2 -translate-x-1/2 flex gap-2">
+                {carouselImages.map((_, idx) => (
+                  <button
+                    key={idx}
+                    onClick={() => setCurrentImage(idx)}
+                    className={cn(
+                      "w-2 h-2 rounded-full transition-all",
+                      idx === currentImage 
+                        ? "bg-primary w-6" 
+                        : "bg-background/60 hover:bg-background/80"
+                    )}
+                    aria-label={`Go to image ${idx + 1}`}
+                  />
+                ))}
               </div>
-            ))}
+            </div>
+
+            {/* Highlight chips */}
+            <div className="flex flex-wrap gap-2 mt-4">
+              {highlightChips.map((chip, idx) => (
+                <span
+                  key={idx}
+                  className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-secondary text-secondary-foreground text-sm font-medium"
+                >
+                  {idx === 0 && <Mountain className="w-4 h-4 text-primary" />}
+                  {idx === 1 && <Droplets className="w-4 h-4 text-primary" />}
+                  {idx === 2 && <MapPin className="w-4 h-4 text-primary" />}
+                  {chip}
+                </span>
+              ))}
+            </div>
           </div>
 
-          {/* Right Arrow */}
-          {canScrollRight && (
-            <button
-              onClick={() => scrollByCard('right')}
-              className="absolute right-0 top-1/2 -translate-y-1/2 z-10 w-10 h-10 rounded-full bg-background/90 border border-border shadow-card flex items-center justify-center hover:bg-secondary transition-colors -mr-3 lg:-mr-5"
-              aria-label="Scroll right"
+          {/* Right: Tabs + Cards */}
+          <div>
+            {/* Tabs - Horizontal scroll on mobile */}
+            <div 
+              ref={tabsRef}
+              className="flex gap-2 mb-6 overflow-x-auto scrollbar-hide pb-2 -mx-4 px-4 md:mx-0 md:px-0"
+              style={{ scrollbarWidth: 'none', msOverflowStyle: 'none' }}
             >
-              <ChevronRight className="w-5 h-5 text-foreground" />
-            </button>
-          )}
+              {tabs.map((tab) => (
+                <button
+                  key={tab.key}
+                  onClick={() => {
+                    setActiveTab(tab.key);
+                    setExpandedCard(null);
+                  }}
+                  className={cn(
+                    "flex-shrink-0 px-4 py-2 rounded-full text-sm font-medium transition-all whitespace-nowrap",
+                    activeTab === tab.key
+                      ? "bg-primary text-primary-foreground shadow-sm"
+                      : "bg-secondary text-secondary-foreground hover:bg-secondary/80"
+                  )}
+                >
+                  {tab.label}
+                </button>
+              ))}
+            </div>
+
+            {/* Amenity Cards Grid */}
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+              {amenitiesByCategory[activeTab].map((amenity) => {
+                const isExpanded = expandedCard === amenity.titleKey;
+                const Icon = amenity.icon;
+                
+                return (
+                  <div
+                    key={amenity.titleKey}
+                    className={cn(
+                      "group rounded-xl border bg-card p-4 transition-all duration-300 cursor-pointer",
+                      isExpanded 
+                        ? "border-primary/30 shadow-md" 
+                        : "border-border hover:shadow-md hover:border-primary/20 hover:-translate-y-0.5"
+                    )}
+                    onClick={() => toggleCard(amenity.titleKey)}
+                  >
+                    {/* Card Header */}
+                    <div className="flex items-start gap-3">
+                      <div className="w-10 h-10 rounded-lg bg-secondary flex items-center justify-center text-primary flex-shrink-0 group-hover:bg-primary group-hover:text-primary-foreground transition-colors duration-300">
+                        <Icon className="w-5 h-5" />
+                      </div>
+                      <div className="flex-1 min-w-0">
+                        <div className="flex items-center gap-2 mb-1">
+                          <h3 className="font-semibold text-foreground text-sm leading-tight truncate">
+                            {getTitle(amenity.titleKey)}
+                          </h3>
+                          <span className={cn(
+                            "flex-shrink-0 text-[10px] font-medium px-1.5 py-0.5 rounded-full uppercase tracking-wide",
+                            amenity.badge === 'included' 
+                              ? "bg-primary/10 text-primary" 
+                              : "bg-muted text-muted-foreground"
+                          )}>
+                            {amenity.badge === 'included' 
+                              ? (t.offersNew?.badges?.included || 'Included')
+                              : (t.offersNew?.badges?.request || 'On request')
+                            }
+                          </span>
+                        </div>
+                        <p className="text-xs text-muted-foreground leading-relaxed line-clamp-2">
+                          {getBenefit(amenity.titleKey)}
+                        </p>
+                      </div>
+                      <ChevronDown 
+                        className={cn(
+                          "w-4 h-4 text-muted-foreground flex-shrink-0 transition-transform duration-300",
+                          isExpanded && "rotate-180"
+                        )} 
+                      />
+                    </div>
+
+                    {/* Expandable Details */}
+                    <div className={cn(
+                      "grid transition-all duration-300 ease-in-out",
+                      isExpanded ? "grid-rows-[1fr] mt-3 pt-3 border-t border-border/50" : "grid-rows-[0fr]"
+                    )}>
+                      <div className="overflow-hidden">
+                        <ul className="space-y-1.5">
+                          {amenity.details.map((detailKey, idx) => (
+                            <li key={idx} className="flex items-center gap-2 text-xs text-muted-foreground">
+                              <span className="w-1 h-1 rounded-full bg-primary flex-shrink-0" />
+                              {getDetail(detailKey)}
+                            </li>
+                          ))}
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                );
+              })}
+            </div>
+          </div>
+        </div>
+
+        {/* CTA Bar */}
+        <div className="flex flex-col sm:flex-row items-center justify-center gap-3 pt-6 border-t border-border">
+          <Button 
+            size="lg" 
+            className="w-full sm:w-auto"
+            onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })}
+          >
+            <Calendar className="w-4 h-4 mr-2" />
+            {t.offersNew?.cta?.availability || t.accommodations.cta}
+          </Button>
+          <Button 
+            variant="outline" 
+            size="lg" 
+            className="w-full sm:w-auto"
+            onClick={() => window.open('https://wa.me/38765123456', '_blank')}
+          >
+            <MessageCircle className="w-4 h-4 mr-2" />
+            {t.offersNew?.cta?.whatsapp || 'WhatsApp'}
+          </Button>
+          <Button 
+            variant="ghost" 
+            size="lg" 
+            className="w-full sm:w-auto"
+            onClick={() => document.getElementById('location')?.scrollIntoView({ behavior: 'smooth' })}
+          >
+            <MapPin className="w-4 h-4 mr-2" />
+            {t.offersNew?.cta?.location || t.nav.location}
+          </Button>
         </div>
       </div>
     </section>
