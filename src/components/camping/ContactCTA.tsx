@@ -2,7 +2,7 @@ import { Mail, MessageCircle } from 'lucide-react';
 import { useLanguage } from '@/i18n/LanguageContext';
 import { Button } from '@/components/ui/button';
 
-const WHATSAPP_URL = 'https://wa.me/31648563141';
+const WHATSAPP_URL = 'https://wa.me/38766912449';
 const MESSENGER_URL = 'https://m.me/100094247625434';
 const INSTAGRAM_DM_URL = 'https://ig.me/m/izletiste_camp_turjanica';
 const EMAIL = 'camp.turjanica@gmail.com';
