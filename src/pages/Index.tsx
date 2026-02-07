@@ -22,8 +22,8 @@ const Index = () => {
           <Hero />
           <QuickFacts />
           <AboutSection />
-          <OffersSection />
           <Accommodations />
+          <OffersSection />
           <PhotoGallery />
           <TripsSection />
           <Location />
