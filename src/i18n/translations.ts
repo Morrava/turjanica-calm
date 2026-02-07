@@ -195,7 +195,7 @@ export const translations = {
     },
     // Footer
     footer: {
-      tagline: 'Gemaakt voor kampeerders, niet voor toeristen',
+      tagline: 'Waar wifi wegvalt en sterren verschijnen ✨',
       address: 'Branešci, Čelinac, Bosnië & Herzegovina',
       links: 'Links',
       language: 'Taal',
@@ -381,7 +381,7 @@ export const translations = {
       email: 'Email',
     },
     footer: {
-      tagline: 'Made for campers, not tourists',
+      tagline: 'Where WiFi fades and stars appear ✨',
       address: 'Branešci, Čelinac, Bosnia & Herzegovina',
       links: 'Links',
       language: 'Language',
@@ -567,7 +567,7 @@ export const translations = {
       email: 'E-Mail',
     },
     footer: {
-      tagline: 'Für Camper gemacht, nicht für Touristen',
+      tagline: 'Wo WLAN endet und Sterne beginnen ✨',
       address: 'Branešci, Čelinac, Bosnien & Herzegowina',
       links: 'Links',
       language: 'Sprache',
@@ -753,7 +753,7 @@ export const translations = {
       email: 'Email',
     },
     footer: {
-      tagline: 'Napravljeno za kampere, ne za turiste',
+      tagline: 'Gdje WiFi nestaje, a zvijezde izlaze ✨',
       address: 'Branešci, Čelinac, Bosna i Hercegovina',
       links: 'Linkovi',
       language: 'Jezik',
@@ -939,7 +939,7 @@ export const translations = {
       email: 'Email',
     },
     footer: {
-      tagline: 'Fait pour les campeurs, pas les touristes',
+      tagline: 'Là où le WiFi s\'efface et les étoiles apparaissent ✨',
       address: 'Branešci, Čelinac, Bosnie-Herzégovine',
       links: 'Liens',
       language: 'Langue',
