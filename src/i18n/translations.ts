@@ -195,7 +195,7 @@ export const translations = {
     },
     // Footer
     footer: {
-      tagline: 'Waar wifi wegvalt en sterren verschijnen ✨',
+      tagline: 'Ontkoppel om weer te verbinden',
       address: 'Branešci, Čelinac, Bosnië & Herzegovina',
       links: 'Links',
       language: 'Taal',
@@ -381,7 +381,7 @@ export const translations = {
       email: 'Email',
     },
     footer: {
-      tagline: 'Where WiFi fades and stars appear ✨',
+      tagline: 'Disconnect to reconnect',
       address: 'Branešci, Čelinac, Bosnia & Herzegovina',
       links: 'Links',
       language: 'Language',
@@ -567,7 +567,7 @@ export const translations = {
       email: 'E-Mail',
     },
     footer: {
-      tagline: 'Wo WLAN endet und Sterne beginnen ✨',
+      tagline: 'Abschalten, um aufzutanken',
       address: 'Branešci, Čelinac, Bosnien & Herzegowina',
       links: 'Links',
       language: 'Sprache',
@@ -753,7 +753,7 @@ export const translations = {
       email: 'Email',
     },
     footer: {
-      tagline: 'Gdje WiFi nestaje, a zvijezde izlaze ✨',
+      tagline: 'Isključi se da bi se ponovo povezao',
       address: 'Branešci, Čelinac, Bosna i Hercegovina',
       links: 'Linkovi',
       language: 'Jezik',
@@ -939,7 +939,7 @@ export const translations = {
       email: 'Email',
     },
     footer: {
-      tagline: 'Là où le WiFi s\'efface et les étoiles apparaissent ✨',
+      tagline: 'Déconnectez-vous pour vous reconnecter',
       address: 'Branešci, Čelinac, Bosnie-Herzégovine',
       links: 'Liens',
       language: 'Langue',
