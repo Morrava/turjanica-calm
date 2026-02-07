@@ -12,7 +12,7 @@ export const translations = {
   nl: {
     // Camp info
     camp: {
-      name: 'Izletište camp Turjanica',
+      name: 'Uitje & Kamp Turjanica',
       location: 'Branešci, Čelinac',
       gps: '44.77506, 17.51265',
     },
@@ -28,7 +28,7 @@ export const translations = {
     },
     // Hero
     hero: {
-      headline: 'Izletište & Kamp Turjanica',
+      headline: 'Uitje & Kamp Turjanica',
       tagline: 'Natuur. Rust. Avontuur.',
       cta: 'Contact opnemen',
       ctaMap: 'Open in Google Maps',
@@ -305,7 +305,7 @@ export const translations = {
   },
   en: {
     camp: {
-      name: 'Izletište camp Turjanica',
+      name: 'Picnic Area & Camp Turjanica',
       location: 'Branešci, Čelinac',
       gps: '44.77506, 17.51265',
     },
@@ -319,7 +319,7 @@ export const translations = {
       contact: 'Contact',
     },
     hero: {
-      headline: 'Izletište & Camp Turjanica',
+      headline: 'Picnic Area & Camp Turjanica',
       tagline: 'Nature. Peace. Adventure.',
       cta: 'Get in touch',
       ctaMap: 'Open in Google Maps',
@@ -583,7 +583,7 @@ export const translations = {
   },
   de: {
     camp: {
-      name: 'Izletište camp Turjanica',
+      name: 'Ausflugsziel & Camp Turjanica',
       location: 'Branešci, Čelinac',
       gps: '44.77506, 17.51265',
     },
@@ -597,7 +597,7 @@ export const translations = {
       contact: 'Kontakt',
     },
     hero: {
-      headline: 'Izletište & Camp Turjanica',
+      headline: 'Ausflugsziel & Camp Turjanica',
       tagline: 'Natur. Ruhe. Abenteuer.',
       cta: 'Kontakt aufnehmen',
       ctaMap: 'In Google Maps öffnen',
@@ -861,7 +861,7 @@ export const translations = {
   },
   sr: {
     camp: {
-      name: 'Izletište camp Turjanica',
+      name: 'Izletište & Kamp Turjanica',
       location: 'Branešci, Čelinac',
       gps: '44.77506, 17.51265',
     },
@@ -1139,7 +1139,7 @@ export const translations = {
   },
   fr: {
     camp: {
-      name: 'Izletište camp Turjanica',
+      name: 'Aire de pique-nique & Camp Turjanica',
       location: 'Branešci, Čelinac',
       gps: '44.77506, 17.51265',
     },
@@ -1153,7 +1153,7 @@ export const translations = {
       contact: 'Contact',
     },
     hero: {
-      headline: 'Izletište & Camp Turjanica',
+      headline: 'Aire de pique-nique & Camp Turjanica',
       tagline: 'Nature. Paix. Aventure.',
       cta: 'Nous contacter',
       ctaMap: 'Ouvrir dans Google Maps',
