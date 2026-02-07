@@ -24,9 +24,6 @@ export const Location = () => {
           <h2 className="text-3xl sm:text-4xl font-bold mb-4">
             {t.location.title}
           </h2>
-          <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-            {t.location.subtitle}
-          </p>
         </div>
 
         <div className="grid lg:grid-cols-2 gap-12 items-start">
