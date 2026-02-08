@@ -11,7 +11,6 @@ import { Location } from '@/components/camping/Location';
 import { Reviews } from '@/components/camping/Reviews';
 import { ContactCTA } from '@/components/camping/ContactCTA';
 import { Footer } from '@/components/camping/Footer';
-import { MobileContactButton } from '@/components/camping/MobileContactButton';
 
 const Index = () => {
   return (
@@ -31,7 +30,6 @@ const Index = () => {
           <ContactCTA />
         </main>
         <Footer />
-        <MobileContactButton />
       </div>
     </LanguageProvider>
   );
