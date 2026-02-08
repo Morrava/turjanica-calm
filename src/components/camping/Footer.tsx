@@ -71,6 +71,10 @@ export const Footer = () => {
                 <a href="tel:+38766912449" className="hover:text-background transition-colors">+387 66 912 449</a>
               </div>
               <div className="flex items-center gap-2">
+                <Phone className="w-4 h-4" />
+                <a href="tel:+38765534700" className="hover:text-background transition-colors">+387 65 534 700</a>
+              </div>
+              <div className="flex items-center gap-2">
                 <Mail className="w-4 h-4" />
                 <a href="mailto:camp.turjanica@gmail.com" className="hover:text-background transition-colors">camp.turjanica@gmail.com</a>
               </div>
