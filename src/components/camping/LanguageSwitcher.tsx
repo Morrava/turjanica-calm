@@ -9,6 +9,9 @@ const languages: { code: Language; flag: string; label: string; fullLabel: strin
   { code: 'de', flag: '🇩🇪', label: 'DE', fullLabel: 'Deutsch' },
   { code: 'fr', flag: '🇫🇷', label: 'FR', fullLabel: 'Français' },
   { code: 'sr', flag: '🇷🇸', label: 'SR', fullLabel: 'Srpski' },
+  { code: 'sk', flag: '🇸🇰', label: 'SK', fullLabel: 'Slovenčina' },
+  { code: 'cs', flag: '🇨🇿', label: 'CS', fullLabel: 'Čeština' },
+  { code: 'hu', flag: '🇭🇺', label: 'HU', fullLabel: 'Magyar' },
 ];
 
 interface LanguageSwitcherProps {
