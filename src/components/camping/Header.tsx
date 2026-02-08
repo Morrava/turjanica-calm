@@ -63,7 +63,7 @@ export const Header = () => {
         </div>
 
         {/* Mobile Navigation */}
-        {isMenuOpen && <div className="lg:hidden py-4 border-t border-border">
+        {isMenuOpen && <div className="lg:hidden py-4 border-t border-border max-h-[calc(100vh-4rem)] overflow-y-auto">
             <nav className="flex flex-col gap-2">
               {navItems.map(item => <a key={item.href} href={item.href} onClick={() => setIsMenuOpen(false)} className="px-4 py-3 text-sm font-medium text-muted-foreground hover:text-foreground hover:bg-secondary rounded-lg transition-colors">
                   {item.label}
@@ -72,8 +72,8 @@ export const Header = () => {
                 {t.nav.contact}
               </a>
             </nav>
-            <div className="mt-4 px-4">
-              <LanguageSwitcher />
+            <div className="mt-4 px-4 pb-4">
+              <LanguageSwitcher variant="mobile" />
             </div>
           </div>}
       </div>
