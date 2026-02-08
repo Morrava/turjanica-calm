@@ -15,7 +15,7 @@ const languages: { code: Language; flag: string; label: string; fullLabel: strin
 ];
 
 interface LanguageSwitcherProps {
-  variant?: 'navbar' | 'footer';
+  variant?: 'navbar' | 'footer' | 'mobile';
 }
 
 export const LanguageSwitcher = ({ variant = 'navbar' }: LanguageSwitcherProps) => {
@@ -38,6 +38,7 @@ export const LanguageSwitcher = ({ variant = 'navbar' }: LanguageSwitcherProps) 
   }, []);
 
   const isFooter = variant === 'footer';
+  const isMobile = variant === 'mobile';
 
   return (
     <div className="relative inline-block" ref={dropdownRef}>
@@ -70,7 +71,9 @@ export const LanguageSwitcher = ({ variant = 'navbar' }: LanguageSwitcherProps) 
           className={`absolute z-50 rounded-xl shadow-lg overflow-hidden min-w-[180px] border ${
             isFooter 
               ? 'bottom-full mb-2 left-0 bg-foreground border-background/20' 
-              : 'top-full mt-2 right-0 bg-background border-border'
+              : isMobile
+                ? 'bottom-full mb-2 left-0 bg-background border-border max-h-[50vh] overflow-y-auto'
+                : 'top-full mt-2 right-0 bg-background border-border'
           }`}
         >
           <div className="py-1">
