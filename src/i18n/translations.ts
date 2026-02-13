@@ -230,6 +230,11 @@ export const translations = {
         distance: '38 km',
         desc: 'Regionaal centrum met restaurants, winkelcentra, museum en theaters',
       },
+      marriott: {
+        name: 'Hotel Marriott',
+        distance: '38 km',
+        desc: 'Courtyard by Marriott in Banja Luka, modern hotel met uitstekende service',
+      },
       celinac: {
         name: 'Čelinac',
         distance: '21 km',
@@ -514,6 +519,11 @@ export const translations = {
         distance: '38 km',
         desc: 'Regional center with restaurants, malls, museum and theatres',
       },
+      marriott: {
+        name: 'Hotel Marriott',
+        distance: '38 km',
+        desc: 'Courtyard by Marriott in Banja Luka, modern hotel with excellent service',
+      },
       celinac: {
         name: 'Čelinac',
         distance: '21 km',
@@ -792,6 +802,11 @@ export const translations = {
         name: 'Banja Luka',
         distance: '38 km',
         desc: 'Regionalzentrum mit Restaurants, Einkaufszentren, Museum und Theatern',
+      },
+      marriott: {
+        name: 'Hotel Marriott',
+        distance: '38 km',
+        desc: 'Courtyard by Marriott in Banja Luka, modernes Hotel mit ausgezeichnetem Service',
       },
       celinac: {
         name: 'Čelinac',
@@ -1072,6 +1087,11 @@ export const translations = {
         distance: '38 km',
         desc: 'Regionalni centar s restoranima, tržnim centrima, muzejom i pozorištima',
       },
+      marriott: {
+        name: 'Hotel Marriott',
+        distance: '38 km',
+        desc: 'Courtyard by Marriott u Banja Luci, moderan hotel s odličnom uslugom',
+      },
       celinac: {
         name: 'Čelinac',
         distance: '21 km',
@@ -1350,6 +1370,11 @@ export const translations = {
         name: 'Banja Luka',
         distance: '38 km',
         desc: 'Centre régional avec restaurants, centres commerciaux, musée et théâtres',
+      },
+      marriott: {
+        name: 'Hôtel Marriott',
+        distance: '38 km',
+        desc: 'Courtyard by Marriott à Banja Luka, hôtel moderne avec un excellent service',
       },
       celinac: {
         name: 'Čelinac',
@@ -1630,6 +1655,11 @@ export const translations = {
         distance: '38 km',
         desc: 'Regionálne centrum s reštauráciami, nákupnými centrami, múzeom a divadlami',
       },
+      marriott: {
+        name: 'Hotel Marriott',
+        distance: '38 km',
+        desc: 'Courtyard by Marriott v Banja Luke, moderný hotel s vynikajúcimi službami',
+      },
       celinac: {
         name: 'Čelinac',
         distance: '21 km',
@@ -1909,6 +1939,11 @@ export const translations = {
         distance: '38 km',
         desc: 'Regionální centrum s restauracemi, obchodními centry, muzeem a divadly',
       },
+      marriott: {
+        name: 'Hotel Marriott',
+        distance: '38 km',
+        desc: 'Courtyard by Marriott v Banja Luce, moderní hotel s vynikajícími službami',
+      },
       celinac: {
         name: 'Čelinac',
         distance: '21 km',
@@ -2187,6 +2222,11 @@ export const translations = {
         name: 'Banja Luka',
         distance: '38 km',
         desc: 'Regionális központ éttermekkel, bevásárlóközpontokkal, múzeummal és színházakkal',
+      },
+      marriott: {
+        name: 'Hotel Marriott',
+        distance: '38 km',
+        desc: 'Courtyard by Marriott Banja Lukában, modern szálloda kiváló szolgáltatással',
       },
       celinac: {
         name: 'Čelinac',

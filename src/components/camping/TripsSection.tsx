@@ -3,6 +3,7 @@ import { useLanguage } from '@/i18n/LanguageContext';
 
 // Import trip images
 import banjaLukaImg from '@/assets/trips/banja-luka.jpg';
+import marriottImg from '@/assets/trips/marriott.png';
 import celinacImg from '@/assets/trips/celinac.jpg';
 import brvnaraImg from '@/assets/trips/brvnara.png';
 import pizzeriaImg from '@/assets/trips/pizzeria.png';
@@ -14,6 +15,7 @@ export const TripsSection = () => {
 
   const trips = [
     { ...t.trips.banjaluka, key: 'banjaluka', image: banjaLukaImg, mapUrl: 'https://www.google.com/maps/place/Kastel+Fortress/@44.7665964,17.1880921,17z/data=!3m1!4b1!4m6!3m5!1s0x475e03180c09d68d:0x62337bdf5d5ca7fa!8m2!3d44.7665926!4d17.190667!16s%2Fg%2F122z2gz3?entry=ttu' },
+    { ...t.trips.marriott, key: 'marriott', image: marriottImg, mapUrl: 'https://www.google.com/maps/place/Courtyard+by+Marriott+Banja+Luka/@44.777418,17.1926662,18z/data=!4m10!3m9!1s0x475e03159b9614e9:0x672e9768b226ebe7!5m3!1s2026-02-20!4m1!1i2!8m2!3d44.7774161!4d17.1939537!16s%2Fg%2F11fk9_p7bq?entry=ttu&g_ep=EgoyMDI2MDIxMC4wIKXMDSoASAFQAw%3D%3D' },
     { ...t.trips.celinac, key: 'celinac', image: celinacImg, mapUrl: 'https://www.google.com/maps/place/%C4%8Celinac,+Bosnia+and+Herzegovina/@44.7223702,17.3112794,15z/data=!3m1!4b1!4m6!3m5!1s0x475e10037ef43d95:0x4b930955a9b45eaf!8m2!3d44.7258634!4d17.3207229!16zL20vMDQyN3Bj?entry=ttu' },
     { ...t.trips.brvnara, key: 'brvnara', image: brvnaraImg, mapUrl: 'https://www.google.com/maps/place/Brvnara/@44.7493297,17.266916,17z/data=!3m1!4b1!4m6!3m5!1s0x475e04d94ba98f0f:0xe6980006d51e92dc!8m2!3d44.7493259!4d17.2694909!16s%2Fg%2F1q5bn9cbd?entry=ttu' },
     { ...t.trips.pizzeria, key: 'pizzeria', image: pizzeriaImg, mapUrl: 'https://www.google.com/maps/place/Kafe-Pizzeria3M/@44.7679,17.4901496,17z/data=!3m1!4b1!4m6!3m5!1s0x475e0d002a9344d1:0x21a3826a5b1d73e2!8m2!3d44.7678962!4d17.4927245!16s%2Fg%2F11vx3mtvqp?entry=ttu' },
