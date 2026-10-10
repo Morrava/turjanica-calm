@@ -1,8 +1,8 @@
 import { Mail, MessageCircle } from 'lucide-react';
 import { useLanguage } from '@/i18n/LanguageContext';
 import { Button } from '@/components/ui/button';
+import { useBooking } from '@/hooks/use-booking';
 
-const WHATSAPP_URL = 'https://wa.me/38766912449';
 const MESSENGER_URL = 'https://m.me/100094247625434';
 const INSTAGRAM_DM_URL = 'https://ig.me/m/izletiste_camp_turjanica';
 const EMAIL = 'camp.turjanica@gmail.com';
@@ -28,6 +28,7 @@ const InstagramIcon = () => (
 
 export const ContactCTA = () => {
   const { t } = useLanguage();
+  const { bookingUrl } = useBooking();
 
   return (
     <section id="contact" className="section-padding bg-primary">
@@ -47,7 +48,7 @@ export const ContactCTA = () => {
               className="h-14 text-base bg-[#25D366] hover:bg-[#1ebe5d] text-white shadow-card"
               asChild
             >
-              <a href={WHATSAPP_URL} target="_blank" rel="noopener noreferrer">
+              <a href={bookingUrl} target="_blank" rel="noopener noreferrer">
                 <WhatsAppIcon />
                 {t.cta.whatsapp}
               </a>

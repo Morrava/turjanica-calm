@@ -3,18 +3,23 @@ import { Menu, X, Tent } from 'lucide-react';
 import { useLanguage } from '@/i18n/LanguageContext';
 import { LanguageSwitcher } from './LanguageSwitcher';
 import { Button } from '@/components/ui/button';
+import { useBooking } from '@/hooks/use-booking';
 
 export const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const {
     t
   } = useLanguage();
+  const { b, bookingUrl } = useBooking();
   const navItems = [{
     label: t.nav.about,
     href: '#about'
   }, {
     label: t.nav.accommodations,
     href: '#accommodations'
+  }, {
+    label: b.navPricing,
+    href: '#pricing'
   }, {
     label: t.nav.offers,
     href: '#offers'
@@ -52,7 +57,7 @@ export const Header = () => {
               <LanguageSwitcher />
             </div>
             <Button variant="cta" size="sm" asChild className="hidden sm:flex">
-              <a href="#contact">{t.nav.contact}</a>
+              <a href={bookingUrl} target="_blank" rel="noopener noreferrer">{b.bookNow}</a>
             </Button>
 
             {/* Mobile menu button */}
@@ -68,6 +73,9 @@ export const Header = () => {
               {navItems.map(item => <a key={item.href} href={item.href} onClick={() => setIsMenuOpen(false)} className="px-4 py-3 text-sm font-medium text-muted-foreground hover:text-foreground hover:bg-secondary rounded-lg transition-colors">
                   {item.label}
                 </a>)}
+              <a href={bookingUrl} target="_blank" rel="noopener noreferrer" onClick={() => setIsMenuOpen(false)} className="px-4 py-3 text-sm font-semibold text-primary hover:bg-secondary rounded-lg transition-colors">
+                {b.bookNow}
+              </a>
               <a href="#contact" onClick={() => setIsMenuOpen(false)} className="px-4 py-3 text-sm font-medium text-primary hover:bg-secondary rounded-lg transition-colors">
                 {t.nav.contact}
               </a>

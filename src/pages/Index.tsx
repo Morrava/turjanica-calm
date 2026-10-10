@@ -5,6 +5,8 @@ import { QuickFacts } from '@/components/camping/QuickFacts';
 import { AboutSection } from '@/components/camping/AboutSection';
 import { OffersSection } from '@/components/camping/OffersSection';
 import { Accommodations } from '@/components/camping/Accommodations';
+import { Pricing } from '@/components/camping/Pricing';
+import { StickyBookButton } from '@/components/camping/StickyBookButton';
 import { PhotoGallery } from '@/components/camping/PhotoGallery';
 import { TripsSection } from '@/components/camping/TripsSection';
 import { Location } from '@/components/camping/Location';
@@ -22,6 +24,7 @@ const Index = () => {
           <QuickFacts />
           <AboutSection />
           <Accommodations />
+          <Pricing />
           <OffersSection />
           <PhotoGallery />
           <TripsSection />
@@ -30,6 +33,7 @@ const Index = () => {
           <ContactCTA />
         </main>
         <Footer />
+        <StickyBookButton />
       </div>
     </LanguageProvider>
   );

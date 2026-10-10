@@ -1,17 +1,20 @@
-import { MapPin, Navigation } from 'lucide-react';
+import { MapPin, Navigation, MessageCircle } from 'lucide-react';
 import { useLanguage } from '@/i18n/LanguageContext';
 import { Button } from '@/components/ui/button';
+import { useBooking } from '@/hooks/use-booking';
 import heroImage from '@/assets/hero-camping.jpg';
 
 const GOOGLE_MAPS_URL = "https://www.google.com/maps/place/Izleti%C5%A1te+Camp+Turjanica/@44.7748936,17.5077542,17z/data=!3m1!4b1!4m6!3m5!1s0x475e0bd99cadffeb:0x229eb213d65e0676!8m2!3d44.7748899!4d17.5126251!16s%2Fg%2F11sv_lsqmk?entry=ttu&g_ep=EgoyMDI2MDEyMS4wIKXMDSoKLDEwMDc5MjA2OUgBUAM%3D";
 
 export const Hero = () => {
   const { t } = useLanguage();
+  const { b, bookingUrl } = useBooking();
 
   const trustPoints = [
     t.hero.trust1,
     t.hero.trust2,
     t.hero.trust3,
+    b.teaser,
   ];
 
   return (
@@ -60,7 +63,10 @@ export const Hero = () => {
           {/* CTAs */}
           <div className="flex flex-col sm:flex-row gap-4 animate-slide-up" style={{ animationDelay: '0.3s' }}>
             <Button variant="hero" size="xl" asChild>
-              <a href="#contact">{t.hero.cta}</a>
+              <a href={bookingUrl} target="_blank" rel="noopener noreferrer">
+                <MessageCircle className="w-5 h-5" />
+                {b.bookNow}
+              </a>
             </Button>
             <Button variant="heroSecondary" size="xl" asChild>
               <a href={GOOGLE_MAPS_URL} target="_blank" rel="noopener noreferrer">
