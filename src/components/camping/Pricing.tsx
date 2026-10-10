@@ -1,14 +1,13 @@
 import { Moon, Zap, Baby, MessageCircle } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { useBooking } from '@/hooks/use-booking';
-import { PRICING } from '@/lib/pricing';
 
 export const Pricing = () => {
   const { b, bookingUrl } = useBooking();
 
   const rows = [
-    { icon: Moon, label: b.perNight, desc: b.perNightDesc, value: `${PRICING.currency}${PRICING.camperPerNight}` },
-    { icon: Zap, label: b.electricity, desc: b.electricityDesc, value: `+ ${PRICING.currency}${PRICING.electricityOneTime}` },
+    { icon: Moon, label: b.perNight, desc: b.perNightDesc, value: b.camperPrice },
+    { icon: Zap, label: b.electricity, desc: b.electricityDesc, value: b.electricityPrice },
     { icon: Baby, label: b.children, desc: b.childrenDesc, value: b.childrenValue },
   ];
 
