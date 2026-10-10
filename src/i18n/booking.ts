@@ -12,7 +12,8 @@ interface BookingStrings {
   children: string;
   childrenValue: string;
   childrenDesc: string;
-  teaser: string;
+  priceFrom: string;
+  kidsFree: string;
   bookNow: string;
   bookHint: string;
 }
@@ -30,7 +31,8 @@ const strings: Record<Language, BookingStrings> = {
     children: 'Kinderen',
     childrenValue: 'Gratis',
     childrenDesc: 'jonger dan {age} jaar',
-    teaser: 'Vanaf {price} per nacht · Kinderen gratis',
+    priceFrom: 'Vanaf {price} per nacht',
+    kidsFree: 'Kinderen onder {age} gratis',
     bookNow: 'Boek nu',
     bookHint: 'Eén tik via WhatsApp, niet bellen nodig',
   },
@@ -45,7 +47,8 @@ const strings: Record<Language, BookingStrings> = {
     children: 'Children',
     childrenValue: 'Free',
     childrenDesc: 'under {age} years old',
-    teaser: 'From {price} per night · Kids stay free',
+    priceFrom: 'From {price} per night',
+    kidsFree: 'Kids under {age} stay free',
     bookNow: 'Book now',
     bookHint: 'One tap via WhatsApp, no phone call needed',
   },
@@ -60,7 +63,8 @@ const strings: Record<Language, BookingStrings> = {
     children: 'Kinder',
     childrenValue: 'Kostenlos',
     childrenDesc: 'unter {age} Jahren',
-    teaser: 'Ab {price} pro Nacht · Kinder gratis',
+    priceFrom: 'Ab {price} pro Nacht',
+    kidsFree: 'Kinder unter {age} Jahren gratis',
     bookNow: 'Jetzt buchen',
     bookHint: 'Ein Klick über WhatsApp, kein Anruf nötig',
   },
@@ -75,7 +79,8 @@ const strings: Record<Language, BookingStrings> = {
     children: 'Djeca',
     childrenValue: 'Besplatno',
     childrenDesc: 'mlađa od {age} godina',
-    teaser: 'Od {price} po noćenju · Djeca besplatno',
+    priceFrom: 'Od {price} po noćenju',
+    kidsFree: 'Djeca mlađa od {age} godina besplatno',
     bookNow: 'Rezerviši',
     bookHint: 'Jedan klik preko WhatsApp-a, bez telefonskog poziva',
   },
@@ -90,7 +95,8 @@ const strings: Record<Language, BookingStrings> = {
     children: 'Enfants',
     childrenValue: 'Gratuit',
     childrenDesc: 'de moins de {age} ans',
-    teaser: 'Dès {price} par nuit · Enfants gratuits',
+    priceFrom: 'Dès {price} par nuit',
+    kidsFree: 'Enfants de moins de {age} ans gratuits',
     bookNow: 'Réserver',
     bookHint: 'Un clic via WhatsApp, pas besoin de téléphoner',
   },
@@ -105,7 +111,8 @@ const strings: Record<Language, BookingStrings> = {
     children: 'Deti',
     childrenValue: 'Zadarmo',
     childrenDesc: 'mladšie ako {age} rokov',
-    teaser: 'Od {price} za noc · Deti zadarmo',
+    priceFrom: 'Od {price} za noc',
+    kidsFree: 'Deti mladšie ako {age} rokov zadarmo',
     bookNow: 'Rezervovať',
     bookHint: 'Jedno kliknutie cez WhatsApp, bez telefonovania',
   },
@@ -120,7 +127,8 @@ const strings: Record<Language, BookingStrings> = {
     children: 'Děti',
     childrenValue: 'Zdarma',
     childrenDesc: 'mladší {age} let',
-    teaser: 'Od {price} za noc · Děti zdarma',
+    priceFrom: 'Od {price} za noc',
+    kidsFree: 'Děti mladší {age} let zdarma',
     bookNow: 'Rezervovat',
     bookHint: 'Jedno kliknutí přes WhatsApp, bez telefonování',
   },
@@ -135,7 +143,8 @@ const strings: Record<Language, BookingStrings> = {
     children: 'Gyerekek',
     childrenValue: 'Ingyenes',
     childrenDesc: '{age} év alatt',
-    teaser: '{price}-tól éjszakánként · Gyerekeknek ingyenes',
+    priceFrom: '{price}-tól éjszakánként',
+    kidsFree: '{age} év alatti gyerekeknek ingyenes',
     bookNow: 'Foglalás',
     bookHint: 'Egy koppintás WhatsAppon, telefonálás nélkül',
   },
@@ -161,6 +170,7 @@ export const getBookingStrings = (lang: Language) => {
     camperPrice,
     electricityPrice,
     childrenDesc: fill(s.childrenDesc),
-    teaser: fill(s.teaser),
+    priceFrom: fill(s.priceFrom),
+    kidsFree: fill(s.kidsFree),
   };
 };

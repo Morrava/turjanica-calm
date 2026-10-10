@@ -1,28 +1,31 @@
-import { MapPin, Ruler, Waves, Route, Navigation } from 'lucide-react';
 import { useLanguage } from '@/i18n/LanguageContext';
+import { useBooking } from '@/hooks/use-booking';
 
 export const QuickFacts = () => {
   const { t } = useLanguage();
+  const { b } = useBooking();
 
   const facts = [
-    { icon: MapPin, label: t.quickFacts.distance },
-    { icon: Ruler, label: t.quickFacts.area },
-    { icon: Waves, label: t.quickFacts.rivers },
-    { icon: Route, label: t.quickFacts.road },
-    { icon: Navigation, label: t.quickFacts.gps },
+    { label: b.priceFrom, highlight: true },
+    { label: b.kidsFree },
+    { label: t.quickFacts.distance },
+    { label: `${t.quickFacts.area}, ${t.quickFacts.rivers}` },
   ];
 
   return (
-    <section className="bg-primary py-6">
+    <section className="bg-foreground text-background">
       <div className="section-container">
-        <div className="flex flex-wrap justify-center gap-4 sm:gap-8">
+        <div className="grid grid-cols-2 lg:grid-cols-4 divide-background/15 lg:divide-x">
           {facts.map((fact, index) => (
             <div
               key={index}
-              className="flex items-center gap-2 text-primary-foreground"
+              className={`px-3 py-4 sm:px-4 sm:py-6 text-center border-background/15 ${index < 2 ? 'border-b lg:border-b-0' : ''} ${index % 2 === 0 ? 'border-r lg:border-r-0' : ''}`}
             >
-              <fact.icon className="w-5 h-5 opacity-80" />
-              <span className="text-sm sm:text-base font-medium">{fact.label}</span>
+              <span
+                className={`font-heading font-bold text-sm sm:text-lg leading-snug text-balance ${fact.highlight ? 'text-ember-light' : ''}`}
+              >
+                {fact.label}
+              </span>
             </div>
           ))}
         </div>
