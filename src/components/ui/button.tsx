@@ -16,9 +16,9 @@ const buttonVariants = cva(
         ghost: "hover:bg-accent hover:text-accent-foreground",
         link: "text-primary underline-offset-4 hover:underline",
         // Camping Turjanica custom variants
-        hero: "bg-primary text-primary-foreground hover:bg-forest-dark shadow-card hover:shadow-elevated",
+        hero: "bg-ember text-white hover:bg-ember-dark shadow-card hover:shadow-elevated",
         heroSecondary: "bg-card/90 backdrop-blur-sm text-foreground border border-border hover:bg-card shadow-soft",
-        cta: "bg-primary text-primary-foreground hover:bg-forest-dark shadow-card",
+        cta: "bg-ember text-white hover:bg-ember-dark shadow-card",
         whatsapp: "bg-[hsl(145,70%,48%)] text-primary-foreground hover:bg-[hsl(145,70%,40%)] shadow-card",
       },
       size: {

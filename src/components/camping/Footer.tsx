@@ -1,4 +1,5 @@
-import { MapPin, Phone, Mail, Navigation, Instagram, Facebook, Tent } from 'lucide-react';
+import { MapPin, Phone, Mail, Navigation, Instagram, Facebook } from 'lucide-react';
+import { Logo } from './Logo';
 import { useLanguage } from '@/i18n/LanguageContext';
 import { LanguageSwitcher } from './LanguageSwitcher';
 
@@ -13,11 +14,8 @@ export const Footer = () => {
         <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
           {/* Brand */}
           <div>
-            <div className="flex items-center gap-2 mb-4">
-              <div className="w-10 h-10 rounded-lg bg-primary flex items-center justify-center">
-                <Tent className="w-6 h-6 text-primary-foreground" />
-              </div>
-              <span className="font-semibold text-lg">{t.camp.name}</span>
+            <div className="mb-4">
+              <Logo light />
             </div>
             <p className="text-background/70 text-sm italic mb-4">
               {t.footer.tagline}
@@ -27,7 +25,7 @@ export const Footer = () => {
                 href="https://www.instagram.com/izletiste_camp_turjanica/?hl=en"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-background/70 hover:text-primary transition-colors"
+                className="text-background/70 hover:text-ember-light transition-colors"
                 aria-label="Instagram"
               >
                 <Instagram className="w-5 h-5" />
@@ -36,7 +34,7 @@ export const Footer = () => {
                 href="https://www.facebook.com/p/Izleti%C5%A1te-i-kamp-Turjanica-Picnic-and-Camping-Turjanica-100094247625434/"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-background/70 hover:text-primary transition-colors"
+                className="text-background/70 hover:text-ember-light transition-colors"
                 aria-label="Facebook"
               >
                 <Facebook className="w-5 h-5" />
@@ -46,7 +44,7 @@ export const Footer = () => {
               href={GOOGLE_MAPS_URL}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 text-sm text-primary hover:text-primary/80 transition-colors"
+              className="inline-flex items-center gap-2 text-sm text-ember-light hover:text-ember-light/80 transition-colors"
             >
               <Navigation className="w-4 h-4" />
               {t.directions.openMaps}

@@ -14,7 +14,8 @@ export default {
     },
     extend: {
       fontFamily: {
-        sans: ['Instrument Sans', 'system-ui', 'sans-serif'],
+        sans: ['Source Sans 3', 'system-ui', 'sans-serif'],
+        heading: ['Bitter', 'Georgia', 'serif'],
       },
       colors: {
         border: "hsl(var(--border))",
@@ -58,6 +59,11 @@ export default {
         earth: {
           DEFAULT: "hsl(var(--earth))",
           light: "hsl(var(--earth-light))",
+        },
+        ember: {
+          DEFAULT: "hsl(var(--ember))",
+          dark: "hsl(var(--ember-dark))",
+          light: "hsl(var(--ember-light))",
         },
         sand: "hsl(var(--sand))",
         charcoal: "hsl(var(--charcoal))",
