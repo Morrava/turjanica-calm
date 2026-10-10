@@ -12,7 +12,7 @@ export const AboutSection = () => {
   ];
 
   return (
-    <section id="about" className="section-padding bg-card">
+    <section id="about" className="section-padding bg-background">
       <div className="section-container">
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           {/* Text content */}
@@ -25,29 +25,25 @@ export const AboutSection = () => {
               <p>{t.about.text2}</p>
             </div>
 
-            {/* Nearby amenities integrated */}
-            <div className="bg-secondary/50 rounded-xl p-5">
-              <h3 className="font-semibold text-foreground mb-4">{t.nearby.title}</h3>
-              <div className="flex flex-wrap gap-3">
+            <div className="border-t border-border pt-6">
+              <h3 className="font-heading font-bold text-lg mb-3">{t.nearby.title}</h3>
+              <ul className="space-y-2">
                 {nearbyItems.map((item, index) => (
-                  <div
-                    key={index}
-                    className="flex items-center gap-2 bg-background px-4 py-2 rounded-full"
-                  >
-                    <item.icon className="w-4 h-4 text-primary" />
-                    <span className="text-sm text-foreground">{item.label}</span>
-                  </div>
+                  <li key={index} className="flex items-start gap-3 text-foreground">
+                    <item.icon className="w-5 h-5 text-ember mt-0.5 flex-shrink-0" />
+                    <span>{item.label}</span>
+                  </li>
                 ))}
-              </div>
+              </ul>
             </div>
           </div>
 
           {/* Image */}
-          <div className="rounded-2xl overflow-hidden shadow-card">
+          <div className="overflow-hidden rounded-sm">
             <img
               src={natureImage}
               alt="Camp Turjanica nature"
-              className="w-full aspect-[4/3] object-cover"
+              className="w-full aspect-[4/5] object-cover"
             />
           </div>
         </div>

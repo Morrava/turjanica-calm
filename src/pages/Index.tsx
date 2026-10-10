@@ -5,6 +5,7 @@ import { QuickFacts } from '@/components/camping/QuickFacts';
 import { AboutSection } from '@/components/camping/AboutSection';
 import { OffersSection } from '@/components/camping/OffersSection';
 import { Accommodations } from '@/components/camping/Accommodations';
+import { FeatureBlocks } from '@/components/camping/FeatureBlocks';
 import { Pricing } from '@/components/camping/Pricing';
 import { StickyBookButton } from '@/components/camping/StickyBookButton';
 import { PhotoGallery } from '@/components/camping/PhotoGallery';
@@ -23,6 +24,7 @@ const Index = () => {
           <Hero />
           <QuickFacts />
           <AboutSection />
+          <FeatureBlocks />
           <Accommodations />
           <Pricing />
           <OffersSection />

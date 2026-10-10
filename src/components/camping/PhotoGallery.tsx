@@ -1,6 +1,6 @@
-import { useState, useRef, useEffect } from 'react';
+import { useState, useEffect } from 'react';
 import { useLanguage } from '@/i18n/LanguageContext';
-import { X, ChevronLeft, ChevronRight, Images } from 'lucide-react';
+import { X, ChevronLeft, ChevronRight } from 'lucide-react';
 
 // Import all gallery images
 import pavilionImg from '@/assets/gallery/pavilion.jpg';
@@ -42,46 +42,19 @@ const galleryImages = [
   roadSignImg,
 ];
 
+const PREVIEW_COUNT = 9;
+
 export const PhotoGallery = () => {
   const { t } = useLanguage();
   const [lightboxOpen, setLightboxOpen] = useState(false);
   const [currentIndex, setCurrentIndex] = useState(0);
-  const scrollRef = useRef<HTMLDivElement>(null);
-  const [canScrollLeft, setCanScrollLeft] = useState(false);
-  const [canScrollRight, setCanScrollRight] = useState(true);
-
-  const checkScrollability = () => {
-    if (scrollRef.current) {
-      const { scrollLeft, scrollWidth, clientWidth } = scrollRef.current;
-      setCanScrollLeft(scrollLeft > 0);
-      setCanScrollRight(scrollLeft < scrollWidth - clientWidth - 10);
-    }
-  };
-
-  useEffect(() => {
-    checkScrollability();
-    window.addEventListener('resize', checkScrollability);
-    return () => window.removeEventListener('resize', checkScrollability);
-  }, []);
-
-  const scrollByCard = (direction: 'left' | 'right') => {
-    if (scrollRef.current) {
-      const cardWidth = 432 + 16; // card width + gap (md:w-[432px] + gap-4)
-      const scrollAmount = direction === 'left' ? -cardWidth : cardWidth;
-      scrollRef.current.scrollBy({ left: scrollAmount, behavior: 'smooth' });
-    }
-  };
 
   const openLightbox = (index: number) => {
     setCurrentIndex(index);
     setLightboxOpen(true);
-    document.body.style.overflow = 'hidden';
   };
 
-  const closeLightbox = () => {
-    setLightboxOpen(false);
-    document.body.style.overflow = 'auto';
-  };
+  const closeLightbox = () => setLightboxOpen(false);
 
   const goToPrevious = () => {
     setCurrentIndex((prev) => (prev === 0 ? galleryImages.length - 1 : prev - 1));
@@ -91,126 +64,92 @@ export const PhotoGallery = () => {
     setCurrentIndex((prev) => (prev === galleryImages.length - 1 ? 0 : prev + 1));
   };
 
-  const handleKeyDown = (e: React.KeyboardEvent) => {
-    if (e.key === 'Escape') closeLightbox();
-    if (e.key === 'ArrowLeft') goToPrevious();
-    if (e.key === 'ArrowRight') goToNext();
-  };
+  useEffect(() => {
+    if (!lightboxOpen) return;
+    document.body.style.overflow = 'hidden';
+    const onKey = (e: KeyboardEvent) => {
+      if (e.key === 'Escape') setLightboxOpen(false);
+      if (e.key === 'ArrowLeft') setCurrentIndex((prev) => (prev === 0 ? galleryImages.length - 1 : prev - 1));
+      if (e.key === 'ArrowRight') setCurrentIndex((prev) => (prev === galleryImages.length - 1 ? 0 : prev + 1));
+    };
+    window.addEventListener('keydown', onKey);
+    return () => {
+      document.body.style.overflow = 'auto';
+      window.removeEventListener('keydown', onKey);
+    };
+  }, [lightboxOpen]);
+
+  const remaining = galleryImages.length - PREVIEW_COUNT;
 
   return (
-    <section id="gallery" className="py-16 md:py-24 bg-background">
-      <div className="container mx-auto px-4">
-        {/* Header */}
-        <div className="text-center mb-10">
-          <div className="flex items-center justify-center gap-2 mb-4">
-            <Images className="h-6 w-6 text-primary" />
-            <h2 className="text-3xl md:text-4xl font-display font-semibold text-foreground">
-              {t.gallery.title}
-            </h2>
-          </div>
-          <p className="text-muted-foreground max-w-2xl mx-auto">
-            {t.gallery.subtitle}
-          </p>
+    <section id="gallery" className="section-padding bg-background">
+      <div className="section-container">
+        <div className="mb-10 max-w-2xl">
+          <h2 className="text-3xl sm:text-4xl font-bold mb-3">{t.gallery.title}</h2>
+          <p className="text-muted-foreground">{t.gallery.subtitle}</p>
         </div>
 
-        {/* Gallery Carousel */}
-        <div className="relative">
-          {/* Left Arrow */}
-          {canScrollLeft && (
+        <div className="grid grid-cols-2 md:grid-cols-4 auto-rows-[130px] sm:auto-rows-[180px] md:auto-rows-[210px] gap-2 sm:gap-3">
+          {galleryImages.slice(0, PREVIEW_COUNT).map((image, index) => (
             <button
-              onClick={() => scrollByCard('left')}
-              className="absolute left-0 top-1/2 -translate-y-1/2 z-10 w-12 h-12 rounded-full bg-background/90 border border-border shadow-card flex items-center justify-center hover:bg-secondary transition-colors -ml-4 lg:-ml-6"
-              aria-label="Scroll left"
+              key={index}
+              onClick={() => openLightbox(index)}
+              className={`group relative overflow-hidden rounded-sm bg-muted focus:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 ${index === 0 ? 'col-span-2 row-span-2' : ''}`}
+              aria-label={`Camp Turjanica - Photo ${index + 1}`}
             >
-              <ChevronLeft className="w-6 h-6 text-foreground" />
+              <img
+                src={image}
+                alt={`Camp Turjanica - Photo ${index + 1}`}
+                className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                loading="lazy"
+              />
+              {index === PREVIEW_COUNT - 1 && remaining > 0 && (
+                <span className="absolute inset-0 bg-foreground/60 flex items-center justify-center font-heading font-bold text-3xl text-card">
+                  +{remaining}
+                </span>
+              )}
             </button>
-          )}
-
-          {/* Scrollable Container */}
-          <div
-            ref={scrollRef}
-            onScroll={checkScrollability}
-            className="flex gap-4 overflow-x-auto scrollbar-hide pb-4 snap-x snap-mandatory"
-            style={{ scrollbarWidth: 'none', msOverflowStyle: 'none' }}
-          >
-            {galleryImages.map((image, index) => (
-              <button
-                key={index}
-                onClick={() => openLightbox(index)}
-                className="flex-shrink-0 snap-start group relative w-[336px] sm:w-[384px] md:w-[432px] aspect-[4/3] overflow-hidden rounded-xl bg-muted cursor-pointer focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2"
-              >
-                <img
-                  src={image}
-                  alt={`Camp Turjanica - Photo ${index + 1}`}
-                  className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
-                  loading="lazy"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
-              </button>
-            ))}
-          </div>
-
-          {/* Right Arrow */}
-          {canScrollRight && (
-            <button
-              onClick={() => scrollByCard('right')}
-              className="absolute right-0 top-1/2 -translate-y-1/2 z-10 w-12 h-12 rounded-full bg-background/90 border border-border shadow-card flex items-center justify-center hover:bg-secondary transition-colors -mr-4 lg:-mr-6"
-              aria-label="Scroll right"
-            >
-              <ChevronRight className="w-6 h-6 text-foreground" />
-            </button>
-          )}
+          ))}
         </div>
 
-        {/* Lightbox */}
         {lightboxOpen && (
           <div
             className="fixed inset-0 z-[100] bg-black/95 flex items-center justify-center"
             onClick={closeLightbox}
-            onKeyDown={handleKeyDown}
-            tabIndex={0}
             role="dialog"
             aria-modal="true"
           >
-            {/* Close button */}
             <button
               onClick={closeLightbox}
               className="absolute top-4 right-4 z-50 p-2 rounded-full bg-white/10 hover:bg-white/20 transition-colors"
-              aria-label="Close lightbox"
+              aria-label="Close"
             >
               <X className="h-6 w-6 text-white" />
             </button>
 
-            {/* Previous button */}
             <button
               onClick={(e) => { e.stopPropagation(); goToPrevious(); }}
               className="absolute left-4 top-1/2 -translate-y-1/2 z-50 p-3 rounded-full bg-white/10 hover:bg-white/20 transition-colors"
-              aria-label="Previous image"
+              aria-label="Previous"
             >
               <ChevronLeft className="h-8 w-8 text-white" />
             </button>
 
-            {/* Image */}
-            <div 
-              className="max-w-[90vw] max-h-[85vh] relative"
-              onClick={(e) => e.stopPropagation()}
-            >
+            <div className="max-w-[90vw] max-h-[85vh] relative" onClick={(e) => e.stopPropagation()}>
               <img
                 src={galleryImages[currentIndex]}
                 alt={`Camp Turjanica - Photo ${currentIndex + 1}`}
-                className="max-w-full max-h-[85vh] object-contain rounded-lg"
+                className="max-w-full max-h-[85vh] object-contain rounded-sm"
               />
-              {/* Image counter */}
               <div className="absolute bottom-4 left-1/2 -translate-x-1/2 text-white/80 text-sm bg-black/40 px-4 py-2 rounded-full backdrop-blur-sm">
                 {currentIndex + 1} / {galleryImages.length}
               </div>
             </div>
 
-            {/* Next button */}
             <button
               onClick={(e) => { e.stopPropagation(); goToNext(); }}
               className="absolute right-4 top-1/2 -translate-y-1/2 z-50 p-3 rounded-full bg-white/10 hover:bg-white/20 transition-colors"
-              aria-label="Next image"
+              aria-label="Next"
             >
               <ChevronRight className="h-8 w-8 text-white" />
             </button>
