@@ -229,14 +229,14 @@ export const OffersSection = () => {
   };
 
   return (
-    <section id="offers" className="py-16 md:py-24 bg-card">
-      <div className="container mx-auto px-4">
+    <section id="offers" className="section-padding bg-card">
+      <div className="section-container">
         {/* Header */}
-        <div className="text-center mb-10 md:mb-14">
-          <h2 className="text-3xl md:text-4xl font-display font-semibold text-foreground mb-4">
+        <div className="mb-10 md:mb-14 max-w-2xl">
+          <h2 className="text-3xl sm:text-4xl font-bold mb-3">
             {t.offersNew?.title || t.offers.title}
           </h2>
-          <p className="text-muted-foreground max-w-2xl mx-auto">
+          <p className="text-lg text-muted-foreground">
             {t.offersNew?.subtitle || t.offers.subtitle}
           </p>
         </div>
@@ -245,7 +245,7 @@ export const OffersSection = () => {
         <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 mb-12">
           {/* Left: Image Carousel with Chips */}
           <div className="relative">
-            <div className="relative aspect-[4/3] rounded-2xl overflow-hidden bg-muted">
+            <div className="relative aspect-[4/3] rounded-sm overflow-hidden bg-muted">
               {carouselImages.map((img, idx) => (
                 <img
                   key={idx}
@@ -299,7 +299,7 @@ export const OffersSection = () => {
             <div className="overflow-x-auto scrollbar-hide -mx-4 px-4 md:mx-0 md:px-0">
               <div 
                 ref={tabsRef}
-                className="flex gap-2 mb-6 pb-2 w-max md:w-auto"
+                className="flex gap-6 mb-4 w-max md:w-auto border-b border-border"
               >
                 {tabs.map((tab) => (
                   <button
@@ -309,10 +309,10 @@ export const OffersSection = () => {
                       setExpandedCard(null);
                     }}
                     className={cn(
-                      "flex-shrink-0 px-4 py-2 rounded-full text-sm font-medium transition-all whitespace-nowrap",
+                      "flex-shrink-0 pb-3 -mb-px border-b-2 font-heading font-bold transition-colors whitespace-nowrap",
                       activeTab === tab.key
-                        ? "bg-primary text-primary-foreground shadow-sm"
-                        : "bg-secondary text-secondary-foreground hover:bg-secondary/80"
+                        ? "border-ember text-foreground"
+                        : "border-transparent text-muted-foreground hover:text-foreground"
                     )}
                   >
                     {tab.label}
@@ -322,7 +322,7 @@ export const OffersSection = () => {
             </div>
 
             {/* Amenity Cards Grid */}
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-x-8">
               {amenitiesByCategory[activeTab].map((amenity) => {
                 const isExpanded = expandedCard === amenity.titleKey;
                 const Icon = amenity.icon;
@@ -331,23 +331,19 @@ export const OffersSection = () => {
                   <div
                     key={amenity.titleKey}
                     className={cn(
-                      "group rounded-xl border bg-card p-4 transition-all duration-300 cursor-pointer",
-                      isExpanded 
-                        ? "border-primary/30 shadow-md" 
-                        : "border-border hover:shadow-md hover:border-primary/20 hover:-translate-y-0.5"
+                      "group border-b border-border py-4 cursor-pointer",
+                      isExpanded && "border-ember/50"
                     )}
                     onClick={() => toggleCard(amenity.titleKey)}
                   >
                     {/* Card Header */}
                     <div className="flex items-start gap-3">
-                      <div className="w-10 h-10 rounded-lg bg-secondary flex items-center justify-center text-primary flex-shrink-0 group-hover:bg-primary group-hover:text-primary-foreground transition-colors duration-300">
-                        <Icon className="w-5 h-5" />
-                      </div>
+                      <Icon className="w-6 h-6 text-ember flex-shrink-0 mt-0.5" />
                       <div className="flex-1 min-w-0">
-                        <h3 className="font-semibold text-foreground text-sm leading-tight truncate mb-1">
+                        <h3 className="font-heading font-bold text-foreground leading-tight mb-1">
                           {getTitle(amenity.titleKey)}
                         </h3>
-                        <p className="text-xs text-muted-foreground leading-relaxed line-clamp-2">
+                        <p className="text-sm text-muted-foreground leading-relaxed">
                           {getBenefit(amenity.titleKey)}
                         </p>
                       </div>

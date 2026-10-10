@@ -19,43 +19,28 @@ export const Location = () => {
   return (
     <section id="location" className="section-padding bg-background">
       <div className="section-container">
-        {/* Header */}
-        <div className="text-center mb-16">
-          <h2 className="text-3xl sm:text-4xl font-bold mb-4">
-            {t.location.title}
-          </h2>
-        </div>
-
-        <div className="grid lg:grid-cols-2 gap-12 items-start">
-          {/* Description */}
+        <div className="grid lg:grid-cols-2 gap-10 lg:gap-14 items-start">
           <div>
-            <p className="text-muted-foreground leading-relaxed mb-8">
+            <h2 className="text-3xl sm:text-4xl font-bold mb-5">{t.location.title}</h2>
+            <p className="text-lg text-muted-foreground leading-relaxed mb-8">
               {t.location.description}
             </p>
 
-            {/* Highlights */}
-            <div className="flex flex-wrap gap-4 mb-8">
+            <ul className="space-y-3 mb-8">
               {highlights.map((item, index) => (
-                <div
-                  key={index}
-                  className="flex items-center gap-2 bg-secondary px-4 py-2 rounded-full"
-                >
-                  <item.icon className="w-4 h-4 text-primary" />
-                  <span className="text-sm font-medium text-foreground">{item.text}</span>
-                </div>
+                <li key={index} className="flex items-center gap-3">
+                  <item.icon className="w-5 h-5 text-ember flex-shrink-0" />
+                  <span className="font-medium">{item.text}</span>
+                </li>
               ))}
-            </div>
+            </ul>
 
-            {/* GPS + CTA */}
-            <div className="bg-secondary rounded-xl p-5">
-              <div className="flex items-center gap-2 mb-3">
-                <MapPin className="w-5 h-5 text-primary" />
-                <span className="font-semibold">{t.camp.location}</span>
-              </div>
-              <p className="text-sm font-mono text-muted-foreground mb-4">
-                GPS: {GPS_LAT}, {GPS_LNG}
+            <div className="border-t border-border pt-6">
+              <p className="font-heading font-bold text-lg">{t.camp.location}</p>
+              <p className="text-sm font-mono text-muted-foreground mt-1 mb-5">
+                GPS: {GPS_LAT.toFixed(5)}, {GPS_LNG.toFixed(5)}
               </p>
-              <Button variant="cta" size="default" asChild className="w-full sm:w-auto">
+              <Button variant="hero" size="lg" asChild className="w-full sm:w-auto">
                 <a href={GOOGLE_MAPS_URL} target="_blank" rel="noopener noreferrer">
                   <Navigation className="w-4 h-4" />
                   {t.directions.openMaps}
@@ -64,8 +49,7 @@ export const Location = () => {
             </div>
           </div>
 
-          {/* Map */}
-          <div className="rounded-2xl overflow-hidden shadow-card border border-border h-[400px] lg:h-[500px]">
+          <div className="overflow-hidden rounded-sm h-[360px] lg:h-[480px] bg-muted">
             <iframe
               src={EMBED_URL}
               width="100%"

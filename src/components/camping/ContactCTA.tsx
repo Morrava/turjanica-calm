@@ -41,11 +41,9 @@ export const ContactCTA = () => {
             {t.cta.subtitle}
           </p>
 
-          {/* Chat Buttons */}
-          <div className="flex flex-col gap-3 max-w-sm mx-auto">
-            {/* WhatsApp */}
-            <Button 
-              className="h-14 text-base bg-[#25D366] hover:bg-[#1ebe5d] text-white shadow-card"
+          <div className="max-w-sm mx-auto">
+            <Button
+              className="h-14 w-full text-base bg-[#25D366] hover:bg-[#1ebe5d] text-white shadow-card"
               asChild
             >
               <a href={bookingUrl} target="_blank" rel="noopener noreferrer">
@@ -53,39 +51,24 @@ export const ContactCTA = () => {
                 {t.cta.whatsapp}
               </a>
             </Button>
+          </div>
 
-            {/* Facebook Messenger */}
-            <Button 
-              className="h-14 text-base bg-[#0084FF] hover:bg-[#0073e6] text-white shadow-card"
-              asChild
-            >
-              <a href={MESSENGER_URL} target="_blank" rel="noopener noreferrer">
-                <MessengerIcon />
-                {t.cta.messenger}
+          <div className="grid grid-cols-3 gap-3 max-w-sm mx-auto mt-3">
+            {[
+              { href: MESSENGER_URL, icon: <MessengerIcon />, label: t.cta.messenger, external: true },
+              { href: INSTAGRAM_DM_URL, icon: <InstagramIcon />, label: t.cta.instagram, external: true },
+              { href: `mailto:${EMAIL}`, icon: <Mail className="w-5 h-5" />, label: t.cta.email, external: false },
+            ].map((c) => (
+              <a
+                key={c.label}
+                href={c.href}
+                {...(c.external ? { target: '_blank', rel: 'noopener noreferrer' } : {})}
+                className="flex flex-col items-center justify-center gap-2 h-20 rounded-sm border border-primary-foreground/30 text-primary-foreground hover:bg-primary-foreground/10 transition-colors text-sm font-medium"
+              >
+                {c.icon}
+                {c.label}
               </a>
-            </Button>
-
-            {/* Instagram DM */}
-            <Button 
-              className="h-14 text-base bg-gradient-to-r from-[#833AB4] via-[#E1306C] to-[#F77737] hover:opacity-90 text-white shadow-card"
-              asChild
-            >
-              <a href={INSTAGRAM_DM_URL} target="_blank" rel="noopener noreferrer">
-                <InstagramIcon />
-                {t.cta.instagram}
-              </a>
-            </Button>
-
-            {/* Email */}
-            <Button 
-              className="h-14 text-base bg-muted text-foreground hover:bg-muted/80 shadow-card"
-              asChild
-            >
-              <a href={`mailto:${EMAIL}`}>
-                <Mail className="w-5 h-5" />
-                {t.cta.email}
-              </a>
-            </Button>
+            ))}
           </div>
         </div>
       </div>

@@ -1,4 +1,3 @@
-import { MapPin } from 'lucide-react';
 import { useLanguage } from '@/i18n/LanguageContext';
 
 // Import trip images
@@ -26,46 +25,37 @@ export const TripsSection = () => {
   return (
     <section id="trips" className="section-padding bg-card">
       <div className="section-container">
-        {/* Header */}
-        <div className="text-center mb-16">
-          <h2 className="text-3xl sm:text-4xl font-bold mb-4">
-            {t.trips.title}
-          </h2>
-          <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-            {t.trips.subtitle}
-          </p>
+        <div className="mb-12 max-w-2xl">
+          <h2 className="text-3xl sm:text-4xl font-bold mb-3">{t.trips.title}</h2>
+          <p className="text-lg text-muted-foreground">{t.trips.subtitle}</p>
         </div>
 
-        {/* Trips Grid */}
-        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto">
+        <div className="grid lg:grid-cols-2 lg:gap-x-16">
           {trips.map((trip) => (
             <a
               key={trip.key}
               href={trip.mapUrl}
               target="_blank"
               rel="noopener noreferrer"
-              className="group bg-card rounded-2xl overflow-hidden border border-border hover:shadow-card hover:border-primary/20 transition-all duration-300 cursor-pointer"
+              className="group flex items-center gap-4 sm:gap-5 py-5 border-b border-border"
             >
-              {/* Image */}
-              <div className="aspect-[16/10] overflow-hidden">
+              <div className="w-24 h-24 sm:w-28 sm:h-28 flex-shrink-0 overflow-hidden rounded-sm">
                 <img
                   src={trip.image}
                   alt={trip.name}
+                  loading="lazy"
                   className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                 />
               </div>
-
-              {/* Content */}
-              <div className="p-5">
-                <div className="flex items-start justify-between mb-2">
-                  <h3 className="font-semibold text-lg text-foreground">{trip.name}</h3>
-                  <div className="flex items-center gap-1 text-primary text-sm font-medium flex-shrink-0 ml-2">
-                    <MapPin className="w-4 h-4" />
-                    {trip.distance}
-                  </div>
-                </div>
-                <p className="text-sm text-muted-foreground leading-relaxed">{trip.desc}</p>
+              <div className="flex-1 min-w-0">
+                <h3 className="font-heading font-bold text-lg leading-tight group-hover:text-ember transition-colors">
+                  {trip.name}
+                </h3>
+                <p className="text-sm text-muted-foreground mt-1">{trip.desc}</p>
               </div>
+              <span className="font-heading font-extrabold text-xl sm:text-2xl text-ember whitespace-nowrap">
+                {trip.distance}
+              </span>
             </a>
           ))}
         </div>

@@ -46,50 +46,46 @@ const reviews = [
 
 export const Reviews = () => {
   const { t, language } = useLanguage();
+  const [featured, ...others] = reviews;
+  const text = (r: (typeof reviews)[number]) => r.text[language] ?? r.text.en;
+
+  const Stars = ({ n }: { n: number }) => (
+    <div className="flex gap-0.5 mb-3" aria-label={`${n} / 5`}>
+      {[...Array(n)].map((_, i) => (
+        <Star key={i} className="w-4 h-4 fill-ember text-ember" />
+      ))}
+    </div>
+  );
 
   return (
-    <section className="section-padding bg-card">
+    <section id="reviews" className="section-padding bg-accent/50">
       <div className="section-container">
-        {/* Header */}
-        <div className="text-center mb-16">
-          <h2 className="text-3xl sm:text-4xl font-bold mb-4">
-            {t.reviews.title}
-          </h2>
-          <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-            {t.reviews.subtitle}
-          </p>
+        <div className="mb-12 max-w-2xl">
+          <h2 className="text-3xl sm:text-4xl font-bold mb-3">{t.reviews.title}</h2>
+          <p className="text-lg text-muted-foreground">{t.reviews.subtitle}</p>
         </div>
 
-        {/* Reviews Grid */}
-        <div className="grid md:grid-cols-3 gap-6 max-w-5xl mx-auto">
-          {reviews.map((review, index) => (
-            <div
-              key={index}
-              className="bg-card rounded-2xl p-6 border border-border shadow-soft hover:shadow-card transition-all duration-300"
-            >
-              {/* Stars */}
-              <div className="flex gap-1 mb-4">
-                {[...Array(review.rating)].map((_, i) => (
-                  <Star key={i} className="w-5 h-5 fill-amber-400 text-amber-400" />
-                ))}
-              </div>
+        <figure className="max-w-3xl mb-14">
+          <Stars n={featured.rating} />
+          <blockquote className="font-heading font-bold text-2xl sm:text-3xl lg:text-4xl leading-snug">
+            “{text(featured)}”
+          </blockquote>
+          <figcaption className="mt-5 text-muted-foreground">
+            <span className="mr-2">{featured.country}</span>
+            <span className="font-semibold text-foreground">{featured.name}</span>, {t.reviews.source} {featured.source}
+          </figcaption>
+        </figure>
 
-              {/* Text */}
-              <p className="text-muted-foreground leading-relaxed mb-6">
-                "{review.text[language]}"
-              </p>
-
-              {/* Author */}
-              <div className="flex items-center justify-between">
-                <div className="flex items-center gap-2">
-                  <span className="text-xl">{review.country}</span>
-                  <span className="font-medium text-sm">{review.name}</span>
-                </div>
-                <span className="text-xs text-muted-foreground">
-                  {t.reviews.source} {review.source}
-                </span>
-              </div>
-            </div>
+        <div className="grid md:grid-cols-2 gap-10 border-t border-border pt-10">
+          {others.map((review) => (
+            <figure key={review.name}>
+              <Stars n={review.rating} />
+              <blockquote className="text-lg leading-relaxed">“{text(review)}”</blockquote>
+              <figcaption className="mt-4 text-sm text-muted-foreground">
+                <span className="mr-2">{review.country}</span>
+                <span className="font-semibold text-foreground">{review.name}</span>, {t.reviews.source} {review.source}
+              </figcaption>
+            </figure>
           ))}
         </div>
       </div>

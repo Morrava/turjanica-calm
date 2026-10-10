@@ -92,9 +92,6 @@ export const Footer = () => {
               <a href="#accommodations" className="block hover:text-background transition-colors">
                 {t.nav.accommodations}
               </a>
-              <a href="#facilities" className="block hover:text-background transition-colors">
-                {t.nav.facilities}
-              </a>
               <a href="#location" className="block hover:text-background transition-colors">
                 {t.nav.location}
               </a>
