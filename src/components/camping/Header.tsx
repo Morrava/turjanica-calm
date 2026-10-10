@@ -16,11 +16,8 @@ export const Header = () => {
     label: t.nav.about,
     href: '#about'
   }, {
-    label: t.nav.accommodations,
+    label: b.navStay,
     href: '#accommodations'
-  }, {
-    label: b.navPricing,
-    href: '#pricing'
   }, {
     label: t.nav.offers,
     href: '#offers'

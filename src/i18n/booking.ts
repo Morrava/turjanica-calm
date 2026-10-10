@@ -2,7 +2,8 @@ import type { Language } from './translations';
 import { PRICING } from '@/lib/pricing';
 
 interface BookingStrings {
-  navPricing: string;
+  navStay: string;
+  onRequest: string;
   title: string;
   subtitle: string;
   perNight: string;
@@ -21,7 +22,8 @@ interface BookingStrings {
 // Tokens {age} is replaced from PRICING.
 const strings: Record<Language, BookingStrings> = {
   nl: {
-    navPricing: 'Prijzen',
+    navStay: 'Verblijf & prijzen',
+    onRequest: 'Prijs op aanvraag',
     title: 'Prijzen',
     subtitle: 'Eenvoudig en transparant',
     perNight: 'Verblijf in het kamp',
@@ -37,7 +39,8 @@ const strings: Record<Language, BookingStrings> = {
     bookHint: 'Eén tik via WhatsApp, niet bellen nodig',
   },
   en: {
-    navPricing: 'Prices',
+    navStay: 'Stay & prices',
+    onRequest: 'Price on request',
     title: 'Prices',
     subtitle: 'Simple and transparent',
     perNight: 'Stay in the camp',
@@ -53,7 +56,8 @@ const strings: Record<Language, BookingStrings> = {
     bookHint: 'One tap via WhatsApp, no phone call needed',
   },
   de: {
-    navPricing: 'Preise',
+    navStay: 'Unterkunft & Preise',
+    onRequest: 'Preis auf Anfrage',
     title: 'Preise',
     subtitle: 'Einfach und transparent',
     perNight: 'Aufenthalt im Camp',
@@ -69,7 +73,8 @@ const strings: Record<Language, BookingStrings> = {
     bookHint: 'Ein Klick über WhatsApp, kein Anruf nötig',
   },
   sr: {
-    navPricing: 'Cijene',
+    navStay: 'Smještaj i cijene',
+    onRequest: 'Cijena na upit',
     title: 'Cijene',
     subtitle: 'Jednostavno i transparentno',
     perNight: 'Boravak u kampu',
@@ -85,7 +90,8 @@ const strings: Record<Language, BookingStrings> = {
     bookHint: 'Jedan klik preko WhatsApp-a, bez telefonskog poziva',
   },
   fr: {
-    navPricing: 'Tarifs',
+    navStay: 'Séjour et tarifs',
+    onRequest: 'Prix sur demande',
     title: 'Tarifs',
     subtitle: 'Simple et transparent',
     perNight: 'Séjour au camp',
@@ -101,7 +107,8 @@ const strings: Record<Language, BookingStrings> = {
     bookHint: 'Un clic via WhatsApp, pas besoin de téléphoner',
   },
   sk: {
-    navPricing: 'Cenník',
+    navStay: 'Pobyt a ceny',
+    onRequest: 'Cena na požiadanie',
     title: 'Cenník',
     subtitle: 'Jednoducho a transparentne',
     perNight: 'Pobyt v kempe',
@@ -117,7 +124,8 @@ const strings: Record<Language, BookingStrings> = {
     bookHint: 'Jedno kliknutie cez WhatsApp, bez telefonovania',
   },
   cs: {
-    navPricing: 'Ceník',
+    navStay: 'Pobyt a ceny',
+    onRequest: 'Cena na vyžádání',
     title: 'Ceník',
     subtitle: 'Jednoduše a transparentně',
     perNight: 'Pobyt v kempu',
@@ -133,7 +141,8 @@ const strings: Record<Language, BookingStrings> = {
     bookHint: 'Jedno kliknutí přes WhatsApp, bez telefonování',
   },
   hu: {
-    navPricing: 'Árak',
+    navStay: 'Szállás és árak',
+    onRequest: 'Ár kérésre',
     title: 'Árak',
     subtitle: 'Egyszerű és átlátható',
     perNight: 'Tartózkodás a kempingben',
