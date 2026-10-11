@@ -33,7 +33,7 @@ export const translations = {
     // Hero
     hero: {
       headline: 'Uitje & Kamp Turjanica',
-      tagline: 'Natuur. Rust. Avontuur.',
+      tagline: 'Twee rivieren, een werkende watermolen en 10 hectare rust.',
       cta: 'Contact opnemen',
       ctaMap: 'Open in Google Maps',
       trust1: '10 hectare natuur',
@@ -50,9 +50,9 @@ export const translations = {
     },
     // About
     about: {
-      title: 'Over de camping',
+      title: 'Een stil hoekje van Bosnië',
       text1: 'Camp Turjanica ligt op slechts 2 km van de hoofdweg R-476 (Banja Luka, Doboj, Sarajevo). De camping is gemakkelijk bereikbaar via een volledig geasfalteerde toegangsweg. Gebruik Google Maps om direct naar ons toe te navigeren.',
-      text2: 'Op 38 km van Banja Luka vindt u 10 hectare prachtige natuur, omringd door twee kleine rivieren. De rijke planten- en dierenwereld zorgt voor een zeer aangenaam verblijf.',
+      text2: 'Op 38 km van Banja Luka vindt u 10 hectare weide en bos tussen twee kleine rivieren. Er is een watermolen die nog steeds meel maalt, een boomhut om in te spelen en een vuurplaats bij elke plek.',
     },
     // What we offer
     offers: {
@@ -72,11 +72,11 @@ export const translations = {
       },
       kids: {
         title: 'Kinderhoek',
-        desc: 'Schommels, zandbak en speeltuin voor de kleintjes',
+        desc: 'Schommels, zandbak, speeltuin en een boomhut om in te spelen',
       },
       pets: {
         title: 'Huisdieren',
-        desc: 'Speciale ruimte voor huisdieren',
+        desc: 'Huisdieren welkom, met een speciale ruimte voor hen',
       },
       river: {
         title: 'Rivierboot',
@@ -101,8 +101,8 @@ export const translations = {
     },
     // New offers section
     offersNew: {
-      title: 'Comfort in de natuur',
-      subtitle: 'Alles wat u nodig heeft voor een onvergetelijk verblijf',
+      title: 'Wat u op de camping vindt',
+      subtitle: 'Warme douches, bronwater, stroom en vuurplaatsen. Tik op een rij voor details.',
       tabs: {
         comfort: 'Comfort',
         fire: 'Vuur & Eten',
@@ -127,7 +127,7 @@ export const translations = {
         equipment: { title: 'Kookgerei', benefit: 'Grills, sač en koelkasten beschikbaar' },
         localFood: { title: 'Lokaal eten', benefit: 'Verse eieren, kaas en honing van boeren' },
         distillery: { title: 'Distilleerderij', benefit: 'Proef onze huisgemaakte rakija' },
-        kids: { title: 'Kinderhoek', benefit: 'Speeltuin en zandbak voor de kleintjes' },
+        kids: { title: 'Kinderhoek', benefit: 'Speeltuin, zandbak en een boomhut' },
         pets: { title: 'Huisdieren', benefit: 'Speciale ruimte voor uw huisdier' },
         sports: { title: 'Sport', benefit: 'Voetbal, volleybal en tafeltennis' },
         safety: { title: 'Veiligheid', benefit: 'Rustig en veilig platteland' },
@@ -195,9 +195,9 @@ export const translations = {
     // Accommodations
     accommodations: {
       title: 'Verblijfsmogelijkheden',
-      subtitle: 'Kies wat bij u past',
+      subtitle: 'Een plek voor uw camper, of een bungalow voor maximaal zes personen',
       camperTitle: 'Camperplaatsen',
-      camperFeatures: ['Ruime staanplaatsen', 'Elektriciteit beschikbaar', 'Ondergrond van gras', 'Campers, caravans & tenten welkom'],
+      camperFeatures: ['Ruime grasplekken', 'Stroomaansluiting beschikbaar', 'Vuurplaats bij elke plek', 'Campers, caravans & tenten welkom'],
       bungalowTitle: 'Bungalow',
       bungalowFeatures: ['Tot 6 personen', 'Ideaal voor gezinnen', 'Privé & comfortabel', 'Omringd door natuur'],
       cta: 'Vraag beschikbaarheid',
@@ -224,7 +224,7 @@ export const translations = {
     // Trips
     trips: {
       title: 'Uitstapjes & Attracties',
-      subtitle: 'Ontdek de omgeving',
+      subtitle: 'Kloosters, restaurants en de stad, allemaal binnen 40 km',
       banjaluka: {
         name: 'Banja Luka',
         distance: '38 km',
@@ -288,8 +288,8 @@ export const translations = {
     },
     // CTA
     cta: {
-      title: 'Klaar voor rust en natuur?',
-      subtitle: 'Neem contact met ons op via onze socials',
+      title: 'Reserveer uw plek',
+      subtitle: 'Stuur ons uw data via WhatsApp en wij bevestigen.',
       whatsapp: 'WhatsApp',
       messenger: 'Messenger',
       instagram: 'Instagram DM',
@@ -305,7 +305,7 @@ export const translations = {
     },
     gallery: {
       title: 'Fotogalerij',
-      subtitle: 'Ontdek de schoonheid van Camp Turjanica',
+      subtitle: 'De camping, de rivieren en de boomhut',
       all: 'Alles',
       facilities: 'Voorzieningen',
       nature: 'Natuur',
@@ -330,7 +330,7 @@ export const translations = {
     },
     hero: {
       headline: 'Picnic Area & Camp Turjanica',
-      tagline: 'Nature. Peace. Adventure.',
+      tagline: 'Two rivers, a working watermill and 10 hectares of quiet.',
       cta: 'Get in touch',
       ctaMap: 'Open in Google Maps',
       trust1: '10 hectares of nature',
@@ -345,9 +345,9 @@ export const translations = {
       gps: 'GPS navigation',
     },
     about: {
-      title: 'About the camp',
+      title: 'A quiet corner of Bosnia',
       text1: 'Camp Turjanica is located just 2 km from the main road R-476 (Banja Luka, Doboj, Sarajevo). The camp is easily accessible via a fully paved access road. Use Google Maps to navigate directly to us.',
-      text2: 'At 38 km from Banja Luka, you will find 10 hectares of beautiful nature, surrounded by two small rivers. The rich plant and animal life ensures a very pleasant stay.',
+      text2: 'At 38 km from Banja Luka you find 10 hectares of meadow and forest between two small rivers. There is a watermill that still grinds flour, a treehouse to play in, and a fire pit at every pitch.',
     },
     offers: {
       title: 'What we offer',
@@ -366,11 +366,11 @@ export const translations = {
       },
       kids: {
         title: 'Kids corner',
-        desc: 'Swings, sandbox and playground for the little ones',
+        desc: 'Swings, sandbox, playground and a treehouse to play in',
       },
       pets: {
         title: 'Pets',
-        desc: 'Special area for pets',
+        desc: 'Pets are welcome, with a special area for them',
       },
       river: {
         title: 'River boat',
@@ -394,8 +394,8 @@ export const translations = {
       },
     },
     offersNew: {
-      title: 'Comfort in Nature',
-      subtitle: 'Everything you need for an unforgettable stay',
+      title: 'What you find at the camp',
+      subtitle: 'Hot showers, spring water, power and fire pits. Tap a row for details.',
       tabs: {
         comfort: 'Comfort',
         fire: 'Fire & Food',
@@ -420,7 +420,7 @@ export const translations = {
         equipment: { title: 'Cooking gear', benefit: 'Grills, sač and fridges available' },
         localFood: { title: 'Local food', benefit: 'Fresh eggs, cheese and honey from farmers' },
         distillery: { title: 'Distillery', benefit: 'Taste our homemade rakija' },
-        kids: { title: 'Kids corner', benefit: 'Playground and sandbox for little ones' },
+        kids: { title: 'Kids corner', benefit: 'Playground, sandbox and a treehouse' },
         pets: { title: 'Pets', benefit: 'Special area for your pet' },
         sports: { title: 'Sports', benefit: 'Football, volleyball and table tennis' },
         safety: { title: 'Safety', benefit: 'Quiet and safe countryside' },
@@ -487,9 +487,9 @@ export const translations = {
     },
     accommodations: {
       title: 'Accommodations',
-      subtitle: 'Choose what suits you',
+      subtitle: 'A pitch for your camper, or a bungalow for up to six',
       camperTitle: 'Camper Spots',
-      camperFeatures: ['Spacious pitches', 'Electricity available', 'Grass surface', 'Campers, caravans & tents welcome'],
+      camperFeatures: ['Large grass pitches', 'Power hookup available', 'Fire pit at every pitch', 'Campers, caravans & tents welcome'],
       bungalowTitle: 'Bungalow',
       bungalowFeatures: ['Up to 6 people', 'Ideal for families', 'Private & comfortable', 'Surrounded by nature'],
       cta: 'Ask availability',
@@ -513,7 +513,7 @@ export const translations = {
     },
     trips: {
       title: 'Trips & Attractions',
-      subtitle: 'Explore the surroundings',
+      subtitle: 'Monasteries, restaurants and the city, all within 40 km',
       banjaluka: {
         name: 'Banja Luka',
         distance: '38 km',
@@ -573,8 +573,8 @@ export const translations = {
       source: 'via',
     },
     cta: {
-      title: 'Ready for peace and nature?',
-      subtitle: 'Contact us through our socials',
+      title: 'Book your spot',
+      subtitle: 'Send us your dates on WhatsApp and we will confirm.',
       whatsapp: 'WhatsApp',
       messenger: 'Messenger',
       instagram: 'Instagram DM',
@@ -589,7 +589,7 @@ export const translations = {
     },
     gallery: {
       title: 'Photo Gallery',
-      subtitle: 'Discover the beauty of Camp Turjanica',
+      subtitle: 'The camp, the rivers and the treehouse',
       all: 'All',
       facilities: 'Facilities',
       nature: 'Nature',
@@ -614,7 +614,7 @@ export const translations = {
     },
     hero: {
       headline: 'Ausflugsziel & Camp Turjanica',
-      tagline: 'Natur. Ruhe. Abenteuer.',
+      tagline: 'Zwei Flüsse, eine funktionierende Wassermühle und 10 Hektar Ruhe.',
       cta: 'Kontakt aufnehmen',
       ctaMap: 'In Google Maps öffnen',
       trust1: '10 Hektar Natur',
@@ -629,9 +629,9 @@ export const translations = {
       gps: 'GPS Navigation',
     },
     about: {
-      title: 'Über den Campingplatz',
+      title: 'Ein ruhiger Winkel Bosniens',
       text1: 'Camp Turjanica liegt nur 2 km von der Hauptstraße R-476 (Banja Luka, Doboj, Sarajevo) entfernt. Der Campingplatz ist über eine vollständig asphaltierte Zufahrtsstraße leicht erreichbar. Nutzen Sie Google Maps, um direkt zu uns zu navigieren.',
-      text2: '38 km von Banja Luka entfernt finden Sie 10 Hektar wunderschöne Natur, umgeben von zwei kleinen Flüssen. Die reiche Pflanzen- und Tierwelt sorgt für einen sehr angenehmen Aufenthalt.',
+      text2: '38 km von Banja Luka entfernt finden Sie 10 Hektar Wiese und Wald zwischen zwei kleinen Flüssen. Es gibt eine Wassermühle, die noch immer Mehl mahlt, ein Baumhaus zum Spielen und an jedem Platz eine Feuerstelle.',
     },
     offers: {
       title: 'Was wir bieten',
@@ -650,11 +650,11 @@ export const translations = {
       },
       kids: {
         title: 'Kinderecke',
-        desc: 'Schaukeln, Sandkasten und Spielplatz für die Kleinen',
+        desc: 'Schaukeln, Sandkasten, Spielplatz und ein Baumhaus zum Spielen',
       },
       pets: {
         title: 'Haustiere',
-        desc: 'Spezieller Bereich für Haustiere',
+        desc: 'Haustiere willkommen, mit eigenem Bereich',
       },
       river: {
         title: 'Flussboot',
@@ -678,8 +678,8 @@ export const translations = {
       },
     },
     offersNew: {
-      title: 'Komfort in der Natur',
-      subtitle: 'Alles, was Sie für einen unvergesslichen Aufenthalt brauchen',
+      title: 'Was Sie auf dem Platz finden',
+      subtitle: 'Warme Duschen, Quellwasser, Strom und Feuerstellen. Tippen Sie auf eine Zeile für Details.',
       tabs: {
         comfort: 'Komfort',
         fire: 'Feuer & Essen',
@@ -704,7 +704,7 @@ export const translations = {
         equipment: { title: 'Kochausrüstung', benefit: 'Grills, Sač und Kühlschränke verfügbar' },
         localFood: { title: 'Lokales Essen', benefit: 'Frische Eier, Käse und Honig von Bauern' },
         distillery: { title: 'Brennerei', benefit: 'Probieren Sie unseren hausgemachten Rakija' },
-        kids: { title: 'Kinderecke', benefit: 'Spielplatz und Sandkasten für die Kleinen' },
+        kids: { title: 'Kinderecke', benefit: 'Spielplatz, Sandkasten und ein Baumhaus' },
         pets: { title: 'Haustiere', benefit: 'Spezieller Bereich für Ihr Haustier' },
         sports: { title: 'Sport', benefit: 'Fußball, Volleyball und Tischtennis' },
         safety: { title: 'Sicherheit', benefit: 'Ruhige und sichere Landschaft' },
@@ -771,9 +771,9 @@ export const translations = {
     },
     accommodations: {
       title: 'Unterkünfte',
-      subtitle: 'Wählen Sie, was zu Ihnen passt',
+      subtitle: 'Ein Stellplatz für Ihr Wohnmobil oder ein Bungalow für bis zu sechs Personen',
       camperTitle: 'Stellplätze',
-      camperFeatures: ['Geräumige Plätze', 'Strom verfügbar', 'Rasenuntergrund', 'Wohnmobile, Wohnwagen & Zelte willkommen'],
+      camperFeatures: ['Große Rasenplätze', 'Stromanschluss verfügbar', 'Feuerstelle an jedem Platz', 'Wohnmobile, Wohnwagen & Zelte willkommen'],
       bungalowTitle: 'Bungalow',
       bungalowFeatures: ['Bis zu 6 Personen', 'Ideal für Familien', 'Privat & komfortabel', 'Umgeben von Natur'],
       cta: 'Verfügbarkeit anfragen',
@@ -797,7 +797,7 @@ export const translations = {
     },
     trips: {
       title: 'Ausflüge & Sehenswürdigkeiten',
-      subtitle: 'Entdecken Sie die Umgebung',
+      subtitle: 'Klöster, Restaurants und die Stadt, alles innerhalb von 40 km',
       banjaluka: {
         name: 'Banja Luka',
         distance: '38 km',
@@ -857,8 +857,8 @@ export const translations = {
       source: 'über',
     },
     cta: {
-      title: 'Bereit für Ruhe und Natur?',
-      subtitle: 'Kontaktieren Sie uns über unsere Socials',
+      title: 'Reservieren Sie Ihren Platz',
+      subtitle: 'Senden Sie uns Ihre Reisedaten per WhatsApp, wir bestätigen.',
       whatsapp: 'WhatsApp',
       messenger: 'Messenger',
       instagram: 'Instagram DM',
@@ -873,7 +873,7 @@ export const translations = {
     },
     gallery: {
       title: 'Fotogalerie',
-      subtitle: 'Entdecken Sie die Schönheit von Camp Turjanica',
+      subtitle: 'Das Camp, die Flüsse und das Baumhaus',
       all: 'Alle',
       facilities: 'Einrichtungen',
       nature: 'Natur',
@@ -898,7 +898,7 @@ export const translations = {
     },
     hero: {
       headline: 'Izletište & Kamp Turjanica',
-      tagline: 'Priroda. Mir. Avantura.',
+      tagline: 'Dvije rijeke, vodenica koja radi i 10 hektara mira.',
       cta: 'Kontaktirajte nas',
       ctaMap: 'Otvori u Google Maps',
       trust1: '10 hektara prirode',
@@ -913,9 +913,9 @@ export const translations = {
       gps: 'GPS navigacija',
     },
     about: {
-      title: 'O kampu',
+      title: 'Miran kutak Bosne',
       text1: 'Kamp Turjanica se nalazi na samo 2 km od glavnog puta R-476 (Banja Luka, Doboj, Sarajevo). Kamp je lako dostupan putem potpuno asfaltiranog pristupnog puta. Koristite Google Maps za navigaciju direktno do nas.',
-      text2: 'Na 38 km od Banja Luke pronaći ćete 10 hektara prelijepe prirode, okružene s dvije male rijeke. Bogat biljni i životinjski svijet osigurava vrlo ugodan boravak.',
+      text2: 'Na 38 km od Banja Luke nalazi se 10 hektara livade i šume između dvije male rijeke. Tu je vodenica koja i dalje melje brašno, kućica na drvetu za igru i ložište na svakom mjestu.',
     },
     offers: {
       title: 'Šta nudimo',
@@ -934,11 +934,11 @@ export const translations = {
       },
       kids: {
         title: 'Dječji kutak',
-        desc: 'Ljuljačke, pješčanik i igralište za najmlađe',
+        desc: 'Ljuljačke, pješčanik, igralište i kućica na drvetu za igru',
       },
       pets: {
         title: 'Ljubimci',
-        desc: 'Poseban prostor za kućne ljubimce',
+        desc: 'Ljubimci su dobrodošli, uz poseban prostor za njih',
       },
       river: {
         title: 'Riječni čamac',
@@ -962,8 +962,8 @@ export const translations = {
       },
     },
     offersNew: {
-      title: 'Udobnost u prirodi',
-      subtitle: 'Sve što vam treba za nezaboravan boravak',
+      title: 'Šta vas čeka u kampu',
+      subtitle: 'Topli tuševi, izvorska voda, struja i ložišta. Dodirnite red za detalje.',
       tabs: {
         comfort: 'Udobnost',
         fire: 'Vatra i hrana',
@@ -988,7 +988,7 @@ export const translations = {
         equipment: { title: 'Oprema za kuhanje', benefit: 'Roštilji, sač i frižideri dostupni' },
         localFood: { title: 'Lokalna hrana', benefit: 'Svježa jaja, sir i med od farmera' },
         distillery: { title: 'Destilerija', benefit: 'Probajte našu domaću rakiju' },
-        kids: { title: 'Dječji kutak', benefit: 'Igralište i pješčanik za mališane' },
+        kids: { title: 'Dječji kutak', benefit: 'Igralište, pješčanik i kućica na drvetu' },
         pets: { title: 'Ljubimci', benefit: 'Poseban prostor za vašeg ljubimca' },
         sports: { title: 'Sport', benefit: 'Fudbal, odbojka i stoni tenis' },
         safety: { title: 'Sigurnost', benefit: 'Mirno i sigurno selo' },
@@ -1055,9 +1055,9 @@ export const translations = {
     },
     accommodations: {
       title: 'Smještaj',
-      subtitle: 'Izaberite ono što vam odgovara',
+      subtitle: 'Mjesto za vaš kamper ili bungalov za do šest osoba',
       camperTitle: 'Mjesta za kampere',
-      camperFeatures: ['Prostrana mjesta', 'Struja dostupna', 'Travnata podloga', 'Kamperi, prikolice i šatori dobrodošli'],
+      camperFeatures: ['Prostrana travnata mjesta', 'Priključak za struju dostupan', 'Ložište na svakom mjestu', 'Kamperi, prikolice i šatori dobrodošli'],
       bungalowTitle: 'Bungalov',
       bungalowFeatures: ['Do 6 osoba', 'Idealno za porodice', 'Privatno i udobno', 'Okruženo prirodom'],
       cta: 'Pitajte za dostupnost',
@@ -1081,7 +1081,7 @@ export const translations = {
     },
     trips: {
       title: 'Izleti i atrakcije',
-      subtitle: 'Istražite okolinu',
+      subtitle: 'Manastiri, restorani i grad, sve u krugu od 40 km',
       banjaluka: {
         name: 'Banja Luka',
         distance: '38 km',
@@ -1141,8 +1141,8 @@ export const translations = {
       source: 'preko',
     },
     cta: {
-      title: 'Spremni za mir i prirodu?',
-      subtitle: 'Kontaktirajte nas preko naših društvenih mreža',
+      title: 'Rezervišite svoje mjesto',
+      subtitle: 'Pošaljite nam datume preko WhatsApp-a, a mi ćemo potvrditi.',
       whatsapp: 'WhatsApp',
       messenger: 'Messenger',
       instagram: 'Instagram DM',
@@ -1157,7 +1157,7 @@ export const translations = {
     },
     gallery: {
       title: 'Foto galerija',
-      subtitle: 'Otkrijte ljepotu kampa Turjanica',
+      subtitle: 'Kamp, rijeke i kućica na drvetu',
       all: 'Sve',
       facilities: 'Sadržaji',
       nature: 'Priroda',
@@ -1182,7 +1182,7 @@ export const translations = {
     },
     hero: {
       headline: 'Aire de pique-nique & Camp Turjanica',
-      tagline: 'Nature. Paix. Aventure.',
+      tagline: 'Deux rivières, un moulin à eau en activité et 10 hectares de calme.',
       cta: 'Nous contacter',
       ctaMap: 'Ouvrir dans Google Maps',
       trust1: '10 hectares de nature',
@@ -1197,9 +1197,9 @@ export const translations = {
       gps: 'Navigation GPS',
     },
     about: {
-      title: 'À propos du camping',
+      title: 'Un coin tranquille de Bosnie',
       text1: 'Camp Turjanica est situé à seulement 2 km de la route principale R-476 (Banja Luka, Doboj, Sarajevo). Le camping est facilement accessible par une route d\'accès entièrement goudronnée. Utilisez Google Maps pour naviguer directement vers nous.',
-      text2: 'À 38 km de Banja Luka, vous trouverez 10 hectares de belle nature, entourés de deux petites rivières. La riche faune et flore assurent un séjour très agréable.',
+      text2: 'À 38 km de Banja Luka, vous trouverez 10 hectares de prairie et de forêt entre deux petites rivières. Il y a un moulin à eau qui moud encore de la farine, une cabane dans les arbres pour jouer et un foyer à chaque emplacement.',
     },
     offers: {
       title: 'Ce que nous offrons',
@@ -1218,11 +1218,11 @@ export const translations = {
       },
       kids: {
         title: 'Coin enfants',
-        desc: 'Balançoires, bac à sable et aire de jeux pour les petits',
+        desc: 'Balançoires, bac à sable, aire de jeux et une cabane dans les arbres pour jouer',
       },
       pets: {
         title: 'Animaux',
-        desc: 'Espace spécial pour les animaux de compagnie',
+        desc: 'Animaux bienvenus, avec un espace dédié',
       },
       river: {
         title: 'Bateau fluvial',
@@ -1246,8 +1246,8 @@ export const translations = {
       },
     },
     offersNew: {
-      title: 'Confort en nature',
-      subtitle: 'Tout ce dont vous avez besoin pour un séjour inoubliable',
+      title: 'Ce que vous trouvez au camp',
+      subtitle: 'Douches chaudes, eau de source, électricité et foyers. Touchez une ligne pour les détails.',
       tabs: {
         comfort: 'Confort',
         fire: 'Feu et cuisine',
@@ -1272,7 +1272,7 @@ export const translations = {
         equipment: { title: 'Équipement cuisine', benefit: 'Grills, sač et réfrigérateurs disponibles' },
         localFood: { title: 'Nourriture locale', benefit: 'Œufs frais, fromage et miel des fermiers' },
         distillery: { title: 'Distillerie', benefit: 'Goûtez notre rakija maison' },
-        kids: { title: 'Coin enfants', benefit: 'Aire de jeux et bac à sable pour les petits' },
+        kids: { title: 'Coin enfants', benefit: 'Aire de jeux, bac à sable et cabane dans les arbres' },
         pets: { title: 'Animaux', benefit: 'Espace spécial pour votre animal' },
         sports: { title: 'Sports', benefit: 'Football, volleyball et tennis de table' },
         safety: { title: 'Sécurité', benefit: 'Campagne calme et sûre' },
@@ -1339,9 +1339,9 @@ export const translations = {
     },
     accommodations: {
       title: 'Hébergements',
-      subtitle: 'Choisissez ce qui vous convient',
+      subtitle: 'Un emplacement pour votre camping-car, ou un bungalow jusqu\'à six personnes',
       camperTitle: 'Emplacements camping-car',
-      camperFeatures: ['Emplacements spacieux', 'Électricité disponible', 'Sol herbeux', 'Camping-cars, caravanes et tentes bienvenus'],
+      camperFeatures: ['Grands emplacements en herbe', 'Branchement électrique disponible', 'Foyer à chaque emplacement', 'Camping-cars, caravanes et tentes bienvenus'],
       bungalowTitle: 'Bungalow',
       bungalowFeatures: ['Jusqu\'à 6 personnes', 'Idéal pour les familles', 'Privé et confortable', 'Entouré de nature'],
       cta: 'Demander la disponibilité',
@@ -1365,7 +1365,7 @@ export const translations = {
     },
     trips: {
       title: 'Excursions et attractions',
-      subtitle: 'Explorez les environs',
+      subtitle: 'Monastères, restaurants et la ville, le tout à moins de 40 km',
       banjaluka: {
         name: 'Banja Luka',
         distance: '38 km',
@@ -1425,8 +1425,8 @@ export const translations = {
       source: 'via',
     },
     cta: {
-      title: 'Prêt pour la paix et la nature ?',
-      subtitle: 'Contactez-nous via nos réseaux sociaux',
+      title: 'Réservez votre emplacement',
+      subtitle: 'Envoyez-nous vos dates sur WhatsApp et nous confirmerons.',
       whatsapp: 'WhatsApp',
       messenger: 'Messenger',
       instagram: 'Instagram DM',
@@ -1441,7 +1441,7 @@ export const translations = {
     },
     gallery: {
       title: 'Galerie photo',
-      subtitle: 'Découvrez la beauté de Camp Turjanica',
+      subtitle: 'Le camp, les rivières et la cabane dans les arbres',
       all: 'Tout',
       facilities: 'Équipements',
       nature: 'Nature',
@@ -1466,7 +1466,7 @@ export const translations = {
     },
     hero: {
       headline: 'Výletné miesto & Kemp Turjanica',
-      tagline: 'Príroda. Pokoj. Dobrodružstvo.',
+      tagline: 'Dve rieky, fungujúci vodný mlyn a 10 hektárov pokoja.',
       cta: 'Kontaktujte nás',
       ctaMap: 'Otvoriť v Google Maps',
       trust1: '10 hektárov prírody',
@@ -1481,9 +1481,9 @@ export const translations = {
       gps: 'GPS navigácia',
     },
     about: {
-      title: 'O kempe',
+      title: 'Tichý kút Bosny',
       text1: 'Kemp Turjanica sa nachádza len 2 km od hlavnej cesty R-476 (Banja Luka, Doboj, Sarajevo). Kemp je ľahko dostupný po úplne asfaltovanej prístupovej ceste. Použite Google Maps na navigáciu priamo k nám.',
-      text2: '38 km od Banja Luky nájdete 10 hektárov krásnej prírody, obklopenej dvoma malými riekami. Bohatá fauna a flóra zaručuje veľmi príjemný pobyt.',
+      text2: '38 km od Banja Luky nájdete 10 hektárov lúk a lesa medzi dvoma malými riekami. Je tu vodný mlyn, ktorý stále melie múku, domček na strome na hranie a ohnisko pri každom mieste.',
     },
     offers: {
       title: 'Čo ponúkame',
@@ -1502,11 +1502,11 @@ export const translations = {
       },
       kids: {
         title: 'Detský kútik',
-        desc: 'Hojdačky, pieskovisko a ihrisko pre najmenších',
+        desc: 'Hojdačky, pieskovisko, ihrisko a domček na strome na hranie',
       },
       pets: {
         title: 'Domáce zvieratá',
-        desc: 'Špeciálny priestor pre domáce zvieratá',
+        desc: 'Domáce zvieratá vítané, s vlastným priestorom',
       },
       river: {
         title: 'Riečny čln',
@@ -1530,8 +1530,8 @@ export const translations = {
       },
     },
     offersNew: {
-      title: 'Komfort v prírode',
-      subtitle: 'Všetko, čo potrebujete pre nezabudnuteľný pobyt',
+      title: 'Čo nájdete v kempe',
+      subtitle: 'Teplé sprchy, pramenitá voda, elektrina a ohniská. Ťuknutím na riadok zobrazíte podrobnosti.',
       tabs: {
         comfort: 'Komfort',
         fire: 'Oheň a jedlo',
@@ -1556,7 +1556,7 @@ export const translations = {
         equipment: { title: 'Kuchynské vybavenie', benefit: 'Grily, sač a chladničky k dispozícii' },
         localFood: { title: 'Miestne jedlo', benefit: 'Čerstvé vajcia, syr a med od farmárov' },
         distillery: { title: 'Pálenica', benefit: 'Ochutnajte našu domácu rakiju' },
-        kids: { title: 'Detský kútik', benefit: 'Ihrisko a pieskovisko pre najmenších' },
+        kids: { title: 'Detský kútik', benefit: 'Ihrisko, pieskovisko a domček na strome' },
         pets: { title: 'Domáce zvieratá', benefit: 'Špeciálny priestor pre vášho miláčika' },
         sports: { title: 'Šport', benefit: 'Futbal, volejbal a stolný tenis' },
         safety: { title: 'Bezpečnosť', benefit: 'Pokojný a bezpečný vidiek' },
@@ -1623,9 +1623,9 @@ export const translations = {
     },
     accommodations: {
       title: 'Ubytovanie',
-      subtitle: 'Vyberte si, čo vám vyhovuje',
+      subtitle: 'Miesto pre vaše obytné auto alebo bungalov až pre šesť osôb',
       camperTitle: 'Miesta pre karavany',
-      camperFeatures: ['Priestranné miesta', 'Elektrina k dispozícii', 'Trávnatý povrch', 'Karavany, obytné vozidlá a stany vítané'],
+      camperFeatures: ['Veľké trávnaté miesta', 'Elektrická prípojka k dispozícii', 'Ohnisko pri každom mieste', 'Karavany, obytné vozidlá a stany vítané'],
       bungalowTitle: 'Bungalov',
       bungalowFeatures: ['Až 6 osôb', 'Ideálne pre rodiny', 'Súkromné a pohodlné', 'Obklopené prírodou'],
       cta: 'Opýtať sa na dostupnosť',
@@ -1649,7 +1649,7 @@ export const translations = {
     },
     trips: {
       title: 'Výlety a atrakcie',
-      subtitle: 'Preskúmajte okolie',
+      subtitle: 'Kláštory, reštaurácie a mesto, všetko do 40 km',
       banjaluka: {
         name: 'Banja Luka',
         distance: '38 km',
@@ -1709,8 +1709,8 @@ export const translations = {
       source: 'cez',
     },
     cta: {
-      title: 'Pripravení na pokoj a prírodu?',
-      subtitle: 'Kontaktujte nás cez naše sociálne siete',
+      title: 'Rezervujte si miesto',
+      subtitle: 'Pošlite nám termín cez WhatsApp a potvrdíme ho.',
       whatsapp: 'WhatsApp',
       messenger: 'Messenger',
       instagram: 'Instagram DM',
@@ -1725,7 +1725,7 @@ export const translations = {
     },
     gallery: {
       title: 'Fotogaléria',
-      subtitle: 'Objavte krásu kempu Turjanica',
+      subtitle: 'Kemp, rieky a domček na strome',
       all: 'Všetko',
       facilities: 'Vybavenie',
       nature: 'Príroda',
@@ -1750,7 +1750,7 @@ export const translations = {
     },
     hero: {
       headline: 'Výletní místo & Kemp Turjanica',
-      tagline: 'Příroda. Klid. Dobrodružství.',
+      tagline: 'Dvě řeky, fungující vodní mlýn a 10 hektarů klidu.',
       cta: 'Kontaktujte nás',
       ctaMap: 'Otevřít v Google Maps',
       trust1: '10 hektarů přírody',
@@ -1765,9 +1765,9 @@ export const translations = {
       gps: 'GPS navigace',
     },
     about: {
-      title: 'O kempu',
+      title: 'Klidný kout Bosny',
       text1: 'Kemp Turjanica se nachází pouhé 2 km od hlavní silnice R-476 (Banja Luka, Doboj, Sarajevo). Kemp je snadno dostupný po zcela asfaltované příjezdové cestě. Použijte Google Maps pro navigaci přímo k nám.',
-      text2: '38 km od Banja Luky najdete 10 hektarů krásné přírody, obklopené dvěma malými řekami. Bohatá fauna a flóra zaručuje velmi příjemný pobyt.',
+      text2: '38 km od Banja Luky najdete 10 hektarů luk a lesa mezi dvěma malými řekami. Je tu vodní mlýn, který stále mele mouku, domek na stromě na hraní a ohniště u každého místa.',
     },
     offers: {
       title: 'Co nabízíme',
@@ -1786,11 +1786,11 @@ export const translations = {
       },
       kids: {
         title: 'Dětský koutek',
-        desc: 'Houpačky, pískoviště a hřiště pro nejmenší',
+        desc: 'Houpačky, pískoviště, hřiště a domek na stromě na hraní',
       },
       pets: {
         title: 'Domácí mazlíčci',
-        desc: 'Speciální prostor pro domácí mazlíčky',
+        desc: 'Domácí mazlíčci vítáni, s vlastním prostorem',
       },
       river: {
         title: 'Říční člun',
@@ -1814,8 +1814,8 @@ export const translations = {
       },
     },
     offersNew: {
-      title: 'Komfort v přírodě',
-      subtitle: 'Vše, co potřebujete pro nezapomenutelný pobyt',
+      title: 'Co najdete v kempu',
+      subtitle: 'Teplé sprchy, pramenitá voda, elektřina a ohniště. Klepnutím na řádek zobrazíte podrobnosti.',
       tabs: {
         comfort: 'Komfort',
         fire: 'Oheň a jídlo',
@@ -1840,7 +1840,7 @@ export const translations = {
         equipment: { title: 'Kuchyňské vybavení', benefit: 'Grily, sač a ledničky k dispozici' },
         localFood: { title: 'Místní jídlo', benefit: 'Čerstvá vejce, sýr a med od farmářů' },
         distillery: { title: 'Palírna', benefit: 'Ochutnejte naši domácí rakiji' },
-        kids: { title: 'Dětský koutek', benefit: 'Hřiště a pískoviště pro nejmenší' },
+        kids: { title: 'Dětský koutek', benefit: 'Hřiště, pískoviště a domek na stromě' },
         pets: { title: 'Domácí mazlíčci', benefit: 'Speciální prostor pro vašeho mazlíčka' },
         sports: { title: 'Sport', benefit: 'Fotbal, volejbal a stolní tenis' },
         safety: { title: 'Bezpečnost', benefit: 'Klidný a bezpečný venkov' },
@@ -1907,9 +1907,9 @@ export const translations = {
     },
     accommodations: {
       title: 'Ubytování',
-      subtitle: 'Vyberte si, co vám vyhovuje',
+      subtitle: 'Místo pro váš obytný vůz nebo bungalov až pro šest osob',
       camperTitle: 'Místa pro karavany',
-      camperFeatures: ['Prostorná místa', 'Elektřina k dispozici', 'Travnatý povrch', 'Karavany, obytné vozy a stany vítány'],
+      camperFeatures: ['Velká travnatá místa', 'Elektrická přípojka k dispozici', 'Ohniště u každého místa', 'Karavany, obytné vozy a stany vítány'],
       bungalowTitle: 'Bungalov',
       bungalowFeatures: ['Až 6 osob', 'Ideální pro rodiny', 'Soukromé a pohodlné', 'Obklopeno přírodou'],
       cta: 'Zeptat se na dostupnost',
@@ -1933,7 +1933,7 @@ export const translations = {
     },
     trips: {
       title: 'Výlety a atrakce',
-      subtitle: 'Prozkoumejte okolí',
+      subtitle: 'Kláštery, restaurace a město, vše do 40 km',
       banjaluka: {
         name: 'Banja Luka',
         distance: '38 km',
@@ -1993,8 +1993,8 @@ export const translations = {
       source: 'přes',
     },
     cta: {
-      title: 'Připraveni na klid a přírodu?',
-      subtitle: 'Kontaktujte nás přes naše sociální sítě',
+      title: 'Rezervujte si místo',
+      subtitle: 'Pošlete nám termín přes WhatsApp a potvrdíme ho.',
       whatsapp: 'WhatsApp',
       messenger: 'Messenger',
       instagram: 'Instagram DM',
@@ -2009,7 +2009,7 @@ export const translations = {
     },
     gallery: {
       title: 'Fotogalerie',
-      subtitle: 'Objevte krásu kempu Turjanica',
+      subtitle: 'Kemp, řeky a domek na stromě',
       all: 'Vše',
       facilities: 'Vybavení',
       nature: 'Příroda',
@@ -2034,7 +2034,7 @@ export const translations = {
     },
     hero: {
       headline: 'Kirándulóhely & Turjanica Kemping',
-      tagline: 'Természet. Béke. Kaland.',
+      tagline: 'Két folyó, működő vízimalom és 10 hektár csend.',
       cta: 'Kapcsolatfelvétel',
       ctaMap: 'Megnyitás Google Maps-ben',
       trust1: '10 hektár természet',
@@ -2049,9 +2049,9 @@ export const translations = {
       gps: 'GPS navigáció',
     },
     about: {
-      title: 'A kempingről',
+      title: 'Bosznia csendes sarka',
       text1: 'A Turjanica Kemping mindössze 2 km-re található az R-476-os főúttól (Banja Luka, Doboj, Szarajevó). A kemping teljesen aszfaltozott bekötőúton könnyen megközelíthető. Használja a Google Maps-et a közvetlen navigációhoz.',
-      text2: 'Banja Lukától 38 km-re 10 hektár gyönyörű természet vár, amelyet két kis folyó ölel körül. A gazdag növény- és állatvilág rendkívül kellemes tartózkodást biztosít.',
+      text2: 'Banja Lukától 38 km-re 10 hektár rét és erdő vár két kis folyó között. Van egy vízimalom, amely még ma is lisztet őröl, egy fáház a játékhoz, és minden helyen tűzrakóhely.',
     },
     offers: {
       title: 'Amit kínálunk',
@@ -2070,11 +2070,11 @@ export const translations = {
       },
       kids: {
         title: 'Gyereksarok',
-        desc: 'Hinták, homokozó és játszótér a legkisebbeknek',
+        desc: 'Hinták, homokozó, játszótér és egy fáház a játékhoz',
       },
       pets: {
         title: 'Háziállatok',
-        desc: 'Külön terület háziállatoknak',
+        desc: 'Háziállatok szívesen látottak, külön területtel',
       },
       river: {
         title: 'Folyami csónak',
@@ -2098,8 +2098,8 @@ export const translations = {
       },
     },
     offersNew: {
-      title: 'Kényelem a természetben',
-      subtitle: 'Minden, ami a felejthetetlen tartózkodáshoz kell',
+      title: 'Ami a kempingben vár',
+      subtitle: 'Meleg zuhany, forrásvíz, áram és tűzrakóhelyek. Koppintson egy sorra a részletekért.',
       tabs: {
         comfort: 'Kényelem',
         fire: 'Tűz és étel',
@@ -2124,7 +2124,7 @@ export const translations = {
         equipment: { title: 'Konyhai felszerelés', benefit: 'Grillezők, sač és hűtőszekrények' },
         localFood: { title: 'Helyi ételek', benefit: 'Friss tojás, sajt és méz a gazdáktól' },
         distillery: { title: 'Pálinkafőzde', benefit: 'Kóstolja meg házi pálinkánkat' },
-        kids: { title: 'Gyereksarok', benefit: 'Játszótér és homokozó a kicsiknek' },
+        kids: { title: 'Gyereksarok', benefit: 'Játszótér, homokozó és fáház' },
         pets: { title: 'Háziállatok', benefit: 'Külön terület kedvencének' },
         sports: { title: 'Sport', benefit: 'Foci, röplabda és asztalitenisz' },
         safety: { title: 'Biztonság', benefit: 'Csendes és biztonságos vidék' },
@@ -2191,9 +2191,9 @@ export const translations = {
     },
     accommodations: {
       title: 'Szállás',
-      subtitle: 'Válassza ki, ami Önnek megfelel',
+      subtitle: 'Hely a lakóautójának, vagy bungaló akár hat főre',
       camperTitle: 'Lakóautó- és lakókocsi-helyek',
-      camperFeatures: ['Tágas helyek', 'Elektromosság elérhető', 'Füves felület', 'Lakókocsik, lakóautók és sátrak szívesen látottak'],
+      camperFeatures: ['Nagy füves helyek', 'Áramcsatlakozás elérhető', 'Tűzrakóhely minden helyen', 'Lakókocsik, lakóautók és sátrak szívesen látottak'],
       bungalowTitle: 'Bungaló',
       bungalowFeatures: ['Akár 6 fő', 'Ideális családoknak', 'Privát és kényelmes', 'Természet veszi körül'],
       cta: 'Érdeklődjön a szabad helyekről',
@@ -2217,7 +2217,7 @@ export const translations = {
     },
     trips: {
       title: 'Kirándulások és látnivalók',
-      subtitle: 'Fedezze fel a környéket',
+      subtitle: 'Kolostorok, éttermek és a város, mind 40 km-en belül',
       banjaluka: {
         name: 'Banja Luka',
         distance: '38 km',
@@ -2277,8 +2277,8 @@ export const translations = {
       source: 'forrás:',
     },
     cta: {
-      title: 'Készen áll a békére és a természetre?',
-      subtitle: 'Lépjen kapcsolatba velünk közösségi oldalainkon',
+      title: 'Foglalja le helyét',
+      subtitle: 'Küldje el az időpontot WhatsAppon, és visszaigazoljuk.',
       whatsapp: 'WhatsApp',
       messenger: 'Messenger',
       instagram: 'Instagram DM',
@@ -2293,7 +2293,7 @@ export const translations = {
     },
     gallery: {
       title: 'Fotógaléria',
-      subtitle: 'Fedezze fel a Turjanica Kemping szépségét',
+      subtitle: 'A kemping, a folyók és a fáház',
       all: 'Mind',
       facilities: 'Felszereltség',
       nature: 'Természet',
